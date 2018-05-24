@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cf48371408c2146833cf1331eb80b4, type: 3}
+  m_Name: EmotionalTraits
+  m_EditorClassIdentifier: 
+  ListElements:
+  - {fileID: 11400000, guid: d6b18f3da57589f4baa4a5f0a9b07610, type: 2}
+  - {fileID: 11400000, guid: e7de9048866c773449d95958651e1491, type: 2}
+  - {fileID: 11400000, guid: fc5f21324d4926445bebd1cdf331877e, type: 2}
+  - {fileID: 11400000, guid: 4956b102ff849b848a7971d6919c8bc7, type: 2}

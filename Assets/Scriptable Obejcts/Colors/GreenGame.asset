@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2e72d39fdac17408eb2c2bf8b993b1, type: 3}
+  m_Name: GreenGame
+  m_EditorClassIdentifier: 
+  colorName: green
+  ShirtColor: {r: 0.23788926, g: 0.8088235, b: 0.45445055, a: 0}
+  MiniGameName: Green Teal Game
+  Description: Papers
+  sceneRef: AddRefereceToMiniGameSceneHere
+  sceneBuildIndex: 0
