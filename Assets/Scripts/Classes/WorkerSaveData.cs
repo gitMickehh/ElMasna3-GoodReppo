@@ -18,6 +18,8 @@ public class WorkerSaveData{
 
     List<Complaints_SO> complaints;
 
+    public WorkerState workerState;
+
     public Transform workerPosition;
 
     public WorkerSaveData()
@@ -33,6 +35,7 @@ public class WorkerSaveData{
         complaints = new List<Complaints_SO>();
 
         workerPosition = null;
+        workerState = WorkerState.Working;
     }
 
     public WorkerSaveData(string fullName, Gender g, int lvl, 
@@ -50,6 +53,7 @@ public class WorkerSaveData{
         complaints = complts;
 
         workerPosition = null;
+        workerState = WorkerState.Working;
     }
 
     public WorkerSaveData(string fullName, Gender g, int lvl,

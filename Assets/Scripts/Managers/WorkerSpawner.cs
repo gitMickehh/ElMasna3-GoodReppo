@@ -15,8 +15,8 @@ public class WorkerSpawner : MonoBehaviour {
 
     [Header("Worker Manager Script")]
     public WorkerManager workerManager;
-    //float angleDiff;
-    //int noOfWorkers;
+    int numberOfWorkersInADay = 0;
+    
 
     private void Start()
     {
@@ -41,6 +41,8 @@ public class WorkerSpawner : MonoBehaviour {
 
     public void SpawnNewWorkers(int numOfWorkers)
     {
+        numberOfWorkersInADay = numOfWorkers;
+
         for (int i = 0; i < numOfWorkers; i++)
         {
             AddNewWorker(i);
@@ -61,6 +63,11 @@ public class WorkerSpawner : MonoBehaviour {
         wo.LoadWorker(saveData);
 
         workerManager.AddNewWorker(w);
+    }
+
+    public void OnEndDay()
+    {
+        numberOfWorkersInADay = 0;
     }
 
 }

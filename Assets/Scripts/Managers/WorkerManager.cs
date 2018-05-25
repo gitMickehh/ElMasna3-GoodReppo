@@ -177,22 +177,26 @@ public class WorkerManager : MonoBehaviour
 
     public void AddRedWorker(Worker w)
     {
-        RedWorkers.Add(w);
+        if(!RedWorkers.Contains(w))
+            RedWorkers.Add(w);
     }
 
     public void AddGreenWorker(Worker w)
     {
-        GreenWorkers.Add(w);
+        if(!GreenWorkers.Contains(w))
+            GreenWorkers.Add(w);
     }
 
     public void AddYellowWorker(Worker w)
     {
-        YellowWorkers.Add(w);
+        if(!YellowWorkers.Contains(w))
+            YellowWorkers.Add(w);
     }
 
     public void AddBlueWorker(Worker w)
     {
-        BlueWorkers.Add(w);
+        if(!BlueWorkers.Contains(w))
+            BlueWorkers.Add(w);
     }
 
     

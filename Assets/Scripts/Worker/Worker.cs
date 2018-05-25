@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WorkerState
+{
+    Idle,
+    Working,
+    Accepted,
+    Refused,
+    Leading
+}
+
 public class Worker : MonoBehaviour
 {
     public Worker_SO WorkerStats;
     [Tooltip("It adds itself")]
     public WorkerManager workerManager;
+    public WorkerState workerState;
 
     [Header("Info")]
     public string FullName;
@@ -47,14 +57,15 @@ public class Worker : MonoBehaviour
 
     void Start()
     {
-        //var m = Instantiate(ModelOfWorker, this.transform);
-        //m.layer = 8; //worker layer
-        //meshRenderers = m.GetComponentsInChildren<MeshRenderer>();
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
-        workerManager = GameObject.FindGameObjectWithTag("WorkerManager").GetComponent<WorkerManager>();
+
+        //workerManager = GameObject.FindGameObjectWithTag("WorkerManager").GetComponent<WorkerManager>();
+        workerManager = GameObject.Find("WorkerManager").GetComponent<WorkerManager>();
 
         GenerateWorker();
     }
+
+    //states for worker and for animation
 
     public void GenerateWorker()
     {
@@ -83,8 +94,6 @@ public class Worker : MonoBehaviour
         }
 
         transform.name = FullName;
-
-        AddToColorList();
     }
     
     public void AddComplaint()
@@ -140,6 +149,7 @@ public class Worker : MonoBehaviour
         }
     }
 
+    //saving
     public void SaveWorker(string key)
     {
         WorkerSaveData saveData = new WorkerSaveData(FullName, gender, level, workerColor, 
@@ -209,6 +219,19 @@ public class Worker : MonoBehaviour
         transform.name = FullName;
 
         AddToColorList();
+    }
+
+    //if worker is working and not in orientation, AddToColorList() after loading or after going to the state
+
+    //happiness
+    public void AddHappiness(float percentage)
+    {
+        happyMeter = Mathf.Clamp(happyMeter+percentage,0,100);
+    }
+
+    public void DecreaseHappiness(float percentage)
+    {
+        happyMeter = Mathf.Clamp(happyMeter - percentage, 0, 100);
     }
 
 }

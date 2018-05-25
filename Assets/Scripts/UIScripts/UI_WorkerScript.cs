@@ -48,7 +48,7 @@ public class UI_WorkerScript : MonoBehaviour {
                 float touchZeroPrevPos = touchZero.position.x - touchZero.deltaPosition.x;
 
                 // Find the magnitude of the vector (the distance) between the touches in each frame.
-                float prevTouchDeltaMag = touchZeroPrevPos;
+                //float prevTouchDeltaMag = touchZeroPrevPos;
                 float touchDeltaMag = touchZero.position.x;
 
                 if(touchDeltaMag > swipeCloseSpeed)

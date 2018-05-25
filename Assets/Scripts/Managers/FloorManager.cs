@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class FloorManager : MonoBehaviour {
 
-    public GameObject FloorPrefab;
     public Factory_SO Factory_SO;
 
+    [Header("Floor")]
+    public GameObject FloorPrefab;
+    public List<FloorRotation> floorsList;
     public FloorRotation TopFloor;
 
+    [Header("Camera")]
     public CameraNavigation_SO CameraNavigator;
+    public GameObject currentFloorSelected;
 
     public void OnClickAddFloor()
     {
@@ -17,17 +21,20 @@ public class FloorManager : MonoBehaviour {
         Factory_SO.LevelUp();
         /*
         Vector3 FloorPosition = TopFloor.transform.position;
-
         FloorPosition.y += (2.27f * 2);
-
         GameObject f = Instantiate(FloorPrefab, FloorPosition,new Quaternion());
-
         FloorRotation fr = f.GetComponent<FloorRotation>();
         TopFloor = fr;
-
         CameraNavigator.MaximumYPosition += 2.5f;
         */
 
+    }
+
+    public void UpdateFloorSelected(GameObject floor)
+    {
+        currentFloorSelected.GetComponent<FloorRotation>().enabled = false;
+        currentFloorSelected = floor;
+        currentFloorSelected.GetComponent<FloorRotation>().enabled = true;
     }
 
 }

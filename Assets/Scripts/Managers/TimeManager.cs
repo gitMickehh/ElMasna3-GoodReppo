@@ -105,7 +105,7 @@ public class TimeManager : MonoBehaviour {
         }
 
         timeLeft = dayDurationMinutes - minuteDifference;
-        timeLeftSec = 60 - secondDifference;
+        timeLeftSec = secondDifference % 60;
 
         //TimeLog.MyLog("Difference from last log in: " + minuteDifference + ":" + secondDifference);
         TimeLog.MyLog("Time left for one hour: " + timeLeft + ":" + timeLeftSec);

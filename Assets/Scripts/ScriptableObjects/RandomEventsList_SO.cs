@@ -9,7 +9,20 @@ public class RandomEventsList_SO : ScriptableObject {
     List<GameEvent_SO> listOfEvents;
 
     [SerializeField]
-    List<float> EventsWeights;
+    [Tooltip("Anything")]
+    List<int> EventsWeights;
+
+    URandom.ShuffleBagCollection<int> shufflebag;
+
+    private void OnEnable()
+    {
+        shufflebag = new URandom.ShuffleBagCollection<int>();
+
+        for (int i = 0; i < listOfEvents.Count; i++)
+        {
+            shufflebag.Add(i,EventsWeights[i]);
+        }
+    }
 
     public GameEvent_SO PickRandomEvent()
     {
@@ -21,11 +34,12 @@ public class RandomEventsList_SO : ScriptableObject {
     public GameEvent_SO PickRandomEventWithWeights()
     {
         //apply weights here...
-
         //biggest weight returns null
+        //int r = Random.Range(0, listOfEvents.Count);
 
-        int r = Random.Range(0, listOfEvents.Count);
-        return listOfEvents[r];
+        int r = shufflebag.Next();
+
+        return listOfEvents[shufflebag.Next()];
     }
 
 }
