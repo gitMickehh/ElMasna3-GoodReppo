@@ -30,8 +30,11 @@ public class Worker_SO : ScriptableObject
     public float MovementSpeed;
 
     [Header("Prefabs")]
-    public List<GameObject> FacialHairPrefabs;
+    public List<GameObject> MalePrefabs;
+    public List<GameObject> FemalePrefabs;
+
     public List<GameObject> HairPrefabs;
+    public List<GameObject> FacialHairPrefabs;
     public List<GameObject> GlassesPrefabs;
 
     public string RandomizeName(Gender g)
@@ -115,5 +118,35 @@ public class Worker_SO : ScriptableObject
 
     }
     */
+
+    public GameObject GetWorkerPrefab(Gender g)
+    {
+        GameObject model;
+        int r;
+        switch (g)
+        {
+            case Gender.MALE:
+                r = Random.Range(0,MalePrefabs.Count);
+                model = MalePrefabs[r];
+                break;
+            case Gender.FEMALE:
+                r = Random.Range(0, FemalePrefabs.Count);
+                model = FemalePrefabs[r];
+                break;
+            default:
+                r = Random.Range(0, MalePrefabs.Count);
+                model = MalePrefabs[r];
+                break;
+        }
+
+        return model;
+    }
+
+    public Gender GetGender()
+    {
+        int r = Random.Range(0,2);
+        return (Gender)r;
+    }
+
 
 }

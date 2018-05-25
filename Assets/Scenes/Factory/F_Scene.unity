@@ -316,7 +316,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4394122990236042, guid: 56885da77f3a0444a9607d5a1fcc8550, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56885da77f3a0444a9607d5a1fcc8550, type: 2}
@@ -359,6 +359,10 @@ Prefab:
     - target: {fileID: 4341533187038278, guid: f425c419b927ca14daa8b8ad97ec30ee, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786089141979130, guid: f425c419b927ca14daa8b8ad97ec30ee, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f425c419b927ca14daa8b8ad97ec30ee, type: 2}
@@ -408,7 +412,7 @@ Prefab:
     - target: {fileID: 224726698984180350, guid: b862cce20ed7e2840b97adebce0b1723,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224726698984180350, guid: b862cce20ed7e2840b97adebce0b1723,
         type: 2}
@@ -1056,7 +1060,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1001583135
 Prefab:
@@ -1096,6 +1100,10 @@ Prefab:
     - target: {fileID: 4515376040341246, guid: 896ff1adee6f18f489d4fa95a4512643, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819802132470224, guid: 896ff1adee6f18f489d4fa95a4512643, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896ff1adee6f18f489d4fa95a4512643, type: 2}
@@ -1259,7 +1267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375005575 stripped
 GameObject:
@@ -1550,7 +1558,7 @@ Prefab:
     - target: {fileID: 224276546105920706, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 19.006256
+      value: 18.987366
       objectReference: {fileID: 0}
     - target: {fileID: 224652463351676742, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}

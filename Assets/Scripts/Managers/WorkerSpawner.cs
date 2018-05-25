@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WorkerSpawner : MonoBehaviour {
 
-    public GameObject WorkerPrefab;
+    //public GameObject WorkerPrefab;
+    public Worker_SO workerStats;
 
     [Header("Instantiation")]
     public Transform OrientationOrigin;
@@ -26,6 +27,8 @@ public class WorkerSpawner : MonoBehaviour {
     void AddNewWorker(int index)
     {
         //angleDiff = (90 / noOfWorkers*1.0f);
+        Gender g = workerStats.GetGender();
+        var WorkerPrefab = workerStats.GetWorkerPrefab(g);
 
         GameObject w = Instantiate(WorkerPrefab, OrientationOrigin);
         w.transform.position = new Vector3(radius * (Mathf.Cos((theta+(index* 15))*(Mathf.PI/180))),
@@ -55,14 +58,14 @@ public class WorkerSpawner : MonoBehaviour {
         string saveJson = PlayerPrefs.GetString(key);
         WorkerSaveData saveData = JsonUtility.FromJson<WorkerSaveData>(saveJson);
 
-        GameObject w = Instantiate(WorkerPrefab, saveData.workerPosition);
+        //GameObject w = Instantiate(WorkerPrefab, saveData.workerPosition);
         //w.transform.position = new Vector3(radius * (Mathf.Cos(theta) * (Mathf.PI / 180)),
         //    OrientationOrigin.position.y, -radius * (Mathf.Sin(theta) * (Mathf.PI / 180)));
 
-        Worker wo = w.GetComponent<Worker>();
-        wo.LoadWorker(saveData);
+        //Worker wo = w.GetComponent<Worker>();
+        //wo.LoadWorker(saveData);
 
-        workerManager.AddNewWorker(w);
+        //workerManager.AddNewWorker(w);
     }
 
     public void OnEndDay()

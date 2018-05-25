@@ -11,17 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e15fed7acb00e4c9550aafbb42a833, type: 3}
   m_Name: WorkerStats
   m_EditorClassIdentifier: 
-  CooldownTime: 2
-  MovementSpeed: 5
-  HappyMeter:
-    minValue: 0
-    maxValue: 0
   MaleFirstNames: {fileID: 11400000, guid: c8294ed4472157b48b7d4ce3b0b74ee5, type: 2}
   FemaleFirstNames: {fileID: 11400000, guid: 4c35c078b614d774792782105562cd1d, type: 2}
   LastNames: {fileID: 11400000, guid: b4b5efeedc839b746adf40e2b6e28234, type: 2}
   EmotionalTraits: {fileID: 11400000, guid: f22fbe12384364c4384a62342a76bb47, type: 2}
   MedicalState: {fileID: 11400000, guid: 446cb79d80270f847942238129651a1e, type: 2}
   ShirtColorsLinks: {fileID: 11400000, guid: aea7349a34b61d84c889baebe75cee31, type: 2}
-  FacialHairPrefabs: []
+  CooldownTime: 2
+  MovementSpeed: 5
+  MalePrefabs:
+  - {fileID: 1281063472529440, guid: bc6a5958dc42a19428bef56d4337a64f, type: 2}
+  FemalePrefabs:
+  - {fileID: 1611894779570934, guid: 9c8efe5fb71085048af4ed1b18973bb5, type: 2}
   HairPrefabs: []
+  FacialHairPrefabs: []
   GlassesPrefabs: []

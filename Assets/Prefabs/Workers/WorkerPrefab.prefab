@@ -646,8 +646,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WorkerStats: {fileID: 11400000, guid: 1a72cd3c5ef757048958203cece174ff, type: 2}
   workerManager: {fileID: 0}
+  workerState: 0
   FullName: 
-  gender: 0
+  gender: 1
   level: 0
   workerColor: {fileID: 0}
   emotion: {fileID: 0}

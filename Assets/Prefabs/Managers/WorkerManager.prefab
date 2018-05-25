@@ -55,8 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0777140fa87e744bfb8abb77eaf5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorkerPrefab: {fileID: 1611894779570934, guid: 9c8efe5fb71085048af4ed1b18973bb5,
-    type: 2}
+  workerStats: {fileID: 11400000, guid: 1a72cd3c5ef757048958203cece174ff, type: 2}
   OrientationOrigin: {fileID: 0}
   radius: 16
   theta: 15

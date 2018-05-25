@@ -69,7 +69,7 @@ public class Worker : MonoBehaviour
 
     public void GenerateWorker()
     {
-        gender = WorkerStats.RandomizeGender();
+        //gender = WorkerStats.RandomizeGender();
         FullName = WorkerStats.RandomizeName(gender);
 
         emotion = WorkerStats.RandomizeEmotionalTraits();
