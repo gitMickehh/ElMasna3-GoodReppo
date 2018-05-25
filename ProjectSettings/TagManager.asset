@@ -11,6 +11,7 @@ TagManager:
   - Floor
   - Ground
   - Machine
+  - PinballGoal
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d04db8805716864ab4cd10a7e558c6d, type: 3}
   m_Name: CompanyMoneyUpdates
   m_EditorClassIdentifier: 
-  levelUpCost: 4000
+  levelUpCost: 60000
   playForRedTeam: 0
   playForYellowTeam: 0
   playForPurpleTeam: 0

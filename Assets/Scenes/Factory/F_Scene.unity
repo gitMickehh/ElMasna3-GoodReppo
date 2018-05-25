@@ -977,11 +977,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea4d425ab69b318418a82cad8a1729e4, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &735630330 stripped
+--- !u!114 &445977121 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114895866107503582, guid: f425c419b927ca14daa8b8ad97ec30ee,
+  m_PrefabParentObject: {fileID: 114103088224598630, guid: 896ff1adee6f18f489d4fa95a4512643,
     type: 2}
-  m_PrefabInternal: {fileID: 140055384}
+  m_PrefabInternal: {fileID: 1001583135}
   m_Script: {fileID: 11500000, guid: fbc84aa9c09b17d43a33bee2caea69d0, type: 3}
 --- !u!1001 &768375370
 Prefab:
@@ -1426,7 +1426,7 @@ Prefab:
         type: 2}
       propertyPath: TopFloor
       value: 
-      objectReference: {fileID: 735630330}
+      objectReference: {fileID: 445977121}
     - target: {fileID: 114956559573891748, guid: a69842c6dee671d40bf67b57f69b5231,
         type: 2}
       propertyPath: currentFloorSelected
@@ -1545,12 +1545,12 @@ Prefab:
     - target: {fileID: 224276546105920706, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.9654999
+      value: 0.96546936
       objectReference: {fileID: 0}
     - target: {fileID: 224276546105920706, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 19.00624
+      value: 19.006256
       objectReference: {fileID: 0}
     - target: {fileID: 224652463351676742, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}

@@ -7,11 +7,11 @@ public class CameraNavigation_SO : ScriptableObject {
 
 
     public float MinimumYPosition = 10f;
-    public float MaximumYPosition = 17.5f;
+    public float MaximumYPosition = 50f;
 
 
     private void OnEnable()
     {
-        MaximumYPosition = 17.5f;
+        //MaximumYPosition = 17.5f;
     }
 }

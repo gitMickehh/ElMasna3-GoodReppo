@@ -19,14 +19,15 @@ public class FloorManager : MonoBehaviour {
     {
         print("Add Floor.");
         Factory_SO.LevelUp();
-        /*
+        
+        
         Vector3 FloorPosition = TopFloor.transform.position;
-        FloorPosition.y += (2.27f * 2);
+        FloorPosition.y += (29.73f);
         GameObject f = Instantiate(FloorPrefab, FloorPosition,new Quaternion());
         FloorRotation fr = f.GetComponent<FloorRotation>();
         TopFloor = fr;
-        CameraNavigator.MaximumYPosition += 2.5f;
-        */
+        CameraNavigator.MaximumYPosition += 20f;
+        
 
     }
 
