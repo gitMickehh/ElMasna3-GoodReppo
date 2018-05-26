@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Factory/F_Scene.unity
     guid: 00c562f56d9f7b3429f63a26929a55c9
+  - enabled: 1
+    path: Assets/Scenes/Pinball/PinballScene.unity
+    guid: 5e3294e6e9f103842811fcdfc2691cb4

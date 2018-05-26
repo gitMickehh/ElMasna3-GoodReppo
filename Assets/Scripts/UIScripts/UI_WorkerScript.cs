@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI_WorkerScript : MonoBehaviour {
 
-    //Worker worker;
+    Worker worker;
 
     [Header("UI Elements")]
     public RawImage workerImage;
@@ -21,7 +22,7 @@ public class UI_WorkerScript : MonoBehaviour {
     public Camera UICamera;
 
     //UI Animation
-    public Animator animatorController;
+    public Animator[] animatorControllers;
 
     [Header("Swipe Controls")]
     public float swipeCloseSpeed = 5;
@@ -29,7 +30,7 @@ public class UI_WorkerScript : MonoBehaviour {
     private void Start()
     {
         UICamera.enabled = false;
-        animatorController = GetComponentInChildren<Animator>();
+        animatorControllers = GetComponentsInChildren<Animator>();
     }
 
     private void Update()
@@ -67,13 +68,15 @@ public class UI_WorkerScript : MonoBehaviour {
         MoveCamera(cameraPos);
 
         //animate in
-        animatorController.SetBool("WorkerClicked", true);
+        animatorControllers[0].SetBool("WorkerClicked", true);
+        animatorControllers[1].SetBool("WorkerClicked", true);
     }
 
     public void ClosePanel()
     {
         //animate out
-        animatorController.SetBool("WorkerClicked", false);
+        animatorControllers[0].SetBool("WorkerClicked", false);
+        animatorControllers[1].SetBool("WorkerClicked", false);
 
         //destroyCamera
         ClearCamera();
@@ -81,6 +84,7 @@ public class UI_WorkerScript : MonoBehaviour {
 
     public void FillWorkerData(Worker w)
     {
+        worker = w;
         workerName.text = w.FullName;
         workerLevel.text = w.level.ToString();
 
@@ -124,6 +128,12 @@ public class UI_WorkerScript : MonoBehaviour {
     {
         //workerImage.texture = null;
         UICamera.enabled = false;
+    }
+
+    public void PlayButton()
+    {
+        //transition loading screen before this
+        SceneManager.LoadSceneAsync(worker.workerColor.sceneBuildIndex);
     }
 
 }

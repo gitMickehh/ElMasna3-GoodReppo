@@ -16,4 +16,4 @@ MonoBehaviour:
   MiniGameName: Red game
   Description: Pinball
   sceneRef: AddRefereceToMiniGameSceneHere
-  sceneBuildIndex: 0
+  sceneBuildIndex: 1

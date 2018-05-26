@@ -16,4 +16,4 @@ MonoBehaviour:
   MiniGameName: Green Teal Game
   Description: Papers
   sceneRef: AddRefereceToMiniGameSceneHere
-  sceneBuildIndex: 0
+  sceneBuildIndex: 1

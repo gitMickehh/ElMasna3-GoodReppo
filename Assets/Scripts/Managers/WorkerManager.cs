@@ -238,7 +238,7 @@ public class WorkerManager : MonoBehaviour
         for (int i = 0; i < listOfWorkerKeys.strings.Count; i++)
         {
             string key = listOfWorkerKeys.strings[i];
-            workerSpawner.SpawnWorker(key);
+            //workerSpawner.SpawnWorker(key);
         }
 
     }

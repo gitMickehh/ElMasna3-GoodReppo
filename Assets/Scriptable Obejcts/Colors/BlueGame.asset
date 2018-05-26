@@ -16,4 +16,4 @@ MonoBehaviour:
   MiniGameName: Blue Game
   Description: Ice Breaking
   sceneRef: AddRefereceToMiniGameSceneHere
-  sceneBuildIndex: 0
+  sceneBuildIndex: 1
