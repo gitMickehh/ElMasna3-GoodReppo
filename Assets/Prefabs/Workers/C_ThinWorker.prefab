@@ -1424,6 +1424,7 @@ MonoBehaviour:
   complaintsManager_SO: {fileID: 0}
   complaints: []
   meshRenderers: []
+  skinnedMeshRenderers: []
 --- !u!114 &114462865295461630
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,7 +9,7 @@ public class TimeManager_D : MonoBehaviour {
     public Text dayText;
     public Text dayStateText;
     private float startTime;
-    private bool nightFlag;
+    //private bool nightFlag;
 
     public float daysInMinutes;
     public int dayDuration;
@@ -29,7 +29,7 @@ public class TimeManager_D : MonoBehaviour {
         dayStateText.text = dayState[0];
         // h = (int)dayToHoursMinute;
         m = daysInMinutes; // so if there was a change in the inspector it won't affect the code
-        nightFlag = false;
+        //nightFlag = false;
         dayDuration = (int)(m * 0.84);
         called = false;
         Debug.Log(GetTime(2) + " Second"); //In sec
@@ -64,7 +64,7 @@ public class TimeManager_D : MonoBehaviour {
         else if (netSecond >= (dayDuration*60))
         {
             dayStateText.text = dayState[1];
-            nightFlag = true;
+            //nightFlag = true;
         }
 
         else if (netSecond < (dayDuration * 60))
@@ -77,7 +77,7 @@ public class TimeManager_D : MonoBehaviour {
             }
 
             dayStateText.text = dayState[0];
-            nightFlag = false;
+            //nightFlag = false;
         }
             
 
