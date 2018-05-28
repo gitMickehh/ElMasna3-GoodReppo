@@ -129,6 +129,9 @@ MonoBehaviour:
   BlueWorkers: []
   listOfWorkerKeys: {fileID: 11400000, guid: 01aa5e950023fdb40b0e4dca66d12fbe, type: 2}
   workerSpawner: {fileID: 0}
+  companyMoneyUpdates_SO: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d,
+    type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114751559800788458
 MonoBehaviour:
   m_ObjectHideFlags: 1

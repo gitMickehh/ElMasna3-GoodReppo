@@ -7,31 +7,57 @@ using UnityEngine.SceneManagement;
 public class PlayToRaiseTeamLevel : MonoBehaviour {
 
     public GameObject panel;
+    public GameObject payButton;
+    public int index;
+
+    public Factory_SO Factory_SO;
 
 	void Start () {
         panel.SetActive(false);
     }
 	
 
-    public void ActivatePanel(int index)
+    public void ActivatePanel(int no)
     {
         panel.gameObject.SetActive(true);
-        panel.GetComponent<PanelTxt>().SetText(index);
+        panel.GetComponent<PanelTxt>().SetText(no);
+        payButton.GetComponent<PayButton>().SetText(no);
+        index = no;
         print("button clicked");
     }
 
-    public void PlayGame(int index)
+    public void PlayGame()
     {
         switch (index)
         {
             case 0:
-                SceneManager.LoadScene(1);
+                Factory_SO.TeamLevelUp(0);
+                StartCoroutine(LoadScene(1));
                 break;
+            case 1:
+                Factory_SO.TeamLevelUp(1);
+                StartCoroutine(LoadScene(2));
+              
+                break;
+            //case 2:
+            //    Factory_SO.TeamLevelUp(2);
+            //    SceneManager.LoadScene(3);
+            //    break;
+            //case 3:
+            //    Factory_SO.TeamLevelUp(3);
+            //    SceneManager.LoadScene(4);
+            //    break;
             default:
-                SceneManager.LoadScene(1);
+                print("LoadSceneMode of index" + index);
                 break;
         }
 
     }
 
+    private IEnumerator LoadScene(int scenenum)
+    {
+        yield return new WaitForEndOfFrame();
+
+        SceneManager.LoadSceneAsync(scenenum);
+    }
 }

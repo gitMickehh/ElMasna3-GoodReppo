@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pinball/PinballScene.unity
     guid: 5e3294e6e9f103842811fcdfc2691cb4
+  - enabled: 1
+    path: Assets/Scenes/Thief/ThiefScene.unity
+    guid: 13d42d62c7537ad42ace433e3ef15f27

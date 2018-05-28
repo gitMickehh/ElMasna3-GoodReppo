@@ -18,6 +18,11 @@ public class WorkerManager : MonoBehaviour
     public ListOfStrings_SO listOfWorkerKeys;
     public WorkerSpawner workerSpawner;
 
+    public enum TShirtsColor {Red, Green,Yellow, Blue};
+
+    public CompanyMoneyUpdates_SO companyMoneyUpdates_SO;
+    public Factory_SO factory_SO;
+
     //properties
     public int TotalRedColor
     {
@@ -243,4 +248,77 @@ public class WorkerManager : MonoBehaviour
 
     }
 
+    public void LevelUpTeam(TShirtsColor shirtsColor) //after winning miniGame
+    {
+        switch (shirtsColor)
+        {
+            case TShirtsColor.Red:
+                if (RedWorkers != null)
+                {
+                    foreach (var worker in RedWorkers)
+                    {
+                        if (worker.level >= 6)
+                            worker.LevelUp();
+                    }
+                }
+                break;
+
+            case TShirtsColor.Green:
+                if (GreenWorkers != null)
+                {
+                    foreach (var worker in GreenWorkers)
+                    {
+                        if (worker.level >= 6)
+                            worker.LevelUp();
+                    }
+                }
+                break;
+
+            case TShirtsColor.Yellow:
+                if (YellowWorkers != null)
+                {
+                    foreach (var worker in YellowWorkers)
+                    {
+                        if (worker.level >= 6)
+                            worker.LevelUp();
+                    }
+                }
+                break;
+
+            case TShirtsColor.Blue:
+                if (BlueWorkers != null)
+                {
+                    foreach (var worker in BlueWorkers)
+                    {
+                        if (worker.level >= 6)
+                            worker.LevelUp();
+                    }
+                }
+                break;
+        }
+    }
+
+    public void ChangeTotalRedColor()
+    {
+        if (RedColorOverSix > 0)
+            companyMoneyUpdates_SO.playForRedTeam = 500 * (TotalRedColor) / (RedColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
+    }
+
+    public void ChangeTotalYellowColor()
+    {
+        if (YellowColorOverSix > 0)
+            companyMoneyUpdates_SO.playForYellowTeam = 500 * (TotalYellowColor) / (YellowColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
+    }
+
+    public void ChangeTotalGreenColor()
+    {
+        if (GreenColorOverSix > 0)
+            companyMoneyUpdates_SO.playForGreenTeam = 500 * (TotalGreenColor) / (GreenColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
+    }
+
+    //public void ChangeTotalBlueColor()
+    //{
+    //    if (BlueColorOverSix > 0)
+    //        companyMoneyUpdates_SO.playForBlueTeam = 500 * (TotalBlueColor) / (BlueColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
+    //}
 }

@@ -12,6 +12,8 @@ TagManager:
   - Ground
   - Machine
   - PinballGoal
+  - Thief
+  - Money
   layers:
   - Default
   - TransparentFX
@@ -46,6 +48,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2002709327
+    locked: 0
+  - name: MidGround
+    uniqueID: 3341129989
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

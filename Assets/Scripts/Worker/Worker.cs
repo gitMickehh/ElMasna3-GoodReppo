@@ -55,6 +55,9 @@ public class Worker : MonoBehaviour
     //public GameObject ModelOfWorker;
     public MeshRenderer[] meshRenderers;
 
+    [Header("Events")]
+    public GameEvent_SO LevelUpEvent;
+
     void Start()
     {
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
@@ -94,6 +97,9 @@ public class Worker : MonoBehaviour
         }
 
         transform.name = FullName;
+
+        //for testing
+        AddToColorList();
     }
     
     public void AddComplaint()
@@ -106,7 +112,8 @@ public class Worker : MonoBehaviour
     {
         print("LevelUp Event has been invoked");
         level++;
-        if(coolDownTime != 0.1)
+        //LevelUpEvent.Raise();
+        if (coolDownTime != 0.1)
         {
             coolDownTime -= decreaseCoolDownTimeBy;
         }

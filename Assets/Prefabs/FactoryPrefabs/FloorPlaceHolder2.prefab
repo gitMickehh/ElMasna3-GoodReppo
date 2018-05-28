@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 65718015360560490}
   - component: {fileID: 54436109521147992}
   - component: {fileID: 114458936767864286}
-  - component: {fileID: 114969298957886056}
   - component: {fileID: 114925373970547550}
   m_Layer: 8
   m_Name: WorkerPrefab (3)
@@ -202,7 +201,6 @@ GameObject:
   - component: {fileID: 65227782182196210}
   - component: {fileID: 54017813235748598}
   - component: {fileID: 114909713485434572}
-  - component: {fileID: 114762953360731392}
   - component: {fileID: 114707783994125406}
   m_Layer: 8
   m_Name: WorkerPrefab (1)
@@ -401,7 +399,6 @@ GameObject:
   - component: {fileID: 65650966858128246}
   - component: {fileID: 54217529670510604}
   - component: {fileID: 114365332128916674}
-  - component: {fileID: 114301817850188132}
   - component: {fileID: 114859261781828260}
   m_Layer: 8
   m_Name: WorkerPrefab
@@ -716,7 +713,6 @@ GameObject:
   - component: {fileID: 65442661915052872}
   - component: {fileID: 54764075301017830}
   - component: {fileID: 114411221931020916}
-  - component: {fileID: 114292527451146580}
   - component: {fileID: 114676967541276906}
   m_Layer: 8
   m_Name: WorkerPrefab (4)
@@ -1358,7 +1354,6 @@ GameObject:
   - component: {fileID: 65840824467474846}
   - component: {fileID: 54456266061323968}
   - component: {fileID: 114103133808654406}
-  - component: {fileID: 114297700449623314}
   - component: {fileID: 114165500469475344}
   m_Layer: 8
   m_Name: WorkerPrefab (2)
@@ -4715,7 +4710,7 @@ MonoBehaviour:
   workerState: 1
   FullName: 
   gender: 0
-  level: 0
+  level: 6
   workerColor: {fileID: 0}
   emotion: {fileID: 0}
   favDayOff: 0
@@ -4729,6 +4724,7 @@ MonoBehaviour:
   complaintsManager_SO: {fileID: 0}
   complaints: []
   meshRenderers: []
+  LevelUpEvent: {fileID: 0}
 --- !u!114 &114153579437334426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4784,90 +4780,6 @@ MonoBehaviour:
   L_IterationFinished: {fileID: 11400000, guid: 5aedc896d567a804099fa221d06b6020,
     type: 2}
   moneyMadeInLine: 0
---- !u!114 &114292527451146580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517258678666298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114411221931020916}
-        m_MethodName: LevelUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114297700449623314
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949801881539480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114103133808654406}
-        m_MethodName: LevelUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114301817850188132
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1347566740776546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114365332128916674}
-        m_MethodName: LevelUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114365332128916674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4884,7 +4796,7 @@ MonoBehaviour:
   workerState: 1
   FullName: 
   gender: 0
-  level: 0
+  level: 6
   workerColor: {fileID: 0}
   emotion: {fileID: 0}
   favDayOff: 0
@@ -4898,6 +4810,7 @@ MonoBehaviour:
   complaintsManager_SO: {fileID: 0}
   complaints: []
   meshRenderers: []
+  LevelUpEvent: {fileID: 0}
 --- !u!114 &114407461401619964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4928,7 +4841,7 @@ MonoBehaviour:
   workerState: 1
   FullName: 
   gender: 0
-  level: 0
+  level: 6
   workerColor: {fileID: 0}
   emotion: {fileID: 0}
   favDayOff: 0
@@ -4942,6 +4855,7 @@ MonoBehaviour:
   complaintsManager_SO: {fileID: 0}
   complaints: []
   meshRenderers: []
+  LevelUpEvent: {fileID: 0}
 --- !u!114 &114458936767864286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4958,7 +4872,7 @@ MonoBehaviour:
   workerState: 1
   FullName: 
   gender: 0
-  level: 0
+  level: 6
   workerColor: {fileID: 0}
   emotion: {fileID: 0}
   favDayOff: 0
@@ -4972,6 +4886,7 @@ MonoBehaviour:
   complaintsManager_SO: {fileID: 0}
   complaints: []
   meshRenderers: []
+  LevelUpEvent: {fileID: 0}
 --- !u!114 &114676967541276906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5026,34 +4941,6 @@ MonoBehaviour:
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4973535934350414}
   worker: {fileID: 0}
---- !u!114 &114762953360731392
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210819030278560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114909713485434572}
-        m_MethodName: LevelUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114859261781828260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5097,7 +4984,7 @@ MonoBehaviour:
   workerState: 1
   FullName: 
   gender: 0
-  level: 0
+  level: 6
   workerColor: {fileID: 0}
   emotion: {fileID: 0}
   favDayOff: 0
@@ -5111,6 +4998,7 @@ MonoBehaviour:
   complaintsManager_SO: {fileID: 0}
   complaints: []
   meshRenderers: []
+  LevelUpEvent: {fileID: 0}
 --- !u!114 &114925373970547550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5136,31 +5024,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SwipeSpeed: 0
---- !u!114 &114969298957886056
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1009550158901864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114458936767864286}
-        m_MethodName: LevelUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null

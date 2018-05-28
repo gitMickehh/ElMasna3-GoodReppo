@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 114754350959100434}
   - component: {fileID: 114722077328202396}
   m_Layer: 5
-  m_Name: Button_PlayForPurpleTeam
+  m_Name: Button_PlayForGreenTeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 222021454189587346}
   - component: {fileID: 114538250947940974}
   - component: {fileID: 114721444533406594}
+  - component: {fileID: 114574633092647350}
   m_Layer: 5
   m_Name: Button_Pay
   m_TagString: Untagged
@@ -453,6 +454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1217797982794518}
+  payButton: {fileID: 1534640743730338}
+  index: 0
+  Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114346019355844052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -651,6 +655,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114582542734379902}
+        m_MethodName: CheckToOpenLevelRedTeamButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114582542734379902}
+        m_MethodName: CheckToOpenLevelYellowTeamButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114582542734379902}
+        m_MethodName: CheckToOpenLevelGreenTeamButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114538250947940974
@@ -730,8 +767,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114582542734379902}
+        m_MethodName: CheckToOpenLevelCompanyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114574633092647350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534640743730338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26542be10c379548b001d56004fb77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompanyMoneyUpdates_SO: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d,
+    type: 2}
 --- !u!114 &114582542734379902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -746,7 +807,11 @@ MonoBehaviour:
   CompanyMoneyUpdates_SO: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d,
     type: 2}
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  WorkerManager: {fileID: 0}
   levelUpButton: {fileID: 114567639334954558}
+  levelUpRedButton: {fileID: 114997183338096528}
+  levelUpYellowButton: {fileID: 114830531915488402}
+  levelUpGreenButton: {fileID: 114722077328202396}
 --- !u!114 &114618335718250300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -927,7 +992,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114289673670503314}
         m_MethodName: PlayGame
-        m_Mode: 3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114582542734379902}
+        m_MethodName: CheckToOpenLevelTeamButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1137,7 +1213,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_FontSize: 47
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1148,7 +1224,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level:'
+  m_Text: 'Level: '
 --- !u!114 &114830531915488402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1222,10 +1298,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_FontSize: 47
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 75
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -1309,10 +1385,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_FontSize: 47
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 4
     m_MaxSize: 75
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1320,7 +1396,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: N
+  m_Text: 1
 --- !u!114 &114993375410323356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1624,8 +1700,8 @@ RectTransform:
   m_Father: {fileID: 224334363469313924}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.9267846, y: 0.009463688}
-  m_AnchorMax: {x: 1.5156103, y: 0.99053633}
+  m_AnchorMin: {x: 1.1169091, y: 0.00000005194022}
+  m_AnchorMax: {x: 1.6077844, y: 0.99053633}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1661,10 +1737,10 @@ RectTransform:
   m_Father: {fileID: 224872992344079578}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.54856247, y: 0.88675845}
-  m_AnchorMax: {x: 0.6626667, y: 0.96318007}
+  m_AnchorMin: {x: 0.54856247, y: 0.8764421}
+  m_AnchorMax: {x: 0.65225, y: 0.96318007}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.0000023841858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224337945732696722
 RectTransform:

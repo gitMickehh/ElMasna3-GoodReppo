@@ -24,9 +24,31 @@ public class Factory_SO : ScriptableObject {
 
     public void LevelUp()
     {
-        WithdrawMoney(companyMoney.levelUpCost);
+        WithdrawMoney(companyMoney.LevelUpCost);
         companyLevel++;
         factory_LevelUpEvent.Raise();
+    }
+
+    public void TeamLevelUp(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                WithdrawMoney(companyMoney.playForRedTeam);
+                break;
+
+            case 1:
+                WithdrawMoney(companyMoney.playForYellowTeam);
+                break;
+
+            case 2:
+                WithdrawMoney(companyMoney.playForGreenTeam);
+                break;
+
+            //case 3:
+            //    WithdrawMoney(companyMoney.playForBlueTeam);
+            //    break;
+        }
     }
 
 
