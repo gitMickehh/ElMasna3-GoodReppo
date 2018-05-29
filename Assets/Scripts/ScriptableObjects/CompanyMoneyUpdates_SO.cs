@@ -20,7 +20,7 @@ public class CompanyMoneyUpdates_SO : ScriptableObject
     {
         get
         {
-            Debug.Log("CompanyMoneyUpdates_SO");
+            //Debug.Log("CompanyMoneyUpdates_SO");
             levelUpCost = Factory_SO.companyLevel * 20000;
             return levelUpCost;
 

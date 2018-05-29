@@ -28,8 +28,8 @@ public class UI_WorkerScript : MonoBehaviour {
     [Header("Swipe Controls")]
     public float swipeCloseSpeed = 5;
 
-    [Header("Scriptable Objects")]
-    public Factory_SO factory_SO;
+    [Header("Events")]
+    public GameEvent_SO miniGameStartedEvent;
 
     private void Start()
     {
@@ -146,9 +146,20 @@ public class UI_WorkerScript : MonoBehaviour {
 
     public void PlayButton()
     {
-        //transition loading screen before this
-        SceneManager.LoadSceneAsync(worker.workerColor.sceneBuildIndex);
-        worker.PayForPlaying();
+        //turn some stuff off first..
+        miniGameStartedEvent.Raise();
+
+        SceneManager.LoadSceneAsync(worker.workerColor.sceneBuildIndex, LoadSceneMode.Additive);
+    }
+
+    public void TurnOffUI()
+    {
+        transform.parent.gameObject.SetActive(false);
+    }
+
+    public void ActivateAll_BackFromMiniGame()
+    {
+        transform.parent.gameObject.SetActive(true);
     }
 
 }

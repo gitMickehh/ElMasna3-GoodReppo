@@ -36,9 +36,6 @@ public class RandomEventsList_SO : ScriptableObject {
         //apply weights here...
         //biggest weight returns null
         //int r = Random.Range(0, listOfEvents.Count);
-
-        int r = shufflebag.Next();
-
         return listOfEvents[shufflebag.Next()];
     }
 

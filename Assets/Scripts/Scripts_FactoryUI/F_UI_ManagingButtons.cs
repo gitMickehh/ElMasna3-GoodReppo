@@ -36,22 +36,22 @@ public class F_UI_ManagingButtons : MonoBehaviour {
 
     public void CheckToOpenLevelCompanyButton()
     {
-        print("WorkerManager.WorkersPrefabs.Count: " + WorkerManager.WorkersPrefabs.Count);
-        print("Factory_SO.FactoryMoney: " + Factory_SO.FactoryMoney + "CompanyMoneyUpdates_SO.levelUpCost: " + CompanyMoneyUpdates_SO.LevelUpCost);
+        //print("WorkerManager.WorkersPrefabs.Count: " + WorkerManager.WorkersPrefabs.Count);
+        //print("Factory_SO.FactoryMoney: " + Factory_SO.FactoryMoney + "CompanyMoneyUpdates_SO.levelUpCost: " + CompanyMoneyUpdates_SO.LevelUpCost);
         if((Factory_SO.FactoryMoney >= CompanyMoneyUpdates_SO.LevelUpCost) && 
             (WorkerManager.WorkersPrefabs.Count >= (Factory_SO.companyLevel * 10)))//no of workers is missing as condition
         {
             //openbutton
-            print("Open levelup button.");
+            //print("Open levelup button.");
             if (levelUpButton.interactable == false)
                 levelUpButton.interactable = true;
         }
         else
         {
             
-            print("close levelup button.");
-            print("Factory_SO.FactoryMoney: "+ Factory_SO.FactoryMoney + " CompanyMoneyUpdates_SO.LevelUpCost: "+ CompanyMoneyUpdates_SO.LevelUpCost);
-            print("WorkerManager.WorkersPrefabs.Count: "+ WorkerManager.WorkersPrefabs.Count +  " Factory_SO.companyLevel * 10): "+ (Factory_SO.companyLevel * 10));
+            //print("close levelup button.");
+            //print("Factory_SO.FactoryMoney: "+ Factory_SO.FactoryMoney + " CompanyMoneyUpdates_SO.LevelUpCost: "+ CompanyMoneyUpdates_SO.LevelUpCost);
+            //print("WorkerManager.WorkersPrefabs.Count: "+ WorkerManager.WorkersPrefabs.Count +  " Factory_SO.companyLevel * 10): "+ (Factory_SO.companyLevel * 10));
             if (levelUpButton.interactable == true)
                 levelUpButton.interactable = false;
         }

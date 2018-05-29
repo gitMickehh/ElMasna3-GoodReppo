@@ -6,7 +6,7 @@ public class FloorRotation : MonoBehaviour {
 
     public float SwipeSpeed = .06f;
     public float swipeThreshold = 200;
-    bool touching = false;
+    //bool touching = false;
 
     //Rigidbody rb;
     //Vector3 torque;
@@ -109,11 +109,11 @@ public class FloorRotation : MonoBehaviour {
     */
 
 
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
-        touching = true;
+        //touching = true;
         Debug.Log("TOUCHED FLOOR!");
-    }
+    }*/
 
     /*
      * private void OnMouseUp()

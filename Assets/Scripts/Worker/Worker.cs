@@ -6,6 +6,7 @@ public enum WorkerState
 {
     Idle,
     Working,
+    InMiniGame,
     Accepted,
     Refused,
     Leading
@@ -54,6 +55,7 @@ public class Worker : MonoBehaviour
     [Header("Model")]
     //public GameObject ModelOfWorker;
     public MeshRenderer[] meshRenderers;
+    public SkinnedMeshRenderer[] skinnedMeshRenderers;
 
     [Header("Events")]
     public GameEvent_SO LevelUpEvent;
@@ -72,6 +74,7 @@ public class Worker : MonoBehaviour
     void Start()
     {
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
 
         //workerManager = GameObject.FindGameObjectWithTag("WorkerManager").GetComponent<WorkerManager>();
         workerManager = GameObject.Find("WorkerManager").GetComponent<WorkerManager>();
@@ -105,6 +108,11 @@ public class Worker : MonoBehaviour
         for (int i = 0; i < meshRenderers.Length; i++)
         {
             meshRenderers[i].material.color = c;
+        }
+
+        for (int i = 0; i < skinnedMeshRenderers.Length; i++)
+        {
+            skinnedMeshRenderers[i].material.color = c;
         }
 
         transform.name = FullName;

@@ -22,7 +22,7 @@ MonoBehaviour:
   MalePrefabs:
   - {fileID: 1281063472529440, guid: bc6a5958dc42a19428bef56d4337a64f, type: 2}
   FemalePrefabs:
-  - {fileID: 1611894779570934, guid: 9c8efe5fb71085048af4ed1b18973bb5, type: 2}
+  - {fileID: 1611894779570934, guid: c478cf1684372d04bbfee559d629ef6c, type: 2}
   HairPrefabs: []
   FacialHairPrefabs: []
   GlassesPrefabs: []

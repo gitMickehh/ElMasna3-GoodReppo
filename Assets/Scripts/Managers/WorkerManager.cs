@@ -226,7 +226,7 @@ public class WorkerManager : MonoBehaviour
     {
         if(PlayerPrefs.HasKey("ListOfKeys"))
         {
-            string workerKeysJson = PlayerPrefs.GetString("ListOfKeys");
+            //string workerKeysJson = PlayerPrefs.GetString("ListOfKeys");
             //Debug.Log(workerKeysJson);
             //listOfWorkerKeys.strings = JsonUtility.FromJson<ListOfStrings_SO>(workerKeysJson).strings;
         }
