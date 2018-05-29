@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4458373048344192}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: InstantiationPosition
   m_TagString: Untagged
   m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4943562918373702}
   - component: {fileID: 212950203728764730}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -96,6 +96,7 @@ MonoBehaviour:
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   FloorPrefab: {fileID: 1819802132470224, guid: 896ff1adee6f18f489d4fa95a4512643,
     type: 2}
+  floorsList: []
   TopFloor: {fileID: 0}
   CameraNavigator: {fileID: 11400000, guid: e0602e465d067eb40b1cbe2d7bb48508, type: 2}
   currentFloorSelected: {fileID: 0}
