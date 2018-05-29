@@ -81,10 +81,10 @@ Material:
     - _DstBlend: 0
     - _EnableFog: 1
     - _EnableRotation: 1
-    - _Exposure: 0.42
-    - _FogFill: 0
-    - _FogHeight: 0.6
-    - _FogSmoothness: 0.01
+    - _Exposure: 1.03
+    - _FogFill: 0.074
+    - _FogHeight: 0.19
+    - _FogSmoothness: 0.368
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -92,8 +92,8 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 50
-    - _RotationSpeed: 2
+    - _Rotation: 61
+    - _RotationSpeed: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -104,4 +104,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Tex_HDR: {r: 1, g: 1, b: 0, a: 0}
-    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TintColor: {r: 0.50735295, g: 0.50735295, b: 0.50735295, a: 1}

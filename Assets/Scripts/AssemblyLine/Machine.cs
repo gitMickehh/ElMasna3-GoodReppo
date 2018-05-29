@@ -24,6 +24,7 @@ public class Machine : MonoBehaviour {
     public IEnumerator ActivateMachine()
     {
         yield return new WaitForSeconds(OverallTimeSeconds);
+
     }
 
 }

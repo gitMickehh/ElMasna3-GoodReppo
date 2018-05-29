@@ -18,7 +18,7 @@ public class AssemblyLine: MonoBehaviour
     [Header("Event")]
     public GameEvent_SO L_IterationFinished;
 
-    public float moneyMadeInLine;
+    float moneyMadeInLine;
     int j;
 
     private void Start()
@@ -35,21 +35,15 @@ public class AssemblyLine: MonoBehaviour
 
     public IEnumerator AssignWorkersToMachinesAvailable()
     {
-        //print("AssignWorkersToMachinesAvailable");
-
         while (true)
         {
 
             for (int i = 0; i < workersInLine.Count && j < Machines.Count; i++)
             {
-                //print("i= " + i);
-                //print("j= " + j);
                 workersInLine[i].AssignWorker(Machines[j].workerPosition);
 
                 j++;
-
                 moneyMadeInLine += (50 * Mathf.Pow((1.2f), workersInLine[i].level)) + ((Factory_SO.companyLevel - 1) * 100);
-
             }
 
             yield return new WaitForSeconds(machineBase.DurationInMinutes*60); // *60

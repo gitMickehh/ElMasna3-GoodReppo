@@ -457,6 +457,7 @@ MonoBehaviour:
   payButton: {fileID: 1534640743730338}
   index: 0
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  miniGameStarted: {fileID: 11400000, guid: 67509b22711573d44bddea0bf81104de, type: 2}
 --- !u!114 &114346019355844052
 MonoBehaviour:
   m_ObjectHideFlags: 1

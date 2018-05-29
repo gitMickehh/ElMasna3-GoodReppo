@@ -12,6 +12,9 @@ public class PlayToRaiseTeamLevel : MonoBehaviour {
 
     public Factory_SO Factory_SO;
 
+    [Header("Events")]
+    public GameEvent_SO miniGameStarted;
+
 	void Start () {
         panel.SetActive(false);
     }
@@ -58,6 +61,7 @@ public class PlayToRaiseTeamLevel : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
 
-        SceneManager.LoadSceneAsync(scenenum);
+        miniGameStarted.Raise();
+        SceneManager.LoadSceneAsync(scenenum, LoadSceneMode.Additive);
     }
 }
