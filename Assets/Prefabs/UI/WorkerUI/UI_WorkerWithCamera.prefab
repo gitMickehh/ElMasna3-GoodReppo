@@ -508,7 +508,6 @@ GameObject:
   - component: {fileID: 114732749138250690}
   - component: {fileID: 114310705431330212}
   - component: {fileID: 114058708931929280}
-  - component: {fileID: 114719512027156978}
   m_Layer: 5
   m_Name: UI_Worker
   m_TagString: Untagged
@@ -844,9 +843,10 @@ MonoBehaviour:
   - {fileID: 114492800167617102}
   - {fileID: 114145701545855166}
   playButton: {fileID: 114057871003652474}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   UICamera: {fileID: 20314278684882056}
   animatorControllers: []
-  swipeCloseSpeed: 10
+  swipeCloseSpeed: 5
   miniGameStartedEvent: {fileID: 11400000, guid: 67509b22711573d44bddea0bf81104de,
     type: 2}
 --- !u!114 &114090112082661556
@@ -1641,34 +1641,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: ???
---- !u!114 &114719512027156978
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1870785362683078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 185a5b7138688f740931f70641d09bed, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114058708931929280}
-        m_MethodName: PlayButtonInteract
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114729434347222006
 MonoBehaviour:
   m_ObjectHideFlags: 1

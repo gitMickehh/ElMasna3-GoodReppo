@@ -19,6 +19,9 @@ public class UI_WorkerScript : MonoBehaviour {
     public Button[] daysOfTheWeek;
     public Button playButton;
 
+    [Header("Factory")]
+    public Factory_SO factory_SO;
+
     [Header("Camera")]
     public Camera UICamera;
 
