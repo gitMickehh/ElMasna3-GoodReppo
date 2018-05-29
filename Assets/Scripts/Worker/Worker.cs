@@ -6,6 +6,7 @@ public enum WorkerState
 {
     Idle,
     Working,
+    InMiniGame,
     Accepted,
     Refused,
     Leading
