@@ -58,6 +58,17 @@ public class Worker : MonoBehaviour
     [Header("Events")]
     public GameEvent_SO LevelUpEvent;
 
+    [Header("Scriptable Objects")]
+    public Factory_SO factory_SO;
+
+    public float PlayingToLevelIndivCost
+    {
+        get
+        {
+            return 200 * Mathf.Pow(1.05f, level);
+        }
+    }
+
     void Start()
     {
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
@@ -239,6 +250,11 @@ public class Worker : MonoBehaviour
     public void DecreaseHappiness(float percentage)
     {
         happyMeter = Mathf.Clamp(happyMeter - percentage, 0, 100);
+    }
+
+    public void PayForPlaying()
+    {
+        factory_SO.WithdrawMoney(PlayingToLevelIndivCost);
     }
 
 }

@@ -17,6 +17,7 @@ public class UI_WorkerScript : MonoBehaviour {
     public Text workerMedicalState;
 
     public Button[] daysOfTheWeek;
+    public Button playButton;
 
     [Header("Camera")]
     public Camera UICamera;
@@ -26,6 +27,9 @@ public class UI_WorkerScript : MonoBehaviour {
 
     [Header("Swipe Controls")]
     public float swipeCloseSpeed = 5;
+
+    [Header("Scriptable Objects")]
+    public Factory_SO factory_SO;
 
     private void Start()
     {
@@ -130,10 +134,21 @@ public class UI_WorkerScript : MonoBehaviour {
         UICamera.enabled = false;
     }
 
+    public void PlayButtonInteract()
+    {
+        if(factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost)
+        {
+            playButton.interactable = true;
+        }
+        else
+            playButton.interactable = false;
+    }
+
     public void PlayButton()
     {
         //transition loading screen before this
         SceneManager.LoadSceneAsync(worker.workerColor.sceneBuildIndex);
+        worker.PayForPlaying();
     }
 
 }
