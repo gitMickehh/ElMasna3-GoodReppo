@@ -39,7 +39,16 @@ public class PinchZoom : MonoBehaviour
 
                
             }
-        
+
+            //else
+            //{
+            //    // Otherwise change the field of view based on the change in distance between the touches.
+            //    camera.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
+
+            //    // Clamp the field of view to make sure it's between 0 and 180.
+            //    camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
+            //}
+
         }
     }
 }
