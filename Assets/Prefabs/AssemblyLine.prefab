@@ -962,7 +962,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592701297855346}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 14.53, y: 18.93, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4135487793081788}
@@ -1574,7 +1574,6 @@ MonoBehaviour:
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   L_IterationFinished: {fileID: 11400000, guid: 5aedc896d567a804099fa221d06b6020,
     type: 2}
-  moneyMadeInLine: 0
 --- !u!114 &114387641361225728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1588,6 +1587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4917356897195434}
+  fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114448647509237516
 MonoBehaviour:
@@ -1602,6 +1602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4039883582554674}
+  fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114731729582866904
 MonoBehaviour:
@@ -1616,6 +1617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4066064857393772}
+  fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114942283999181768
 MonoBehaviour:
@@ -1630,6 +1632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4443066165063456}
+  fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114992479295178046
 MonoBehaviour:
@@ -1644,4 +1647,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4960564542605036}
+  fillImg: {fileID: 0}
   worker: {fileID: 0}

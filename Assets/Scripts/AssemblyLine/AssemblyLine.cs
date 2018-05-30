@@ -41,6 +41,7 @@ public class AssemblyLine: MonoBehaviour
             for (int i = 0; i < workersInLine.Count && j < Machines.Count; i++)
             {
                 workersInLine[i].AssignWorker(Machines[j].workerPosition);
+                StartCoroutine(Machines[j].StartCountDown());
 
                 j++;
                 moneyMadeInLine += (50 * Mathf.Pow((1.2f), workersInLine[i].level)) + ((Factory_SO.companyLevel - 1) * 100);
