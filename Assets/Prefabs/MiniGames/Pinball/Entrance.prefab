@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4943562918373702}
   - component: {fileID: 212950203728764730}
+  - component: {fileID: 114171906343555356}
   m_Layer: 12
   m_Name: Entrance
   m_TagString: Untagged
@@ -62,13 +63,31 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1805105146286952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.51, y: 1.1, z: 0}
-  m_LocalScale: {x: 3.0079584, y: 1.2276924, z: 1}
+  m_LocalPosition: {x: 6.94, y: 1.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4458373048344192}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114171906343555356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1805105146286952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b1255a25db2984e9e1b1747ea22471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entryPoint: {fileID: 4458373048344192}
+  ballObject: {fileID: 1568186085918202, guid: 5f1d14f3e26bc934cae6bdf72a831d2b, type: 2}
+  ballCount: {fileID: 11400000, guid: 3717432b037e6084fbecacb8fcf92362, type: 2}
+  minimumZRotation: -75
+  maximumZRotation: 180
+  minimumForce: 200
+  maximumForce: 340
 --- !u!212 &212950203728764730
 SpriteRenderer:
   m_ObjectHideFlags: 1

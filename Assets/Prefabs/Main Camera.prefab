@@ -106,7 +106,12 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 2048
+<<<<<<< HEAD
+  moving: {fileID: 11400000, guid: 60b49ddbe8eb7a44bb19ec5f46d25951, type: 2}
+--- !u!114 &114710639359754778
+=======
 --- !u!114 &114516352540748608
+>>>>>>> 02c063dec7446467ab5a2f2b3e6f794c06df0e93
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

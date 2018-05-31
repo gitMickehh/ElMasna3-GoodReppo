@@ -63,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
-        m_Texture: {fileID: 8900000, guid: beb1457d375110e468b8d8e1f29fccea, type: 3}
+        m_Texture: {fileID: 8900000, guid: 24a62f3f7d20ffb4c9157906fd37aaee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture0:
@@ -81,10 +81,10 @@ Material:
     - _DstBlend: 0
     - _EnableFog: 1
     - _EnableRotation: 1
-    - _Exposure: 1.03
-    - _FogFill: 0.074
-    - _FogHeight: 0.19
-    - _FogSmoothness: 0.368
+    - _Exposure: 1.19
+    - _FogFill: 0.019
+    - _FogHeight: 0.314
+    - _FogSmoothness: 0.09
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -92,8 +92,8 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 61
-    - _RotationSpeed: 0.5
+    - _Rotation: 120
+    - _RotationSpeed: 0.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
