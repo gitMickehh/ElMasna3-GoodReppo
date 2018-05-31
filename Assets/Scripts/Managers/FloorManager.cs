@@ -36,6 +36,12 @@ public class FloorManager : MonoBehaviour {
         currentFloorSelected.GetComponent<FloorRotation>().enabled = false;
         currentFloorSelected = floor;
         currentFloorSelected.GetComponent<FloorRotation>().enabled = true;
+        
+        //foreach (var item in currentFloorSelected.GetComponentsInChildren<MeshRenderer>())
+        //{
+        //    item.material.color = Color.black;
+        //}
+            
     }
 
 }

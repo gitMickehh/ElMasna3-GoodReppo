@@ -14,6 +14,9 @@ TagManager:
   - PinballGoal
   - Thief
   - Money
+  - Pinball_Ball
+  - Pinball_Trap
+  - Pinball_Obstacle
   layers:
   - Default
   - TransparentFX
@@ -28,7 +31,7 @@ TagManager:
   - Ground
   - Building
   - Pinball
-  - 
+  - ThiefGame
   - 
   - 
   - 
