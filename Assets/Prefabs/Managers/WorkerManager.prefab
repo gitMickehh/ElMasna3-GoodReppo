@@ -121,7 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6955520f35500fb46b0f25d1b7e7a70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorkersPrefabs: []
+  WorkersPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   workersInOrientation: []
   RedWorkers: []
   GreenWorkers: []

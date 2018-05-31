@@ -60,7 +60,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230701481287228}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
   m_Name: 
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
-  FloorPrefab: {fileID: 1819802132470224, guid: 896ff1adee6f18f489d4fa95a4512643,
+  FloorPrefab: {fileID: 1477506694731670, guid: 9bca9a0ffb1e35b4281f4dfca286a8d8,
     type: 2}
   floorsList: []
   TopFloor: {fileID: 0}

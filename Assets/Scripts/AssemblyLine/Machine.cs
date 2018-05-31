@@ -4,18 +4,20 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class Machine : MonoBehaviour {
-
     [Header("Machine")]
     public Machine_SO machineBase;
     //[SerializeField]
     //public static float DurationInMinutes = 2f;
     public Transform workerPosition;
+    public bool isWorking;
+
+    [Header("Machine Time")]
     public Image fillImg;
     float time;
 
     [Header("Worker On Task")]
     public Worker worker;
-    
+    /*
     public float OverallTimeSeconds
     {
         get
@@ -29,7 +31,7 @@ public class Machine : MonoBehaviour {
         yield return new WaitForSeconds(OverallTimeSeconds);
 
     }
-
+    */
     public IEnumerator StartCountDown()
     {
         time = machineBase.DurationInMinutes * 60;
@@ -46,6 +48,10 @@ public class Machine : MonoBehaviour {
         }
     }
 
+    private void Start()
+    {
+        isWorking = true;
+    }
     public void StopCountDown()
     {
         StopCoroutine(StartCountDown());
