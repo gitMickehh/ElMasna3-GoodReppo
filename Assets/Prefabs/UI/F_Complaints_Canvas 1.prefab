@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 114647439559195080}
   - component: {fileID: 114337203407630412}
   - component: {fileID: 114982081594653640}
+  - component: {fileID: 114718440280455362}
   m_Layer: 5
   m_Name: F_Complaints_Canvas 1
   m_TagString: Untagged
@@ -704,6 +705,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &114718440280455362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384221357762140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6564115c81a733641aa152890c7b0ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI_OpenEvent: {fileID: 11400000, guid: 7f266aab3049e3042836f89d4fc5d189, type: 2}
+  UI_CloseEvent: {fileID: 11400000, guid: 07e44d871528a564d8ab89eebb82420e, type: 2}
 --- !u!114 &114829412315177216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -991,7 +1005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.061591044, y: 0.038000003}
   m_AnchorMax: {x: 0.933, y: 0.9620001}
-  m_AnchoredPosition: {x: 0.9654846, y: 19.01947}
+  m_AnchoredPosition: {x: 0.9654846, y: 18.986969}
   m_SizeDelta: {x: -0.7, y: 0}
   m_Pivot: {x: 0.49999994, y: 1}
 --- !u!224 &224363780271985552

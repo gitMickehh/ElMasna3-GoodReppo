@@ -19,5 +19,5 @@ public class MiniGameLinker_SO : ScriptableObject {
     //to have the link to the mini games
     public string sceneRef = "AddRefereceToMiniGameSceneHere";
     public int sceneBuildIndex;
-
+    public string sceneName;
 }

@@ -74,6 +74,9 @@ public class UI_WorkerScript : MonoBehaviour {
         FillWorkerData(w);
         MoveCamera(cameraPos);
 
+        //turn off other input
+        GetComponent<UI_OpenCloseEvent>().UI_OpenEvent.Raise();
+
         //animate in
         animatorControllers[0].SetBool("WorkerClicked", true);
         animatorControllers[1].SetBool("WorkerClicked", true);
@@ -85,7 +88,10 @@ public class UI_WorkerScript : MonoBehaviour {
         animatorControllers[0].SetBool("WorkerClicked", false);
         animatorControllers[1].SetBool("WorkerClicked", false);
 
-        //destroyCamera
+        //turn on other input
+        GetComponent<UI_OpenCloseEvent>().UI_CloseEvent.Raise();
+
+        //clearCamera
         ClearCamera();
     }
 
@@ -149,10 +155,21 @@ public class UI_WorkerScript : MonoBehaviour {
 
     public void PlayButton()
     {
-        //turn some stuff off first..
-        miniGameStartedEvent.Raise();
+        var bIndex = worker.workerColor.sceneBuildIndex;
+        StartCoroutine(LoadSceneCo(bIndex));
 
-        SceneManager.LoadSceneAsync(worker.workerColor.sceneBuildIndex, LoadSceneMode.Additive);
+    }
+
+    IEnumerator LoadSceneCo(int bIndex)
+    {
+        AsyncOperation op = SceneManager.LoadSceneAsync(bIndex, LoadSceneMode.Additive);
+
+        while (!op.isDone)
+        {
+            yield return null;
+        }
+
+        miniGameStartedEvent.Raise();
     }
 
     public void TurnOffUI()

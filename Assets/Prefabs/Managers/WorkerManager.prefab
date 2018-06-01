@@ -127,7 +127,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  workersInOrientation: []
+  workersInOrientation:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   RedWorkers: []
   GreenWorkers: []
   YellowWorkers: []
