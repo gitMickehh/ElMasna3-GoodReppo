@@ -162,6 +162,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4394122990236042, guid: 56885da77f3a0444a9607d5a1fcc8550, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569243928704598, guid: 56885da77f3a0444a9607d5a1fcc8550, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56885da77f3a0444a9607d5a1fcc8550, type: 2}
   m_IsPrefabParent: 0
@@ -1118,7 +1126,77 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2ae631225943d843aa0feca13d598bc, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!1001 &1021899823
+=======
+--- !u!1 &1022837812 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1777193441205330, guid: d2ae631225943d843aa0feca13d598bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1022837811}
+--- !u!1 &1041189461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1041189462}
+  m_Layer: 0
+  m_Name: =====================
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041189462
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041189461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.187214, y: 10.188363, z: -8.530256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1162085263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1162085264}
+  m_Layer: 0
+  m_Name: =====================
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162085264
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162085263}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.187214, y: 10.188363, z: -8.530256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1171444172 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1277215028947616, guid: 1ef333e5263f0e848874d944a5224e50,
+    type: 2}
+  m_PrefabInternal: {fileID: 278270213}
+--- !u!1001 &1410733074
+>>>>>>> parent of 35c7b26... Calculate money made from assembly lines while closing
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1708,6 +1786,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1477506694731670, guid: 9bca9a0ffb1e35b4281f4dfca286a8d8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bca9a0ffb1e35b4281f4dfca286a8d8, type: 2}
   m_IsPrefabParent: 0
@@ -1998,6 +2080,11 @@ Prefab:
     - target: {fileID: 4679755558798614, guid: a69842c6dee671d40bf67b57f69b5231, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850105429453564, guid: a69842c6dee671d40bf67b57f69b5231,
+        type: 2}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114850105429453564, guid: a69842c6dee671d40bf67b57f69b5231,
         type: 2}
