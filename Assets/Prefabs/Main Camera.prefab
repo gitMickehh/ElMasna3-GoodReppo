@@ -116,6 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4b8ec1744b12d43b5c7d9afe652ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomTargetPos: {fileID: 0}
+  transitionDuration: 10
+  lastTransform: {fileID: 0}
+  zoomed: 0
 --- !u!114 &114810855277935524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NavigationSpecs: {fileID: 11400000, guid: e0602e465d067eb40b1cbe2d7bb48508, type: 2}
   cameraMovedEvent: {fileID: 11400000, guid: aff288fe0ae78d246b83af3b8e71bb6e, type: 2}
+  cameraMovedBoolSO: {fileID: 0}
 --- !u!114 &114846173111223576
 MonoBehaviour:
   m_ObjectHideFlags: 1

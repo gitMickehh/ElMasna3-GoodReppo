@@ -1214,12 +1214,12 @@ Prefab:
     - target: {fileID: 224276546105920706, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.9654999
+      value: 0.96546936
       objectReference: {fileID: 0}
     - target: {fileID: 224276546105920706, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 18.986984
+      value: 18.986954
       objectReference: {fileID: 0}
     - target: {fileID: 224652463351676742, guid: 9e6d4c67ac74cb4469ae78819c6fa25a,
         type: 2}
@@ -1548,6 +1548,66 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114881640505557474, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: factory_SO
+      value: 
+      objectReference: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8,
+        type: 2}
+    - target: {fileID: 114073318720526214, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: factory_SO
+      value: 
+      objectReference: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8,
+        type: 2}
+    - target: {fileID: 114886689382074122, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: factory_SO
+      value: 
+      objectReference: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8,
+        type: 2}
+    - target: {fileID: 114114110043650926, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: factory_SO
+      value: 
+      objectReference: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8,
+        type: 2}
+    - target: {fileID: 114120242344944776, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: factory_SO
+      value: 
+      objectReference: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8,
+        type: 2}
+    - target: {fileID: 114881640505557474, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: LevelUpEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74,
+        type: 2}
+    - target: {fileID: 114073318720526214, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: LevelUpEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74,
+        type: 2}
+    - target: {fileID: 114886689382074122, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: LevelUpEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74,
+        type: 2}
+    - target: {fileID: 114114110043650926, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: LevelUpEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74,
+        type: 2}
+    - target: {fileID: 114120242344944776, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: LevelUpEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa38d040c29d5eb44b31a101ecb19f2e, type: 2}
   m_IsPrefabParent: 0

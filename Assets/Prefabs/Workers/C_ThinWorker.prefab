@@ -1425,6 +1425,8 @@ MonoBehaviour:
   complaints: []
   meshRenderers: []
   skinnedMeshRenderers: []
+  LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114462865295461630
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -30,6 +30,13 @@ public class TimeManager : MonoBehaviour {
     [Header("Time UI")]
     public UI_MainTimer timer;
 
+    [Header("Scriptable Objects")]
+    public CompanyMoneyUpdates_SO companyMoneyUpdates_SO;
+    public Factory_SO factory_SO;
+
+    [Header("Manager")]
+    public AssemblyLineManager assemblyLineManager;
+
     //properties
     public float MorningDuration
     {
@@ -153,8 +160,14 @@ public class TimeManager : MonoBehaviour {
     void CalculateScore(int dYear, int dMonth, int dDays, int dHours, float dMinutes, float dSeconds)
     {
         //calculate score here
-        Debug.Log("Years: " + dYear + ", Months: " + dMonth + ", Days: " + dDays + ", Hours: " + dHours + "\n");
+        Debug.Log("Years: " + dYear + ", Months: " + dMonth + ", Days: " + dDays + ", Hours: " + dHours + ", Minutes: "+ dMinutes + ", Seconds: "+ dSeconds+ "\n");
         Debug.Log("Time Missed: " + dMinutes + ":" + dSeconds);
+        float timeInMin = (dYear * (518400)) + (dMonth * (43200)) + (dDays * (1440)) + (dHours * (60)) + dMinutes + (dSeconds / (60.0f));
+
+        //add money to factory_so
+        assemblyLineManager.CalcAssemblyLinesProfit();
+        factory_SO.DepositMoney(companyMoneyUpdates_SO.assemblyLinesProfit * timeInMin);
+
     }
 
     //Setting Day

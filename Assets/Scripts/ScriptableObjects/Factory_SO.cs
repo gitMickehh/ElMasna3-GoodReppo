@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="New Factory", menuName = "ElMasna3/Factory/Factory")]
-public class Factory_SO : ScriptableObject {
+[CreateAssetMenu(fileName = "New Factory", menuName = "ElMasna3/Factory/Factory")]
+public class Factory_SO : ScriptableObject
+{
 
     public string PlayerName;
     //public Day factoryDay = Day.Sunday;
@@ -13,7 +14,7 @@ public class Factory_SO : ScriptableObject {
     public DateTime_SO LastTimeLogin;
 
     [Header("Factory Money")]
-    public float FactoryMoney= 2000;
+    public double FactoryMoney = 2000;
     public int companyLevel;
 
     [Header("Events")]
@@ -45,9 +46,9 @@ public class Factory_SO : ScriptableObject {
                 WithdrawMoney(companyMoney.playForGreenTeam);
                 break;
 
-            //case 3:
-            //    WithdrawMoney(companyMoney.playForBlueTeam);
-            //    break;
+                //case 3:
+                //    WithdrawMoney(companyMoney.playForBlueTeam);
+                //    break;
         }
     }
 
@@ -63,7 +64,7 @@ public class Factory_SO : ScriptableObject {
             Debug.Log("Factory doesn't have enough money.");
     }
 
-    public void DepositMoney(float money)
+    public void DepositMoney(double money)
     {
         FactoryMoney += money;
         factoryMoneyChanged.Raise();
