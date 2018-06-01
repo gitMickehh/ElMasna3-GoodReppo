@@ -13,7 +13,7 @@ public class Factory_SO : ScriptableObject {
     public DateTime_SO LastTimeLogin;
 
     [Header("Factory Money")]
-    public float FactoryMoney= 2000;
+    public double FactoryMoney= 2000;
     public int companyLevel;
 
     [Header("Events")]
@@ -63,7 +63,7 @@ public class Factory_SO : ScriptableObject {
             Debug.Log("Factory doesn't have enough money.");
     }
 
-    public void DepositMoney(float money)
+    public void DepositMoney(double money)
     {
         FactoryMoney += money;
         factoryMoneyChanged.Raise();
