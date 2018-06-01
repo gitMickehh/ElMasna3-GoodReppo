@@ -7,6 +7,7 @@ public class NavUpDown : MonoBehaviour
     public CameraNavigation_SO NavigationSpecs;
 
     public GameEvent_SO cameraMovedEvent;
+    public ScriptableBool_SO cameraMovedBoolSO;
 
     void Update()
     {
@@ -23,7 +24,9 @@ public class NavUpDown : MonoBehaviour
                 else if ((myTouch.deltaPosition.y < 5) && ((transform.position.y + 0.5f) <= NavigationSpecs.MaximumYPosition))
                     transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
 
+                cameraMovedBoolSO.boolValue = true;
                 cameraMovedEvent.Raise();
+
             }
 
         }

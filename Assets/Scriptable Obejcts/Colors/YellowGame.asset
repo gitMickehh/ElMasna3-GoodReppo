@@ -17,3 +17,4 @@ MonoBehaviour:
   Description: Thief
   sceneRef: AddRefereceToMiniGameSceneHere
   sceneBuildIndex: 2
+  sceneName: ThiefScene

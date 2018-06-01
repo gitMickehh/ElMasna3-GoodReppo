@@ -7,12 +7,12 @@ public class InputHolder : MonoBehaviour {
     [SerializeField]
     FloorRotation[] floorRotationScripts;
 
-    [SerializeField]
     NavUpDown cameraNavigation;
 
     private void Start()
     {
         cameraNavigation = FindObjectOfType<NavUpDown>();
+        UpdateFloorRotations();
     }
 
     void UpdateFloorRotations()
@@ -22,6 +22,7 @@ public class InputHolder : MonoBehaviour {
 
     public void SetFloorTouchActive(bool floorTouchOn)
     {
+        UpdateFloorRotations();
         for (int i = 0; i < floorRotationScripts.Length; i++)
         {
             floorRotationScripts[i].enabled = floorTouchOn;
