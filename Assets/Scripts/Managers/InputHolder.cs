@@ -5,28 +5,20 @@ using UnityEngine;
 public class InputHolder : MonoBehaviour {
 
     [SerializeField]
-    FloorRotation[] floorRotationScripts;
+    FloorManager fm;
 
     NavUpDown cameraNavigation;
 
     private void Start()
     {
         cameraNavigation = FindObjectOfType<NavUpDown>();
-        UpdateFloorRotations();
-    }
-
-    void UpdateFloorRotations()
-    {
-        floorRotationScripts = FindObjectsOfType<FloorRotation>();
+        fm = FindObjectOfType<FloorManager>();
     }
 
     public void SetFloorTouchActive(bool floorTouchOn)
     {
-        UpdateFloorRotations();
-        for (int i = 0; i < floorRotationScripts.Length; i++)
-        {
-            floorRotationScripts[i].enabled = floorTouchOn;
-        }
+        //fm.SetFloorTouchActive(floorTouchOn);
+        fm.currentFloorSelected.GetComponent<FloorRotation>().enabled = floorTouchOn;
     }
 
     public void SetCameraTouchActive(bool cameraTouchOn)
