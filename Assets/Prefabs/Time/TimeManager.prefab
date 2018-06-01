@@ -59,6 +59,10 @@ MonoBehaviour:
   firstTimePlayed: {fileID: 11400000, guid: 3ab56e108fe898e4498be3448bad62fb, type: 2}
   lastTimePlayed: {fileID: 11400000, guid: 81a1836bbcc447545a2b88e729c21485, type: 2}
   timer: {fileID: 0}
+  companyMoneyUpdates_SO: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d,
+    type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  assemblyLineManager: {fileID: 0}
 --- !u!114 &114909910396254752
 MonoBehaviour:
   m_ObjectHideFlags: 1

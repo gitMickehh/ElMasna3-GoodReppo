@@ -167,6 +167,7 @@ public class TimeManager : MonoBehaviour {
         //add money to factory_so
         assemblyLineManager.CalcAssemblyLinesProfit();
         factory_SO.DepositMoney(companyMoneyUpdates_SO.assemblyLinesProfit * timeInMin);
+        print(companyMoneyUpdates_SO.assemblyLinesProfit * timeInMin);
 
     }
 
