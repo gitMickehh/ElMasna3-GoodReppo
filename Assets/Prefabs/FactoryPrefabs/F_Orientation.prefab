@@ -12790,7 +12790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4034830285534080}
-  isWorking: 0
   fillImg: {fileID: 114693527722579346}
   worker: {fileID: 0}
 --- !u!114 &114441502090118204
@@ -12838,7 +12837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4495537931111108}
-  isWorking: 0
   fillImg: {fileID: 114725077164548634}
   worker: {fileID: 0}
 --- !u!114 &114478840876011864
@@ -13052,7 +13050,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4456658933011264}
-  isWorking: 0
   fillImg: {fileID: 114739286724492592}
   worker: {fileID: 0}
 --- !u!114 &114621476613483752
@@ -13423,7 +13420,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4348943353173494}
-  isWorking: 0
   fillImg: {fileID: 114601433652179820}
   worker: {fileID: 0}
 --- !u!114 &114811514126394686
@@ -13437,7 +13433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd0b21b1531edd4ebf5557fb96bb085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assemblyLineManager: {fileID: 0}
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   Machines:
   - {fileID: 114807353191244656}
@@ -13454,7 +13449,6 @@ MonoBehaviour:
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   L_IterationFinished: {fileID: 11400000, guid: 5aedc896d567a804099fa221d06b6020,
     type: 2}
-  isWorking: 0
 --- !u!114 &114871352185301672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13645,7 +13639,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   workerPosition: {fileID: 4759256344858696}
-  isWorking: 0
   fillImg: {fileID: 114721089326554332}
   worker: {fileID: 0}
 --- !u!137 &137044556731866734

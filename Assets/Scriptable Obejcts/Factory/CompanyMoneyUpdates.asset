@@ -11,12 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d04db8805716864ab4cd10a7e558c6d, type: 3}
   m_Name: CompanyMoneyUpdates
   m_EditorClassIdentifier: 
-  levelUpCost: 40000
+  levelUpCost: 20000
   playForRedTeam: 50
   playForYellowTeam: 50
   playForGreenTeam: 50
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   WorkerManager: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
     type: 2}
-  assemblyLineManager: {fileID: 114849529122974094, guid: 7ac62ae61149b314f91ec088d8a5b2f6,
+  PlayToRaiseTeamLevel: {fileID: 114289673670503314, guid: d2ae631225943d843aa0feca13d598bc,
     type: 2}
