@@ -508,6 +508,7 @@ GameObject:
   - component: {fileID: 114732749138250690}
   - component: {fileID: 114310705431330212}
   - component: {fileID: 114058708931929280}
+  - component: {fileID: 114623874496882100}
   m_Layer: 5
   m_Name: UI_Worker
   m_TagString: Untagged
@@ -1495,6 +1496,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Sun
+--- !u!114 &114623874496882100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870785362683078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6564115c81a733641aa152890c7b0ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI_OpenEvent: {fileID: 11400000, guid: 7f266aab3049e3042836f89d4fc5d189, type: 2}
+  UI_CloseEvent: {fileID: 11400000, guid: 07e44d871528a564d8ab89eebb82420e, type: 2}
 --- !u!114 &114644400331759434
 MonoBehaviour:
   m_ObjectHideFlags: 1

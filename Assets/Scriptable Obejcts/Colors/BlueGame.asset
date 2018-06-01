@@ -17,3 +17,4 @@ MonoBehaviour:
   Description: Ice Breaking
   sceneRef: AddRefereceToMiniGameSceneHere
   sceneBuildIndex: 1
+  sceneName: PinballScene

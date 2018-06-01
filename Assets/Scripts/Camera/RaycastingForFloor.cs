@@ -34,11 +34,11 @@ public class RaycastingForFloor : MonoBehaviour {
         }
     }
 
-    public void ShootRays()
+    /*public void ShootRays()
     {
         moving = true;
         shootingTime = 0;
-    }
+    }*/
 
     void ShootRaysFixedUpdate()
     {

@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 114846173111223576}
   - component: {fileID: 114960574872727238}
   - component: {fileID: 114710639359754778}
-  - component: {fileID: 114516352540748608}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -106,7 +105,7 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 2048
---- !u!114 &114516352540748608
+--- !u!114 &114710639359754778
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,27 +113,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331869992439824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80fe80228ab63b440bd62b8f3650ac37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orthoZoomSpeed: 0.05
-  minOrthographicSize: 8.7
-  maxOrthographicSize: 15
---- !u!114 &114710639359754778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1331869992439824}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc4b8ec1744b12d43b5c7d9afe652ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomTargetPos: {fileID: 0}
-  transitionDuration: 10
-  lastTransform: {fileID: 0}
-  zoomed: 0
 --- !u!114 &114810855277935524
 MonoBehaviour:
   m_ObjectHideFlags: 1
