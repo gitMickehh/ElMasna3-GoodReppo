@@ -9,22 +9,25 @@ public class RaycastingForFloor : MonoBehaviour {
     //Vector3 target;
     public LayerMask floorLayer;
 
-    bool moving;
+    public ScriptableBool_SO moving;
 
     float shootingTime = 0;
+
+    private void Start()
+    {
+        floorManager = FindObjectOfType<FloorManager>();
+    }
 
     private void FixedUpdate()
     {
 
-
-
-        if (moving)
+        if (moving.boolValue)
         {
             shootingTime += Time.fixedDeltaTime;
 
             if (shootingTime >= 0.5f)
             {
-                moving = false;
+                moving.boolValue = false;
                 shootingTime = 0;
             }
             else
@@ -33,12 +36,6 @@ public class RaycastingForFloor : MonoBehaviour {
             }
         }
     }
-
-    /*public void ShootRays()
-    {
-        moving = true;
-        shootingTime = 0;
-    }*/
 
     void ShootRaysFixedUpdate()
     {

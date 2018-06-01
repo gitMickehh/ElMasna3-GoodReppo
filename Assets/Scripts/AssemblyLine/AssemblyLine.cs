@@ -31,7 +31,7 @@ public class AssemblyLine: MonoBehaviour
         j = 0;
         moneyMadeInLine = 0;
         isWorking = true;
-        print("set isworking to true");
+        //print("set isworking to true");
 
         assemblyLineManager = FindObjectOfType<AssemblyLineManager>();
         assemblyLineManager.assemblyLines.Add(gameObject.GetComponent<AssemblyLine>());

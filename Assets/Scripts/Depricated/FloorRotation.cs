@@ -31,7 +31,7 @@ public class FloorRotation : MonoBehaviour {
 
             if (touchZero.phase == TouchPhase.Began)
             {
-                Debug.Log("tap");
+                //Debug.Log("tap");
             }
 
             if (touchZero.phase == TouchPhase.Moved)

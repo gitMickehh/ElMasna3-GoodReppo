@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ef1d2b3b340924db141b61292a54be, type: 3}
   m_Name: CameraMoving
   m_EditorClassIdentifier: 
-  boolValue: 0
+  boolValue: 1

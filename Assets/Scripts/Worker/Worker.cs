@@ -73,7 +73,7 @@ public class Worker : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("I started");
+        //Debug.Log("I started");
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
         skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
         //workerManager = GameObject.FindGameObjectWithTag("WorkerManager").GetComponent<WorkerManager>();

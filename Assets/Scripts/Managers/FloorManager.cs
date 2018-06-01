@@ -8,18 +8,22 @@ public class FloorManager : MonoBehaviour {
 
     [Header("Floor")]
     public GameObject FloorPrefab;
-    public List<FloorRotation> floorsList;
+    public FloorRotation[] floorsList;
     public FloorRotation TopFloor;
 
     [Header("Camera")]
     public CameraNavigation_SO CameraNavigator;
     public GameObject currentFloorSelected;
 
+    private void Start()
+    {
+        floorsList = FindObjectsOfType<FloorRotation>();
+    }
+
     public void OnClickAddFloor()
     {
         print("Add Floor.");
         Factory_SO.LevelUp();
-        
         
         Vector3 FloorPosition = TopFloor.transform.position;
         FloorPosition.y += (29.73f);
