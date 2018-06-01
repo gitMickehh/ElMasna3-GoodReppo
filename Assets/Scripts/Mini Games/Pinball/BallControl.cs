@@ -9,44 +9,24 @@ public class BallControl : MonoBehaviour {
     Vector2 speed;
     public float speedControl = 10;
 
-    Queue<Coroutine> coroutinePushes;
-    
     private void Start()
     {
         my_body = GetComponent<Rigidbody2D>();
-        coroutinePushes = new Queue<Coroutine>();
     }
 
     void Update()
     {
         speed = Input.acceleration;
-    }
-
-    private void FixedUpdate()
-    {
         my_body.AddForce(speed * speedControl);
+        //transform.Translate(Input.acceleration.x, Input.acceleration.y, 0);
     }
 
-    public void PushBall(Vector3 trapPushStrength, float triggerWaitTime)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        var x = StartCoroutine(PushBallCo(trapPushStrength,triggerWaitTime));
-
-        coroutinePushes.Enqueue(x);
+        if (collision.tag == "PinballGoal")
+        {
+            Debug.Log("Goal");
+            Destroy(this.gameObject);
+        }
     }
-
-    public void CancelPushBall()
-    {
-        var x = coroutinePushes.Dequeue();
-
-        StopCoroutine(x);
-    }
-
-
-    IEnumerator PushBallCo(Vector3 trapPushStrength, float triggerWaitTime)
-    {
-        yield return new WaitForSeconds(triggerWaitTime);
-
-        my_body.AddForce(trapPushStrength);
-    }
-
 }

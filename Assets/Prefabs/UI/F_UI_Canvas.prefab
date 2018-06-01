@@ -290,7 +290,6 @@ GameObject:
   - component: {fileID: 114739951776286962}
   - component: {fileID: 114503862809993928}
   - component: {fileID: 114582542734379902}
-  - component: {fileID: 114340153440092970}
   m_Layer: 5
   m_Name: F_UI_Canvas
   m_TagString: Untagged
@@ -459,19 +458,6 @@ MonoBehaviour:
   index: 0
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   miniGameStarted: {fileID: 11400000, guid: 67509b22711573d44bddea0bf81104de, type: 2}
---- !u!114 &114340153440092970
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1777193441205330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6564115c81a733641aa152890c7b0ea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UI_OpenEvent: {fileID: 11400000, guid: 7f266aab3049e3042836f89d4fc5d189, type: 2}
-  UI_CloseEvent: {fileID: 11400000, guid: 07e44d871528a564d8ab89eebb82420e, type: 2}
 --- !u!114 &114346019355844052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1098,6 +1084,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114993375410323356}
         m_MethodName: LevelUpFactory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d, type: 2}
+        m_MethodName: UpdateLevelUpCost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

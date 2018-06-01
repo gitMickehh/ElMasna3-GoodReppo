@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114432984746350748}
   - component: {fileID: 114511251034549674}
   - component: {fileID: 114587408346105702}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Thief 5
   m_TagString: Thief
   m_Icon: {fileID: 0}

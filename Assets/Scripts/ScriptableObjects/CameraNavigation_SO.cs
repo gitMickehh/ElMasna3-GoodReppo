@@ -6,8 +6,8 @@ using UnityEngine;
 public class CameraNavigation_SO : ScriptableObject {
 
 
-    public float MinimumYPosition = 17f;
-    public float MaximumYPosition = 60f;
+    public float MinimumYPosition = 10f;
+    public float MaximumYPosition = 50f;
 
 
     private void OnEnable()

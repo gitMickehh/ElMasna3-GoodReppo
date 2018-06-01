@@ -15,7 +15,24 @@ public class CompanyMoneyUpdates_SO : ScriptableObject
 
     public Factory_SO Factory_SO;
     public WorkerManager WorkerManager;
-
+   // public AssemblyLineManager assemblyLineManager;
+    public double assemblyLinesProfit;
+/*
+    public double AssemblyLinesProfit
+    {
+        get
+        {
+            Debug.Log("get");
+            assemblyLinesProfit = assemblyLineManager.CalcAssemblyLinesProfit();
+            return assemblyLinesProfit;
+        }
+        set
+        {
+            assemblyLinesProfit = value;
+            //AssemblyLinesProfit = value;
+        }
+    }
+    */
     public float LevelUpCost
     {
         get
@@ -26,6 +43,12 @@ public class CompanyMoneyUpdates_SO : ScriptableObject
 
         }
     }
+/*
+    public void DepositAssemblyLinesMoneyToFactory()
+    {
+        Factory_SO.DepositMoney(assemblyLinesProfit);
+    }
+    */
 
     ////public float PlayForRedTeam
     ////{
@@ -100,5 +123,5 @@ public class CompanyMoneyUpdates_SO : ScriptableObject
     //    }
     //}
 
-    
+
 }
