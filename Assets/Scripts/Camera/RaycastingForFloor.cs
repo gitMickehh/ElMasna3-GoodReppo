@@ -1,36 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RaycastingForFloor : MonoBehaviour {
 
-    //public Text text1;
-    //public Text text2;
-    //public Text text3;
-
     public FloorManager floorManager;
     
-
     //Vector3 target;
     public LayerMask floorLayer;
 
-    //bool moving;
-    public ScriptableBool_SO moving;
+    bool moving;
 
     float shootingTime = 0;
 
     private void FixedUpdate()
     {
-        //text1.text = moving.ToString();
 
-        if (moving.boolValue)
+
+
+        if (moving)
         {
             shootingTime += Time.fixedDeltaTime;
 
             if (shootingTime >= 0.5f)
             {
-                moving.boolValue = false;
+                moving = false;
                 shootingTime = 0;
             }
             else
@@ -42,27 +36,20 @@ public class RaycastingForFloor : MonoBehaviour {
 
     /*public void ShootRays()
     {
-        moving.boolValue = true;
+        moving = true;
         shootingTime = 0;
     }*/
 
     void ShootRaysFixedUpdate()
     {
         var targetS = new Vector3(Screen.width / 2, Screen.height / 2);
-        var r = new Ray(transform.position,transform.forward);
-
-      
+        var r = Camera.main.ScreenPointToRay(targetS);
 
         RaycastHit info;
-        Physics.Raycast(r,out info, 150, floorLayer,QueryTriggerInteraction.Collide);
-
-        //text2.text = "hit " + Physics.Raycast(r, out info, 150, floorLayer, QueryTriggerInteraction.Collide);
-      
-
-        if (info.collider != null)
+        Physics.Raycast(r,out info, 150, floorLayer);
+        if(info.collider != null)
         {
             //Debug.Log("hit floor :)");
-            //text3.text = info.collider.gameObject.name;
             floorManager.UpdateFloorSelected(info.collider.gameObject);
         }
 
