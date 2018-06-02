@@ -9,39 +9,39 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1303433441260172}
+  m_RootGameObject: {fileID: 1123713461871518}
   m_IsPrefabParent: 1
---- !u!1 &1303433441260172
+--- !u!1 &1123713461871518
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4053228779911748}
-  - component: {fileID: 212282738972747086}
-  - component: {fileID: 50321721613945876}
-  - component: {fileID: 60867539829747182}
-  - component: {fileID: 114279599146371586}
-  - component: {fileID: 114228304808600128}
-  - component: {fileID: 114343827117946046}
-  - component: {fileID: 114760166410566994}
-  - component: {fileID: 114432984746350748}
-  - component: {fileID: 114511251034549674}
-  - component: {fileID: 114587408346105702}
+  - component: {fileID: 4954785475952220}
+  - component: {fileID: 212725015398624710}
+  - component: {fileID: 50337039925842978}
+  - component: {fileID: 114701988534047796}
+  - component: {fileID: 114250563026069004}
+  - component: {fileID: 114813794141481738}
+  - component: {fileID: 114084274510036054}
+  - component: {fileID: 114565771552548156}
+  - component: {fileID: 114089153025984316}
+  - component: {fileID: 114638907474166974}
+  - component: {fileID: 61762815333186406}
   m_Layer: 13
-  m_Name: Thief 5
+  m_Name: Thief 61
   m_TagString: Thief
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4053228779911748
+--- !u!4 &4954785475952220
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.84919316, y: 0.8491936, z: 0.8491936}
@@ -49,13 +49,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50321721613945876
+--- !u!50 &50337039925842978
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -69,12 +69,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60867539829747182
-PolygonCollider2D:
+--- !u!61 &61762815333186406
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -85,72 +85,62 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.22, y: 2.24}
-    newSize: {x: 2.22, y: 2.24}
+    oldSize: {x: 1.24, y: 2.85}
+    newSize: {x: 1.24, y: 2.85}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.52, y: -1.0799999}
-      - {x: 0.72999996, y: -0.28}
-      - {x: 0.84999996, y: -0.29999998}
-      - {x: 0.9, y: -0.29999998}
-      - {x: 0.96, y: -0.26}
-      - {x: 0.96999997, y: -0.16}
-      - {x: 0.94, y: -0.13}
-      - {x: 0.95, y: -0.01}
-      - {x: 0.96, y: 0.17}
-      - {x: 0.88, y: 0.19999999}
-      - {x: 1.04, y: 0.32999998}
-      - {x: 1.11, y: 0.38}
-      - {x: 1.11, y: 0.48}
-      - {x: 1.06, y: 0.51}
-      - {x: 1.02, y: 0.58}
-      - {x: 0.96, y: 0.62}
-      - {x: 0.84, y: 0.65999997}
-      - {x: 0.78999996, y: 0.65999997}
-      - {x: 0.74, y: 0.62}
-      - {x: 0.68, y: 0.66999996}
-      - {x: 0.48999998, y: 0.78999996}
-      - {x: 0.089999996, y: 1.05}
-      - {x: 0.099999994, y: 1.09}
-      - {x: 0.04, y: 1.12}
-      - {x: -0.07, y: 1.12}
-      - {x: -0.089999996, y: 1.11}
-      - {x: -0.47, y: 0.81}
-      - {x: -0.65, y: 0.68}
-      - {x: -0.78, y: 0.62}
-      - {x: -0.83, y: 0.63}
-      - {x: -0.98999995, y: 0.62}
-      - {x: -1.06, y: 0.59999996}
-      - {x: -1.11, y: 0.53999996}
-      - {x: -1.11, y: 0.39999998}
-      - {x: -1.1, y: 0.38}
-      - {x: -1.01, y: 0.29999998}
-      - {x: -0.91999996, y: 0.29999998}
-      - {x: -0.89, y: 0.17999999}
-      - {x: -0.91999996, y: 0.14999999}
-      - {x: -0.93, y: 0.099999994}
-      - {x: -0.91999996, y: -0.11}
-      - {x: -0.95, y: -0.16}
-      - {x: -0.95, y: -0.25}
-      - {x: -0.88, y: -0.31}
-      - {x: -0.82, y: -0.29999998}
-      - {x: -0.72999996, y: -0.26999998}
-      - {x: -0.62, y: -0.48}
-      - {x: -0.56, y: -0.62}
-      - {x: -0.48, y: -0.83}
-      - {x: -0.39999998, y: -1.03}
-      - {x: -0.35999998, y: -1.12}
-      - {x: 0.48999998, y: -1.12}
---- !u!114 &114228304808600128
+  serializedVersion: 2
+  m_Size: {x: 1.24, y: 2.85}
+  m_EdgeRadius: 0
+--- !u!114 &114084274510036054
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd1b0bb49feddc4ea6f115923bb2a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swipeAway: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
+  toDrag: {fileID: 0}
+--- !u!114 &114089153025984316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123713461871518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114565771552548156}
+        m_MethodName: LeaveMoneyWhenRunning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114250563026069004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123713461871518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b987fb39e2b455643ab9e23181feda32, type: 3}
@@ -164,53 +154,12 @@ MonoBehaviour:
   PositionTargetTolerance: 0.5
   moneyLostEvent: {fileID: 11400000, guid: d76e9de6d18a9b8418a6e5fcd7ab2f48, type: 2}
   setOfMoney: {fileID: 0}
---- !u!114 &114279599146371586
+--- !u!114 &114565771552548156
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36de4ae7a5ddac04dbe513593eb3d7fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPlace: {x: 0, y: 0, z: 0}
-  moneyCatchedEvent: {fileID: 11400000, guid: b50cb37051c04de4d887839b4b7327eb, type: 2}
---- !u!114 &114343827117946046
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b50cb37051c04de4d887839b4b7327eb, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114228304808600128}
-        m_MethodName: RunAway
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114432984746350748
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 427e6d23cf98b6b478fbfb4ccbc81c3b, type: 3}
@@ -219,40 +168,12 @@ MonoBehaviour:
   setOfMoney: {fileID: 0}
   gameManager: {fileID: 114550947067485378, guid: d528ba98fb51b194b857ba5d28535781,
     type: 2}
---- !u!114 &114511251034549674
+--- !u!114 &114638907474166974
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114432984746350748}
-        m_MethodName: LeaveMoneyWhenRunning
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114587408346105702
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
@@ -262,7 +183,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114279599146371586}
+      - m_Target: {fileID: 114701988534047796}
         m_MethodName: StopSeeking
         m_Mode: 1
         m_Arguments:
@@ -275,25 +196,53 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114760166410566994
+--- !u!114 &114701988534047796
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd1b0bb49feddc4ea6f115923bb2a95, type: 3}
+  m_Script: {fileID: 11500000, guid: 36de4ae7a5ddac04dbe513593eb3d7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swipeAway: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
-  toDrag: {fileID: 0}
---- !u!212 &212282738972747086
+  startPlace: {x: 0, y: 0, z: 0}
+  moneyCatchedEvent: {fileID: 11400000, guid: b50cb37051c04de4d887839b4b7327eb, type: 2}
+--- !u!114 &114813794141481738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123713461871518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b50cb37051c04de4d887839b4b7327eb, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114250563026069004}
+        m_MethodName: RunAway
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!212 &212725015398624710
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303433441260172}
+  m_GameObject: {fileID: 1123713461871518}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -322,12 +271,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 026244b8eb0955949b8654a2fca18788, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 14c4011ca79a3f84781151f07e3acec9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.22, y: 2.24}
+  m_Size: {x: 1.24, y: 2.85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

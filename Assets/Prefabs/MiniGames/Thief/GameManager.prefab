@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4560701897710984}
   - component: {fileID: 114550947067485378}
   - component: {fileID: 114226211035900668}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,10 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thiefPrefab:
-  - {fileID: 1303433441260172, guid: a137a8ec651476a4481f6fb5b4f354a5, type: 2}
-  - {fileID: 1303433441260172, guid: e4c2af9a4a19dda4e823d22cf8654d6f, type: 2}
-  - {fileID: 1303433441260172, guid: d7d07bd34e1ccd24a977f0481077ce49, type: 2}
-  - {fileID: 1303433441260172, guid: f05c57fc8b9d99e4990f002686ed8088, type: 2}
+  - {fileID: 1005430866428902, guid: 0dfe29dcce8e61f47b4df86a77ac437e, type: 2}
+  - {fileID: 1278866372761502, guid: 0b54b408fc76da8419a3894593c7f09e, type: 2}
+  - {fileID: 1123713461871518, guid: 64623ac10f5a5b041abb0e4963830670, type: 2}
+  - {fileID: 1746498319728788, guid: 10b18956ab9db844cb79165f32e8ca10, type: 2}
   durationBetween2Spawns: 0
   thiefStartPlaces:
   - {fileID: 0}

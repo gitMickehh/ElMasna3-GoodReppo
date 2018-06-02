@@ -254,8 +254,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114641933964237688, guid: a137a8ec651476a4481f6fb5b4f354a5,
-          type: 2}
+      - m_Target: {fileID: 114469450342054112}
         m_MethodName: LeaveMoneyWhenRunning
         m_Mode: 1
         m_Arguments:

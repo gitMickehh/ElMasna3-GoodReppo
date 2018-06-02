@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssemblyLine: MonoBehaviour
+public class AssemblyLine : MonoBehaviour
 {
     [SerializeField]
     AssemblyLineManager assemblyLineManager;
@@ -40,7 +40,7 @@ public class AssemblyLine: MonoBehaviour
         {
             StartCoroutine("AssignWorkersToMachinesAvailable");
         }
-        
+
     }
 
     public IEnumerator AssignWorkersToMachinesAvailable()
@@ -51,33 +51,54 @@ public class AssemblyLine: MonoBehaviour
             for (int i = 0; i < workersInLine.Count && j < Machines.Count; i++)
             {
                 workersInLine[i].AssignWorker(Machines[j].workerPosition);
+                //workersInLine[i].SetWorkerState(WorkerState.Working);
                 StartCoroutine(Machines[j].StartCountDown());
 
                 j++;
                 moneyMadeInLine += (50 * Mathf.Pow((1.2f), workersInLine[i].level)) + ((Factory_SO.companyLevel - 1) * 100);
             }
+           // workersInLine[0].PlayerWon();
+            SetWorkersInLineWorking();
+            yield return new WaitForSeconds(machineBase.DurationInMinutes * 60); // *60
 
-            yield return new WaitForSeconds(machineBase.DurationInMinutes*60); // *60
+           // SetWorkersInLineIdle();
 
             if (j >= Machines.Count)
             {
                 //Iteration Finished
 
-               L_IterationFinished.Raise();
+                L_IterationFinished.Raise();
                 moneyMadeInLine = 0;
 
                 j = 0;
             }
+           
         }
     }
 
+    public void SetWorkersInLineWorking()
+    {
+       for (int i = 0; i < workersInLine.Count; i++)
+       {
+            workersInLine[i].SetWorkerState(WorkerState.Working);
+       }
+    }
+/*
+    public void SetWorkersInLineIdle()
+    {
+        for (int i = 0; i < workersInLine.Count; i++)
+        {
+            workersInLine[i].SetWorkerState(WorkerState.Idle);
+        }
+    }
+*/
     public void DepositMoneyToFactory()
     {
         print("L_IterationFinished has been raised.");
         Factory_SO.DepositMoney(moneyMadeInLine);
         moneyMadeInLine = 0;
     }
-    
+
 
     public float CalcMoneyMadePerMin()
     {
@@ -88,7 +109,7 @@ public class AssemblyLine: MonoBehaviour
         {
             moneyPerAssem += (50 * Mathf.Pow((1.2f), workersInLine[i].level)) + ((Factory_SO.companyLevel - 1) * 100);
         }
-        
+
         switch (workersInLine.Count)
         {
             case 1:
