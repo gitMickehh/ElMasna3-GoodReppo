@@ -11,12 +11,12 @@ public class GoalControl : MonoBehaviour {
     public ScriptableInt_SO ballsScored;
 
 
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
         miniGameEndedEvent.Raise();
 
         SceneManager.UnloadSceneAsync(1);
-    }
+    }*/
 
 
     private void OnTriggerEnter2D(Collider2D collision)

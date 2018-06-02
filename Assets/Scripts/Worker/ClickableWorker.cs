@@ -24,17 +24,13 @@ public class ClickableWorker : MonoBehaviour {
     public void ClickWorker()
     {
         Debug.Log(worker.FullName);
-
         workerUI.OpenPanel(worker, cameraPos);
-
     }
 
     //private void OnMouseDown()
     //{
     //    Debug.Log(worker.FullName);
-
     //    workerUI.OpenPanel(worker, cameraPos);
-
     //}
 
 }

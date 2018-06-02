@@ -1,5 +1,6 @@
 ﻿    using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InputHolder : MonoBehaviour {
@@ -8,6 +9,8 @@ public class InputHolder : MonoBehaviour {
     FloorManager fm;
 
     NavUpDown cameraNavigation;
+
+    public TextMeshPro debugTest;
 
     private void Start()
     {
@@ -26,13 +29,16 @@ public class InputHolder : MonoBehaviour {
                 RaycastHit info;
                 if (Physics.Raycast(ray, out info, 300))
                 {
+                    debugTest.text = "hit: " + info.collider.tag;
+
                     if (info.collider.tag == "Worker")
                     {
-                        info.collider.gameObject.GetComponent<ClickableWorker>().ClickWorker();
+                        debugTest.text = "YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEES";
+                        var cw = info.collider.gameObject.GetComponent<ClickableWorker>();
+                        cw.ClickWorker();
                     }
                 }
             }
-
         }
     }
 
