@@ -5,7 +5,7 @@ using UnityEngine;
 public class NavUpDown : MonoBehaviour
 {
     public CameraNavigation_SO NavigationSpecs;
-    public GameEvent_SO cameraMovedEvent;
+    //public GameEvent_SO cameraMovedEvent;
     public ScriptableBool_SO cameraMovedBoolSO;
 
     public float navSpeed = 1.7f;
@@ -27,8 +27,7 @@ public class NavUpDown : MonoBehaviour
                     transform.position = new Vector3((transform.position.x), (transform.position.y  + navSpeed) , transform.position.z);
 
                 cameraMovedBoolSO.boolValue = true;
-                cameraMovedEvent.Raise();
-
+                //cameraMovedEvent.Raise();
             }
 
         }

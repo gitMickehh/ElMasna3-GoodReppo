@@ -30,6 +30,9 @@ public class UI_WorkerScript : MonoBehaviour {
 
     [Header("Swipe Controls")]
     public float swipeCloseSpeed = 5;
+    bool opened = false;
+    float openTime = 0;
+    public float maxOpenTime = 0.5f;
 
     [Header("Events")]
     public GameEvent_SO miniGameStartedEvent;
@@ -47,25 +50,37 @@ public class UI_WorkerScript : MonoBehaviour {
             ClosePanel();
         }
 
-        if (Input.touchCount == 1)
+        if(opened)
         {
-            Touch touchZero = Input.GetTouch(0);
+            openTime += Time.deltaTime;
 
-            if (touchZero.phase == TouchPhase.Moved)
+            if (openTime <= maxOpenTime)
             {
-                float touchZeroPrevPos = touchZero.position.x - touchZero.deltaPosition.x;
+                if (Input.touchCount == 1)
+                    {
+                        Touch touchZero = Input.GetTouch(0);
 
-                // Find the magnitude of the vector (the distance) between the touches in each frame.
-                //float prevTouchDeltaMag = touchZeroPrevPos;
-                float touchDeltaMag = touchZero.position.x;
+                        if (touchZero.phase == TouchPhase.Moved)
+                        {
+                            float touchZeroPrevPos = touchZero.position.x - touchZero.deltaPosition.x;
 
-                if(touchDeltaMag > swipeCloseSpeed)
-                {
-                    ClosePanel();
+                            
+                            float touchDeltaMag = touchZero.position.x;
+
+                            if(touchDeltaMag > swipeCloseSpeed)
+                            {
+                                Debug.Log("hi");
+                                ClosePanel();
+                            }
+                        }
                 }
             }
+            else
+            {
+                opened = false;
+                openTime = 0;
+            }
         }
-
 
     }
 
@@ -76,11 +91,13 @@ public class UI_WorkerScript : MonoBehaviour {
         MoveCamera(cameraPos);
 
         //turn off other input
-        GetComponent<UI_OpenCloseEvent>().UI_OpenEvent.Raise();
+        //GetComponent<UI_OpenCloseEvent>().UI_OpenEvent.Raise();
 
         //animate in
         animatorControllers[0].SetBool("WorkerClicked", true);
         animatorControllers[1].SetBool("WorkerClicked", true);
+
+        opened = true;
     }
 
     public void ClosePanel()
@@ -90,10 +107,13 @@ public class UI_WorkerScript : MonoBehaviour {
         animatorControllers[1].SetBool("WorkerClicked", false);
 
         //turn on other input
-        GetComponent<UI_OpenCloseEvent>().UI_CloseEvent.Raise();
+        //GetComponent<UI_OpenCloseEvent>().UI_CloseEvent.Raise();
 
         //clearCamera
         ClearCamera();
+
+        opened = false;
+        openTime = 0;
     }
 
     public void FillWorkerData(Worker w)
@@ -157,8 +177,8 @@ public class UI_WorkerScript : MonoBehaviour {
     public void PlayButton()
     {
         var bIndex = worker.workerColor.sceneBuildIndex;
-        StartCoroutine(LoadSceneCo(bIndex));
-
+        //StartCoroutine(LoadSceneCo(bIndex));
+        SceneManager.LoadSceneAsync(bIndex);
     }
 
     IEnumerator LoadSceneCo(int bIndex)

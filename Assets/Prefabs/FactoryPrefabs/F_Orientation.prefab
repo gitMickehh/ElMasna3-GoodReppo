@@ -6700,7 +6700,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496557702474790}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6713,7 +6713,7 @@ Transform:
   - {fileID: 4296538459476894}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4116063215303402
 Transform:
   m_ObjectHideFlags: 1
@@ -12456,8 +12456,8 @@ MonoBehaviour:
   complaints: []
   meshRenderers: []
   skinnedMeshRenderers: []
-  LevelUpEvent: {fileID: 0}
-  factory_SO: {fileID: 0}
+  LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114076478237535736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12550,8 +12550,8 @@ MonoBehaviour:
   complaints: []
   meshRenderers: []
   skinnedMeshRenderers: []
-  LevelUpEvent: {fileID: 0}
-  factory_SO: {fileID: 0}
+  LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114120242344944776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12583,8 +12583,8 @@ MonoBehaviour:
   complaints: []
   meshRenderers: []
   skinnedMeshRenderers: []
-  LevelUpEvent: {fileID: 0}
-  factory_SO: {fileID: 0}
+  LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114129119780064100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13542,8 +13542,8 @@ MonoBehaviour:
   complaints: []
   meshRenderers: []
   skinnedMeshRenderers: []
-  LevelUpEvent: {fileID: 0}
-  factory_SO: {fileID: 0}
+  LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114886689382074122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13575,8 +13575,8 @@ MonoBehaviour:
   complaints: []
   meshRenderers: []
   skinnedMeshRenderers: []
-  LevelUpEvent: {fileID: 0}
-  factory_SO: {fileID: 0}
+  LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114888110519905856
 MonoBehaviour:
   m_ObjectHideFlags: 1

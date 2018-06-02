@@ -46,7 +46,7 @@ public class RaycastingForFloor : MonoBehaviour {
         Physics.Raycast(r,out info, 150, floorLayer);
         if(info.collider != null)
         {
-            Debug.Log("hit floor :) -> "+ info.collider.gameObject.name);
+            //Debug.Log("hit floor :) -> "+ info.collider.gameObject.name);
             floorManager.UpdateFloorSelected(info.collider.gameObject);
         }
 

@@ -13,7 +13,6 @@ public class ClickableWorker : MonoBehaviour {
     {
         worker = GetComponent<Worker>();
 
-        // hmm
         if(workerUI == null)
         {
             workerUI = FindObjectOfType<UI_WorkerScript>();
@@ -21,16 +20,11 @@ public class ClickableWorker : MonoBehaviour {
 
     }
 
+
     public void ClickWorker()
     {
         Debug.Log(worker.FullName);
         workerUI.OpenPanel(worker, cameraPos);
     }
-
-    //private void OnMouseDown()
-    //{
-    //    Debug.Log(worker.FullName);
-    //    workerUI.OpenPanel(worker, cameraPos);
-    //}
 
 }

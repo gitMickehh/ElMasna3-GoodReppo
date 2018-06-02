@@ -10,7 +10,7 @@ public class InputHolder : MonoBehaviour {
 
     NavUpDown cameraNavigation;
 
-    public TextMeshPro debugTest;
+    //public TextMeshPro debugTest;
 
     private void Start()
     {
@@ -29,12 +29,12 @@ public class InputHolder : MonoBehaviour {
                 RaycastHit info;
                 if (Physics.Raycast(ray, out info, 300))
                 {
-                    debugTest.text = "hit: " + info.collider.tag;
+                    //debugTest.text = "hit: " + info.collider.tag;
 
                     if (info.collider.tag == "Worker")
                     {
-                        debugTest.text = "YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEES";
-                        var cw = info.collider.gameObject.GetComponent<ClickableWorker>();
+                        //debugTest.text = "YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEES";
+                        ClickableWorker cw = info.collider.gameObject.GetComponent<ClickableWorker>();
                         cw.ClickWorker();
                     }
                 }
