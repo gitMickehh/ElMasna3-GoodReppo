@@ -18,7 +18,7 @@ public class Thief : MonoBehaviour {
         {
             print("catched money.");
             other.gameObject.transform.SetParent(transform);
-            other.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             moneyCatchedEvent.Raise();
         }
     }

@@ -7,7 +7,7 @@ public enum WorkerState
     Idle,
     Working,
     InMiniGame,
-    Accepted,
+    Winning,
     Refused,
     Leading
 }
@@ -63,6 +63,8 @@ public class Worker : MonoBehaviour
     [Header("Scriptable Objects")]
     public Factory_SO factory_SO;
 
+    public Animator workerAnimator;
+
     public float PlayingToLevelIndivCost
     {
         get
@@ -71,15 +73,21 @@ public class Worker : MonoBehaviour
         }
     }
 
-    void Start()
+    void Awake()
     {
         //Debug.Log("I started");
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
         skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
         //workerManager = GameObject.FindGameObjectWithTag("WorkerManager").GetComponent<WorkerManager>();
         workerManager = FindObjectOfType<WorkerManager>();
+        workerAnimator = GetComponentInChildren<Animator>();
 
+        
+    }
+    private void Start()
+    {
         GenerateWorker();
+        workerState = WorkerState.Idle;
     }
 
     //states for worker and for animation
@@ -263,6 +271,41 @@ public class Worker : MonoBehaviour
     public void PayForPlaying()
     {
         factory_SO.WithdrawMoney(PlayingToLevelIndivCost);
+    }
+
+    public void SetWorkerState(WorkerState state)
+    {
+        workerState = state;
+        switch (state)
+        {
+            case WorkerState.Idle:
+             //   if (workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Working")) ;
+             //   else
+              //  {
+                    workerAnimator.SetBool("Working", false);
+              //  }
+                break;
+
+            case WorkerState.Working:
+               // if (workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) ;
+               // else
+               // {
+                    workerAnimator.SetBool("Working", true);
+              //  }
+                break;
+
+            case WorkerState.Winning:
+                print("winning");
+                workerAnimator.SetBool("Working", false);
+                workerAnimator.SetTrigger("WinTrigger");
+               
+                break;
+        }
+    }
+
+    public void PlayerWon()
+    {
+        SetWorkerState(WorkerState.Winning);
     }
 
 }
