@@ -52,33 +52,32 @@ public class UI_WorkerScript : MonoBehaviour {
 
         if(opened)
         {
-            openTime += Time.deltaTime;
-
-            if (openTime <= maxOpenTime)
+            if (openTime >= maxOpenTime)
             {
+                openTime = 0;
+
                 if (Input.touchCount == 1)
+                {
+                    Touch touchZero = Input.GetTouch(0);
+
+                    if (touchZero.phase == TouchPhase.Moved)
                     {
-                        Touch touchZero = Input.GetTouch(0);
+                        float touchZeroPrevPos = touchZero.position.x - touchZero.deltaPosition.x;
 
-                        if (touchZero.phase == TouchPhase.Moved)
+
+                        float touchDeltaMag = touchZero.position.x;
+
+                        if (touchDeltaMag > swipeCloseSpeed)
                         {
-                            float touchZeroPrevPos = touchZero.position.x - touchZero.deltaPosition.x;
-
-                            
-                            float touchDeltaMag = touchZero.position.x;
-
-                            if(touchDeltaMag > swipeCloseSpeed)
-                            {
-                                Debug.Log("hi");
-                                ClosePanel();
-                            }
+                            ClosePanel();
                         }
+                    }
                 }
+
             }
             else
             {
-                opened = false;
-                openTime = 0;
+                openTime += Time.deltaTime;
             }
         }
 
@@ -98,6 +97,8 @@ public class UI_WorkerScript : MonoBehaviour {
         animatorControllers[1].SetBool("WorkerClicked", true);
 
         opened = true;
+
+        FindObjectOfType<FloorManager>().SetCurrentFloorActive(false);
     }
 
     public void ClosePanel()
@@ -114,6 +115,9 @@ public class UI_WorkerScript : MonoBehaviour {
 
         opened = false;
         openTime = 0;
+
+        FindObjectOfType<FloorManager>().SetCurrentFloorActive(true);
+
     }
 
     public void FillWorkerData(Worker w)
@@ -156,6 +160,8 @@ public class UI_WorkerScript : MonoBehaviour {
 
         UICamera.transform.position = CameraPosition.position;
         UICamera.transform.rotation = CameraPosition.rotation;
+
+        UICamera.transform.parent = CameraPosition;
     }
 
     private void ClearCamera()

@@ -67,4 +67,10 @@ public class FloorManager : MonoBehaviour {
         //UpdateFloorSelected(currentFloorSelected);
     }
 
+
+    public void SetCurrentFloorActive(bool floorTouchOn)
+    {
+        currentFloorSelected.GetComponent<FloorRotation>().enabled = floorTouchOn;
+    }
+
 }
