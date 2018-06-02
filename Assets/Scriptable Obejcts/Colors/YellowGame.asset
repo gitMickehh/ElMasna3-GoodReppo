@@ -16,5 +16,5 @@ MonoBehaviour:
   MiniGameName: Yellow Game
   Description: Thief
   sceneRef: AddRefereceToMiniGameSceneHere
-  sceneBuildIndex: 2
+  sceneBuildIndex: 3
   sceneName: ThiefScene

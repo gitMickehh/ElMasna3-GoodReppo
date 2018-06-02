@@ -35,11 +35,11 @@ public class PlayToRaiseTeamLevel : MonoBehaviour {
         {
             case 0:
                 Factory_SO.TeamLevelUp(0);
-                StartCoroutine(LoadScene(1));
+                StartCoroutine(LoadScene(2));
                 break;
             case 1:
                 Factory_SO.TeamLevelUp(1);
-                StartCoroutine(LoadScene(2));
+                StartCoroutine(LoadScene(3));
               
                 break;
             //case 2:
