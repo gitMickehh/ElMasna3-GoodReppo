@@ -36,4 +36,9 @@ public class GameEvent_SO : ScriptableObject {
         Debug.Log("yo");
     }
 
+    public void ClearListeners()
+    {
+        listeners.Clear();
+    }
+
 }
