@@ -66,6 +66,7 @@ public class UI_WorkerScript : MonoBehaviour {
             }
         }
 
+
     }
 
     public void OpenPanel(Worker w, Transform cameraPos)

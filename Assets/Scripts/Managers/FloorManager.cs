@@ -17,6 +17,18 @@ public class FloorManager : MonoBehaviour {
 
     private void Start()
     {
+        UpdateFloors();
+
+        for (int i = 0; i < floorsList.Length; i++)
+        {
+            floorsList[i].GetComponent<FloorRotation>().enabled = false;
+        }
+
+        UpdateFloorSelected(currentFloorSelected);
+    }
+
+    private void UpdateFloors()
+    {
         floorsList = FindObjectsOfType<FloorRotation>();
     }
 
@@ -40,6 +52,19 @@ public class FloorManager : MonoBehaviour {
         currentFloorSelected.GetComponent<FloorRotation>().enabled = false;
         currentFloorSelected = floor;
         currentFloorSelected.GetComponent<FloorRotation>().enabled = true;
+
+        //Debug.Log(currentFloorSelected.name);
+    }
+
+    public void SetFloorTouchActive(bool floorTouchOn)
+    {
+        UpdateFloors();
+        for (int i = 0; i < floorsList.Length; i++)
+        {
+            floorsList[i].enabled = floorTouchOn;
+        }
+
+        //UpdateFloorSelected(currentFloorSelected);
     }
 
 }
