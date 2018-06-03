@@ -171,14 +171,39 @@ public class WorkerManager : MonoBehaviour
 
     public void DestroyWorkersInOrientation()
     {
-        print("Destroying Workers.");
-        for(int i= 0; i< workersInOrientation.Count; i++)
+        for(int i= workersInOrientation.Count-1; i>=0; i--)
         {
-            Destroy(workersInOrientation[i].gameObject);
+            var gOb = workersInOrientation[i].gameObject;
+            Debug.Log("Destroying " + gOb.name);
+            Destroy(gOb, 0.3f);
+            RemoveFromColorList(gOb.GetComponent<Worker>());
+            workersInOrientation.Remove(gOb);
         }
-        
+
     }
-   
+
+    void RemoveFromColorList(Worker w)
+    {
+        switch (w.workerColor.colorName)
+        {
+            case "yellow":
+                YellowWorkers.Remove(w);
+                break;
+            case "red":
+                RedWorkers.Remove(w);
+                break;
+            case "blue":
+                BlueWorkers.Remove(w);
+                break;
+            case "green":
+                GreenWorkers.Remove(w);
+                break;
+            default:
+                break;
+        }
+    }
+
+
     public void AddNewWorker(GameObject w)
     {
         WorkersPrefabs.Add(w);
