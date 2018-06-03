@@ -8,6 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a631be24f4b884f9f4ca9401760a25, type: 3}
-  m_Name: DoubleTapEvent
+  m_Script: {fileID: 11500000, guid: fb9188e72efdc474aaa4c3d92d853229, type: 3}
+  m_Name: WorkerInMiniGame_SO
   m_EditorClassIdentifier: 
+  workerInGame: {fileID: 0}
+  workerWon: 0

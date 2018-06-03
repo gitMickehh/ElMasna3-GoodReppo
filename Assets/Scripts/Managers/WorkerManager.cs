@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class WorkerManager : MonoBehaviour
 {
+    public enum TShirtsColor { Red, Green, Yellow, Blue };
 
     [Header("Worker Manager Lists")]
     public List<GameObject> WorkersPrefabs;
@@ -18,10 +21,12 @@ public class WorkerManager : MonoBehaviour
     public ListOfStrings_SO listOfWorkerKeys;
     public WorkerSpawner workerSpawner;
 
-    public enum TShirtsColor {Red, Green,Yellow, Blue};
-
+    [Header("Scriptable Objects")]
     public CompanyMoneyUpdates_SO companyMoneyUpdates_SO;
     public Factory_SO factory_SO;
+
+    [Header("Worker In MiniGame")]
+    public Worker workerInGame;
 
     //properties
     public int TotalRedColor
