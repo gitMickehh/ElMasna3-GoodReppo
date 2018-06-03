@@ -37,6 +37,9 @@ public class UI_WorkerScript : MonoBehaviour {
     [Header("Events")]
     public GameEvent_SO miniGameStartedEvent;
 
+    [Header("Scriptable Objects")]
+    public WorkerInMiniGame_SO workerInMiniGame_SO; 
+
     private void Start()
     {
         UICamera.enabled = false;
@@ -176,6 +179,7 @@ public class UI_WorkerScript : MonoBehaviour {
 
     public void PlayButton()
     {
+        workerInMiniGame_SO.WorkerInGame = worker;
         var bIndex = worker.workerColor.sceneBuildIndex;
         //StartCoroutine(LoadSceneCo(bIndex));
         SceneManager.LoadSceneAsync(bIndex);
@@ -202,5 +206,7 @@ public class UI_WorkerScript : MonoBehaviour {
     {
         transform.parent.gameObject.SetActive(true);
     }
+
+    
 
 }

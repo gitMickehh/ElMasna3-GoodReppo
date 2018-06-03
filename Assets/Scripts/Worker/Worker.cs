@@ -62,6 +62,7 @@ public class Worker : MonoBehaviour
 
     [Header("Scriptable Objects")]
     public Factory_SO factory_SO;
+    public WorkerInMiniGame_SO workerInMiniGame_SO;
 
     public Animator workerAnimator;
 
@@ -306,6 +307,8 @@ public class Worker : MonoBehaviour
     public void PlayerWon()
     {
         SetWorkerState(WorkerState.Winning);
+        workerInMiniGame_SO.WorkerInGame = null;
+        workerInMiniGame_SO.workerWon = false;
     }
 
 }
