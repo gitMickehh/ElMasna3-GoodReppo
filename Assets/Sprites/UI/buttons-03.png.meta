@@ -3,7 +3,17 @@ guid: 163198853b0af4c4daff9967c34dc57d
 timeCreated: 1528019761
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Money
+    21300002: BT_Cancel
+    21300004: ComplaintsUI_Panel
+    21300006: BT_Promotion
+    21300008: BT_Complaints
+    21300010: BT_AssemblyLine
+    21300012: Time_SunClouds
+    21300014: BT_Pinball
+    21300016: BT_GerenicButton
+    21300018: BT_ThiefMinigame
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -89,7 +99,147 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Money
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 3600
+        width: 714
+        height: 707
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_Cancel
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 3607
+        width: 660
+        height: 676
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ComplaintsUI_Panel
+      rect:
+        serializedVersion: 2
+        x: 4073
+        y: 279
+        width: 3927
+        height: 3864
+      alignment: 9
+      pivot: {x: 0.9983903, y: 0.53762573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_Promotion
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 2643
+        width: 769
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_Complaints
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 2658
+        width: 715
+        height: 732
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_AssemblyLine
+      rect:
+        serializedVersion: 2
+        x: 2717
+        y: 2619
+        width: 715
+        height: 735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time_SunClouds
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1365
+        width: 1063
+        height: 906
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_Pinball
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 1408
+        width: 874
+        height: 891
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_GerenicButton
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 279
+        width: 2308
+        height: 766
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_ThiefMinigame
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 279
+        width: 878
+        height: 887
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

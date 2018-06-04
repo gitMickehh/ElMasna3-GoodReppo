@@ -3,7 +3,21 @@ guid: 73030e36508db854f8b65c4b294c0035
 timeCreated: 1528019773
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BT_Confirm
+    21300002: BT_DayOff
+    21300004: BT_Stamp
+    21300006: Coin_Small
+    21300008: WorkerUI_Panel
+    21300010: WorkerUI_BackgroundPic
+    21300012: BT_ThiefMiniGame
+    21300014: Time_Sun
+    21300016: Time_Moon
+    21300018: WorkerUI_PlayerPicUnder
+    21300020: Time_MoonCloudy
+    21300022: BT_PlayButton
+    21300024: BT_BuildFloor
+    21300026: CoinHolder
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -89,7 +103,203 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BT_Confirm
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 3545
+        width: 660
+        height: 676
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_DayOff
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 3615
+        width: 721
+        height: 723
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_Stamp
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 3627
+        width: 699
+        height: 719
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Coin_Small
+      rect:
+        serializedVersion: 2
+        x: 4545
+        y: 3928
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WorkerUI_Panel
+      rect:
+        serializedVersion: 2
+        x: 4928
+        y: 404
+        width: 3062
+        height: 4094
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WorkerUI_BackgroundPic
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1756
+        width: 1185
+        height: 1281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_ThiefMiniGame
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 1736
+        width: 878
+        height: 891
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time_Sun
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 2615
+        width: 801
+        height: 766
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time_Moon
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 2592
+        width: 805
+        height: 761
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WorkerUI_PlayerPicUnder
+      rect:
+        serializedVersion: 2
+        x: 3381
+        y: 1631
+        width: 1361
+        height: 621
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time_MoonCloudy
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 553
+        width: 1024
+        height: 909
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_PlayButton
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1094
+        width: 1078
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BT_BuildFloor
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 244
+        width: 714
+        height: 735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoinHolder
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 499
+        width: 2371
+        height: 472
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

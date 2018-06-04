@@ -10,11 +10,11 @@ public class F_UI_Money : MonoBehaviour {
 
     void Start()
     {
-        companyMoney.text = factory_SO.FactoryMoney.ToString();
+        companyMoney.text = ((int)factory_SO.FactoryMoney).ToString();
     }
 
     public void ChangeFactoryMoney()
     {
-        companyMoney.text = factory_SO.FactoryMoney.ToString();
+        companyMoney.text = ((int)factory_SO.FactoryMoney).ToString();
     }
 }
