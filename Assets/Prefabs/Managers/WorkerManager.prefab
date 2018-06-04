@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114015113635074040}
   - component: {fileID: 114751559800788458}
   - component: {fileID: 114058060340955206}
+  - component: {fileID: 114904951745753476}
   m_Layer: 0
   m_Name: WorkerManager
   m_TagString: WorkerManager
@@ -140,6 +141,7 @@ MonoBehaviour:
   companyMoneyUpdates_SO: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d,
     type: 2}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  workerInGame: {fileID: 0}
 --- !u!114 &114751559800788458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,6 +159,34 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114221932990920386}
         m_MethodName: GenerateNewWorkers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114904951745753476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356698428104638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2a4ae48314f5e164a8ca6897301f2fda, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114547311667761038}
+        m_MethodName: ReturnFromYellowGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

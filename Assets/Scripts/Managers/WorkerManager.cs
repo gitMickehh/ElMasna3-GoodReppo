@@ -346,6 +346,100 @@ public class WorkerManager : MonoBehaviour
             companyMoneyUpdates_SO.playForGreenTeam = 500 * (TotalGreenColor) / (GreenColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
     }
 
+    public void ReturnFromRedGame()
+    {
+        print("Returned from Red game.");
+        foreach (Worker worker in RedWorkers)
+        {
+            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            {
+                print("find Red worker with state in mini game");
+                worker.LevelUp();
+                worker.PlayerWon();
+            }
+            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
+            {
+                ReturnFromOrientationGame(worker);
+            }
+        }
+    }
+
+    public void ReturnFromYellowGame()
+    {
+        print("Returned from Yellow game.");
+        foreach (Worker worker in YellowWorkers)
+        {
+            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            {
+                print("find Yellow worker with state in mini game");
+                worker.LevelUp();
+                worker.PlayerWon();
+            }
+            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
+            {
+                ReturnFromOrientationGame(worker);
+            }
+        }
+    }
+
+    public void ReturnFromGreenGame()
+    {
+        print("Returned from Green game.");
+        foreach (Worker worker in GreenWorkers)
+        {
+            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            {
+                print("find Green worker with state in mini game");
+                worker.LevelUp();
+                worker.PlayerWon();
+            }
+            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
+            {
+                ReturnFromOrientationGame(worker);
+            }
+        }
+    }
+
+    public void ReturnFromBlueGame()
+    {
+        print("Returned from Blue game.");
+        foreach (Worker worker in BlueWorkers)
+        {
+            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            {
+                print("find Blue worker with state in mini game");
+                worker.LevelUp();
+                worker.PlayerWon();
+            }
+            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
+            {
+                ReturnFromOrientationGame(worker);
+            }
+        }
+    }
+
+    //public void ReturnFromOrientationGame()
+    //{
+    //    print("count in orientation: "+ workersInOrientation.Count);
+    //    foreach (GameObject workerGO in workersInOrientation)
+    //    {
+    //        Worker worker;
+    //        worker = workerGO.GetComponent<Worker>();
+    //        if (worker.workerState == WorkerState.InMiniGame)
+    //        {
+    //            //worker.LevelUp();
+    //            //worker.PlayerWon();
+    //            print("Worker in Orientation has been accepted.");
+    //        }
+    //    }
+    //}
+
+    public void ReturnFromOrientationGame(Worker worker)
+    {
+        worker.LevelUp(); //is the worker level increase when worker accepted?
+        print(worker.name + " has been accepted");
+    }
+
     //public void ChangeTotalBlueColor()
     //{
     //    if (BlueColorOverSix > 0)

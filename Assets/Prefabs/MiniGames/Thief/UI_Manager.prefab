@@ -115,6 +115,6 @@ MonoBehaviour:
   gameDuration: 0
   timeIsUpEvent: {fileID: 11400000, guid: e0df0c12ec8e1c6458874448834b8b2b, type: 2}
   gameOverEvent: {fileID: 11400000, guid: 5087ac2f591f06a45bda3b9bc9c93c57, type: 2}
-  winnigEvent: {fileID: 11400000, guid: 45a769e0f3cc97e4ea6183dee4f4a127, type: 2}
+  whenYellowWin: {fileID: 11400000, guid: 2a4ae48314f5e164a8ca6897301f2fda, type: 2}
   panel: {fileID: 0}
   goldImage: {fileID: 0}

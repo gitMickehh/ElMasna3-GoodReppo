@@ -726,12 +726,6 @@ Prefab:
       propertyPath: goldImage
       value: 
       objectReference: {fileID: 2097893708}
-    - target: {fileID: 114653710954076400, guid: 1b2946f2f4c890d4e99eca0e871bc502,
-        type: 2}
-      propertyPath: workerInMiniGame_SO
-      value: 
-      objectReference: {fileID: 11400000, guid: eec744519b86ee6478d157ecaad03413,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b2946f2f4c890d4e99eca0e871bc502, type: 2}
   m_IsPrefabParent: 0

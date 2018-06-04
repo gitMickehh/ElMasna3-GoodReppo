@@ -6,7 +6,7 @@ using System;
 [CreateAssetMenu(fileName = "New Event", menuName = "ElMasna3/Game Event")]
 public class GameEvent_SO : ScriptableObject {
     
-    List<GameEventListener> listeners = new List<GameEventListener>();
+   public List<GameEventListener> listeners = new List<GameEventListener>(); //remove public 
 	
     public void Raise()
     {
