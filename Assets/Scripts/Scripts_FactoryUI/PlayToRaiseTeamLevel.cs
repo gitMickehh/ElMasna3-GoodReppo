@@ -34,11 +34,11 @@ public class PlayToRaiseTeamLevel : MonoBehaviour {
         switch (index)
         {
             case 0:
-                Factory_SO.TeamLevelUp(0);
+                Factory_SO.TeamLevelUp(0); //yellow pinball
                 StartCoroutine(LoadScene(2));
                 break;
             case 1:
-                Factory_SO.TeamLevelUp(1);
+                Factory_SO.TeamLevelUp(1); //red thief
                 StartCoroutine(LoadScene(3));
               
                 break;

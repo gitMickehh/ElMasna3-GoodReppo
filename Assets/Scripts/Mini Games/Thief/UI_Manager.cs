@@ -12,10 +12,10 @@ public class UI_Manager : MonoBehaviour
     public float gameDuration;
     public GameEvent_SO timeIsUpEvent;
     public GameEvent_SO gameOverEvent;
-    public GameEvent_SO winnigEvent;
+    public GameEvent_SO whenYellowWin;
     public GameObject panel;
     public GameObject goldImage;
-    public WorkerInMiniGame_SO workerInMiniGame_SO;
+    bool won;
 
     private void Start()
     {
@@ -55,27 +55,33 @@ public class UI_Manager : MonoBehaviour
         if (setOfMoney.transform.childCount == 0)
         {
             panel.GetComponentInChildren<Text>().text = "Game Over";
+            won = false;
+           // SceneManager.UnloadSceneAsync(3);
             //gameOverEvent.Raise();
-            workerInMiniGame_SO.workerWon = false;
         }
         else
         {
             panel.GetComponentInChildren<Text>().text = "You Win";
             goldImage.SetActive(true);
             goldImage.GetComponentInChildren<Text>().text = money.text;
+            won = true;
+           // SceneManager.UnloadSceneAsync(3);
             //winnigEvent.Raise();
 
-            workerInMiniGame_SO.workerWon = true;
         }
     }
 
     public void BackToFactory()
     {
-        SceneManager.UnloadScene(workerInMiniGame_SO.WorkerInGame.workerColor.sceneBuildIndex);
-        if (workerInMiniGame_SO.workerWon)
+        //SceneManager.LoadSceneAsync(1);
+        SceneManager.UnloadSceneAsync(3);
+        if (won)
         {
-            workerInMiniGame_SO.WorkerInGame.PlayerWon();
+            print("Won true.");
+            print("listeners count = " + whenYellowWin.listeners.Count);
+            whenYellowWin.Raise();          
         }
     }
 
+    
 }

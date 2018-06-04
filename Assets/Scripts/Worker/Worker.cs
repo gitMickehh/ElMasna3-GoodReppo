@@ -62,7 +62,6 @@ public class Worker : MonoBehaviour
 
     [Header("Scriptable Objects")]
     public Factory_SO factory_SO;
-    public WorkerInMiniGame_SO workerInMiniGame_SO;
 
     public Animator workerAnimator;
 
@@ -280,35 +279,31 @@ public class Worker : MonoBehaviour
         switch (state)
         {
             case WorkerState.Idle:
-             //   if (workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Working")) ;
-             //   else
-              //  {
                     workerAnimator.SetBool("Working", false);
-              //  }
                 break;
 
             case WorkerState.Working:
-               // if (workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) ;
-               // else
-               // {
                     workerAnimator.SetBool("Working", true);
-              //  }
                 break;
 
             case WorkerState.Winning:
                 print("winning");
                 workerAnimator.SetBool("Working", false);
                 workerAnimator.SetTrigger("WinTrigger");
-               
+                workerAnimator.SetBool("Working", true);
+                workerState = WorkerState.Working;
                 break;
+
+            //case WorkerState.InMiniGame:
+
+            //    break;
         }
     }
 
     public void PlayerWon()
     {
+        print("Player Won.");
         SetWorkerState(WorkerState.Winning);
-        workerInMiniGame_SO.WorkerInGame = null;
-        workerInMiniGame_SO.workerWon = false;
     }
 
 }

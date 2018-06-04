@@ -37,8 +37,8 @@ public class UI_WorkerScript : MonoBehaviour {
     [Header("Events")]
     public GameEvent_SO miniGameStartedEvent;
 
-    [Header("Scriptable Objects")]
-    public WorkerInMiniGame_SO workerInMiniGame_SO; 
+    [Header("Manager")]
+    public WorkerManager workerManager;
 
     private void Start()
     {
@@ -175,17 +175,17 @@ public class UI_WorkerScript : MonoBehaviour {
 
     public void PlayButtonInteract()
     {
-        if(factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost)
+        if((factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost) && (workerManager.WorkersPrefabs.Count < factory_SO.companyLevel * 10))
         {
             playButton.interactable = true;
         }
-        else
+        else if(workerManager.workersInOrientation.Contains(worker.gameObject))
             playButton.interactable = false;
     }
 
     public void PlayButton()
     {
-        workerInMiniGame_SO.WorkerInGame = worker;
+        worker.SetWorkerState(WorkerState.InMiniGame);
         var bIndex = worker.workerColor.sceneBuildIndex;
         //StartCoroutine(LoadSceneCo(bIndex));
         SceneManager.LoadSceneAsync(bIndex);
