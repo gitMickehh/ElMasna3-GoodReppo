@@ -188,7 +188,9 @@ public class UI_WorkerScript : MonoBehaviour {
         worker.SetWorkerState(WorkerState.InMiniGame);
         var bIndex = worker.workerColor.sceneBuildIndex;
         //StartCoroutine(LoadSceneCo(bIndex));
-        SceneManager.LoadSceneAsync(bIndex);
+        SceneManager.LoadSceneAsync(bIndex, LoadSceneMode.Additive);
+        miniGameStartedEvent.Raise();
+
     }
 
     IEnumerator LoadSceneCo(int bIndex)
@@ -200,7 +202,6 @@ public class UI_WorkerScript : MonoBehaviour {
             yield return null;
         }
 
-        miniGameStartedEvent.Raise();
     }
 
     public void TurnOffUI()

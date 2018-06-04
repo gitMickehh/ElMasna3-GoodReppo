@@ -24,15 +24,8 @@ public class GameManager : MonoBehaviour {
         {
             int no = Random.Range(0, thiefStartPlaces.Length);
             int no1 = Random.Range(0, thiefPrefab.Length);
-            print("no1" + no1);
-
             GameObject w = Instantiate(thiefPrefab[no1], thiefStartPlaces[no]);
-            print("thiefStartPlaces[no]: " + thiefStartPlaces[no]);
-           // w.GetComponent<Thief>().startPlace = thiefStartPlaces[no].position;
             w.transform.SetParent(thieves);
-            //print("indexOfTarget" + SetOfMoney.indexOfTarget);
-           // if (SetOfMoney.indexOfTarget == 0)
-               // StopSpawning();
             yield return new WaitForSeconds(durationBetween2Spawns);
         }
 

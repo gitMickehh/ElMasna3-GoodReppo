@@ -10,9 +10,13 @@ public class UI_Manager : MonoBehaviour
     public Text money;
     public Text countDown;
     public float gameDuration;
+
+    [Header("Events")]
     public GameEvent_SO timeIsUpEvent;
     public GameEvent_SO gameOverEvent;
     public GameEvent_SO whenYellowWin;
+    public GameEvent_SO miniGameEndedEvent;
+
     public GameObject panel;
     public GameObject goldImage;
     bool won;
@@ -73,15 +77,16 @@ public class UI_Manager : MonoBehaviour
 
     public void BackToFactory()
     {
-        //SceneManager.LoadSceneAsync(1);
-        SceneManager.UnloadSceneAsync(3);
         if (won)
         {
             print("Won true.");
             print("listeners count = " + whenYellowWin.listeners.Count);
             whenYellowWin.Raise();          
         }
+
+        miniGameEndedEvent.Raise();
+        SceneManager.UnloadSceneAsync(3);
     }
 
-    
+
 }

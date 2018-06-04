@@ -32,7 +32,7 @@ public class SetOfMoney : MonoBehaviour
             return null;
         }
             
-        print("index of child: " + indexOfTarget);
+        //print("index of child: " + indexOfTarget);
         return transform.GetChild(indexOfTarget).position;
 
 

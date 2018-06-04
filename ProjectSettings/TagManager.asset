@@ -17,6 +17,7 @@ TagManager:
   - Pinball_Ball
   - Pinball_Trap
   - Pinball_Obstacle
+  - ThiefCamera
   layers:
   - Default
   - TransparentFX
