@@ -14,6 +14,10 @@ public enum WorkerState
 
 public class Worker : MonoBehaviour
 {
+    [Header("Randomnes")]
+    public bool isRandom = true;
+
+    [Header("Management")]
     public Worker_SO WorkerStats;
     [Tooltip("It adds itself")]
     public WorkerManager workerManager;
@@ -86,8 +90,12 @@ public class Worker : MonoBehaviour
     }
     private void Start()
     {
-        GenerateWorker();
-        workerState = WorkerState.Idle;
+
+        if(isRandom)
+        {
+            GenerateWorker();
+            workerState = WorkerState.Idle;
+        }
     }
 
     //states for worker and for animation
