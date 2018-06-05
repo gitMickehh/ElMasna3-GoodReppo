@@ -13,14 +13,15 @@ public class LeaveMoney : MonoBehaviour {
     }
     public void LeaveMoneyWhenRunning()
     {
+        GetComponent<BoxCollider2D>().enabled = false;
         if (transform.childCount > 0)
         {
             print("LeaveMoney");
-            GetComponent<BoxCollider2D>().enabled = false;
+            
             transform.GetChild(0).gameObject.GetComponent<BoxCollider2D>().enabled = true;
             transform.GetChild(0).gameObject.transform.SetParent(setOfMoney.transform);
-            
-    
+
+
         }
     }
 }

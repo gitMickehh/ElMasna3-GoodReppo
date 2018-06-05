@@ -22,16 +22,16 @@ public class Thief : MonoBehaviour {
             moneyCatchedEvent.Raise();
         }
     }
-
+/*
     public IEnumerator DestroyThief()
     {
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
-
+    */
     public void StopSeeking()
     {
         GetComponent<SeekMoney>().enabled = false;
-        GetComponent<TouchManager>().enabled = false;
+        //GetComponent<TouchManager>().enabled = false;
     }
 }

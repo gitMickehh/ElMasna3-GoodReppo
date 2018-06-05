@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public Transform[] thiefStartPlaces;
     public Transform thieves;
     public GameEvent_SO gameStartEvent;
+    public TouchManager touchManager;
 
 
     void Start ()
@@ -35,6 +36,11 @@ public class GameManager : MonoBehaviour {
     public void StopSpawning()
     {
         StopCoroutine("CreateThieves");
+    }
+
+    public void DisablingTouchManager()
+    {
+        touchManager.gameObject.SetActive(false);
     }
 	
 }
