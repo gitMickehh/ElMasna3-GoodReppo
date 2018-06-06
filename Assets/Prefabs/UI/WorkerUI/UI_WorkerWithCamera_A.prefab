@@ -1793,7 +1793,8 @@ MonoBehaviour:
   maxOpenTime: 0.5
   miniGameStartedEvent: {fileID: 11400000, guid: 67509b22711573d44bddea0bf81104de,
     type: 2}
-  workerInMiniGame_SO: {fileID: 0}
+  workerManager: {fileID: 0}
+  assemblyLineManager: {fileID: 0}
 --- !u!114 &114765661305082148
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -55,3 +55,4 @@ MonoBehaviour:
   companyMoneyUpdates_SO: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d,
     type: 2}
   moneyMadeInLines: 0
+  canAssign: 0
