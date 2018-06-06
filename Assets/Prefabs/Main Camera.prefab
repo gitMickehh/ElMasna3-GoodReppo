@@ -63,7 +63,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 66
   orthographic: 0
   orthographic size: 16.9
   m_Depth: -1
@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perspectiveZoomSpeed: 0.5
+  minPerspectiveFOV: 33
+  maxPerspectiveFOV: 66
   orthoZoomSpeed: 0.05
   minOrthographicSize: 8.7
   maxOrthographicSize: 15

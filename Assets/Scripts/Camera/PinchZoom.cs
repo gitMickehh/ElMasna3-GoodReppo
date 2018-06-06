@@ -5,6 +5,9 @@ using UnityEngine;
 public class PinchZoom : MonoBehaviour
 {
     public float perspectiveZoomSpeed = 0.5f;        // The rate of change of the field of view in perspective mode.
+    public float minPerspectiveFOV = 33f;
+    public float maxPerspectiveFOV = 66f;
+
     public float orthoZoomSpeed = 0.05f;        // The rate of change of the orthographic size in orthographic mode.
     Camera camera;
     public float minOrthographicSize = 8.7f;
@@ -47,6 +50,9 @@ public class PinchZoom : MonoBehaviour
 
                 // Clamp the field of view to make sure it's between 0 and 180.
                 camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
+
+                camera.fieldOfView = Mathf.Max(camera.fieldOfView, minPerspectiveFOV);
+                camera.fieldOfView = Mathf.Min(camera.fieldOfView, maxPerspectiveFOV);
             }
 
         }
