@@ -746,6 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swipeAway: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
   toDrag: {fileID: 0}
+  setOfMoney: {fileID: 0}
 --- !u!4 &1544366346
 Transform:
   m_ObjectHideFlags: 0

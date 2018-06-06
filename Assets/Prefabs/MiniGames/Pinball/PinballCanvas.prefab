@@ -163,7 +163,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 5
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -305,6 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisGame: {fileID: 11400000, guid: 4f692257c006e934486732152d5d3c2e, type: 2}
+  whenRedWin: {fileID: 11400000, guid: 6b31498b7cb757946bd3df90d483bebe, type: 2}
+  whenBlueWin: {fileID: 11400000, guid: cc721d846dd55284fa1d75067b839e86, type: 2}
   miniGameEndedEvent: {fileID: 11400000, guid: 9986c0548630f754aae85df677009b94, type: 2}
 --- !u!114 &114364011828214074
 MonoBehaviour:
