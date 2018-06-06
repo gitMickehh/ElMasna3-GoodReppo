@@ -22,6 +22,7 @@ public class AssemblyLine : MonoBehaviour
 
     [Header("Assembly Line")]
     public bool isWorking;
+    public bool workerFull;
 
     float moneyMadeInLine;
     int j;
@@ -31,6 +32,7 @@ public class AssemblyLine : MonoBehaviour
         j = 0;
         moneyMadeInLine = 0;
         isWorking = true;
+        workerFull = false;
         //print("set isworking to true");
 
         assemblyLineManager = FindObjectOfType<AssemblyLineManager>();
@@ -137,6 +139,15 @@ public class AssemblyLine : MonoBehaviour
         }
 
         return moneyPerMin;
+    }
+
+    public void AddNewWorkerToAssembly(Worker worker)
+    {
+        workersInLine.Add(worker);
+        if(workersInLine.Count == 5)
+        {
+            workerFull = true;
+        }
     }
 
 

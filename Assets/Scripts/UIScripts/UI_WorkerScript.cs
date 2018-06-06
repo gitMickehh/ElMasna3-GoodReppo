@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class UI_WorkerScript : MonoBehaviour {
+public class UI_WorkerScript : MonoBehaviour
+{
 
     Worker worker;
 
@@ -39,6 +40,7 @@ public class UI_WorkerScript : MonoBehaviour {
 
     [Header("Manager")]
     public WorkerManager workerManager;
+    public AssemblyLineManager assemblyLineManager;
 
     private void Start()
     {
@@ -48,12 +50,12 @@ public class UI_WorkerScript : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             ClosePanel();
         }
 
-        if(opened)
+        if (opened)
         {
             if (openTime >= maxOpenTime)
             {
@@ -130,7 +132,7 @@ public class UI_WorkerScript : MonoBehaviour {
         workerLevel.text = w.level.ToString();
 
         //before filling traits, check their level
-        if(w.level >= 6)
+        if (w.level >= 6)
         {
             workerEmotion.text = w.emotion.ToString();
             workerDayOff.text = w.favDayOff.ToString();
@@ -142,7 +144,7 @@ public class UI_WorkerScript : MonoBehaviour {
             workerDayOff.text = "???";
             workerMedicalState.text = w.medicalState.ToString();
         }
-        else if(w.level >= 1)
+        else if (w.level >= 1)
         {
             workerEmotion.text = w.emotion.ToString();
             workerDayOff.text = "???";
@@ -154,7 +156,7 @@ public class UI_WorkerScript : MonoBehaviour {
             workerDayOff.text = "???";
             workerMedicalState.text = "???";
         }
-        
+
     }
 
     private void MoveCamera(Transform CameraPosition)
@@ -175,11 +177,18 @@ public class UI_WorkerScript : MonoBehaviour {
 
     public void PlayButtonInteract()
     {
-        if((factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost) && (workerManager.WorkersPrefabs.Count < factory_SO.companyLevel * 10))
+        if (factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost)
         {
-            playButton.interactable = true;
+            if (workerManager.workersInOrientation.Contains(worker.gameObject) && assemblyLineManager.canAssign)
+            {
+                playButton.interactable = true;
+            }
+            else if (workerManager.WorkersPrefabs.Contains(worker.gameObject))
+            {
+                playButton.interactable = true;
+            }
         }
-        else if(workerManager.workersInOrientation.Contains(worker.gameObject))
+        else
             playButton.interactable = false;
     }
 
@@ -214,6 +223,6 @@ public class UI_WorkerScript : MonoBehaviour {
         transform.parent.gameObject.SetActive(true);
     }
 
-    
+
 
 }

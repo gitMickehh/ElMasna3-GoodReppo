@@ -28,6 +28,9 @@ public class WorkerManager : MonoBehaviour
     [Header("Worker In MiniGame")]
     public Worker workerInGame;
 
+    [Header("Manager")]
+    public AssemblyLineManager assemblyLineManager;
+
     //properties
     public int TotalRedColor
     {
@@ -437,6 +440,8 @@ public class WorkerManager : MonoBehaviour
     public void ReturnFromOrientationGame(Worker worker)
     {
         worker.LevelUp(); //is the worker level increase when worker accepted?
+        worker.PlayerWon();
+        assemblyLineManager.AddNewWorkerToAssemb(worker);
         print(worker.name + " has been accepted");
     }
 
