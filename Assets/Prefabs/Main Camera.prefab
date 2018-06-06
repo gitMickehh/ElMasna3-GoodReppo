@@ -64,8 +64,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
-  orthographic size: 14.14
+  orthographic: 0
+  orthographic size: 16.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fe80228ab63b440bd62b8f3650ac37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perspectiveZoomSpeed: 0.5
   orthoZoomSpeed: 0.05
   minOrthographicSize: 8.7
   maxOrthographicSize: 15
@@ -130,7 +131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NavigationSpecs: {fileID: 11400000, guid: e0602e465d067eb40b1cbe2d7bb48508, type: 2}
-  cameraMovedEvent: {fileID: 11400000, guid: aff288fe0ae78d246b83af3b8e71bb6e, type: 2}
   cameraMovedBoolSO: {fileID: 11400000, guid: 60b49ddbe8eb7a44bb19ec5f46d25951, type: 2}
   navSpeed: 1.7
 --- !u!124 &124312371619610578
