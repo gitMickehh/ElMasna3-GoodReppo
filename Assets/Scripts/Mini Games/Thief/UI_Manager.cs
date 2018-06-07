@@ -15,6 +15,7 @@ public class UI_Manager : MonoBehaviour
     public GameEvent_SO timeIsUpEvent;
     public GameEvent_SO gameOverEvent;
     public GameEvent_SO whenYellowWin;
+    public GameEvent_SO whenGreenWin;
     public GameEvent_SO miniGameEndedEvent;
 
     public GameObject panel;
@@ -82,6 +83,7 @@ public class UI_Manager : MonoBehaviour
             print("Won true.");
             print("listeners count = " + whenYellowWin.listeners.Count);
             whenYellowWin.Raise();          
+            whenGreenWin.Raise();          
         }
 
         miniGameEndedEvent.Raise();
