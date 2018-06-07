@@ -66,3 +66,24 @@ MonoBehaviour:
     looping: 0
     playOnAwake: 1
     source: {fileID: 0}
+  - soundName: ButtonClick2
+    clip: {fileID: 8300000, guid: 0c853b866be22084a892be42e33953e5, type: 3}
+    volume: 1
+    pitch: 1
+    looping: 0
+    playOnAwake: 1
+    source: {fileID: 0}
+  - soundName: Swoosh1
+    clip: {fileID: 8300000, guid: 595d41b6b8c9b204ea743d16607f2d5f, type: 3}
+    volume: 1
+    pitch: 1
+    looping: 0
+    playOnAwake: 1
+    source: {fileID: 0}
+  - soundName: ButtonClick3
+    clip: {fileID: 8300000, guid: 62c71a70e574bf44680eb067f306ce7f, type: 3}
+    volume: 1
+    pitch: 1
+    looping: 0
+    playOnAwake: 1
+    source: {fileID: 0}
