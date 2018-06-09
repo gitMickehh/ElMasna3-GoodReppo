@@ -1063,7 +1063,7 @@ Prefab:
     - target: {fileID: 224286932269170944, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 19.0195
+      value: 16.563599
       objectReference: {fileID: 0}
     - target: {fileID: 224773813216320260, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
         type: 2}
@@ -1089,6 +1089,11 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224286932269170944, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.304657
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91ffc23769f28ca49a4c6bd98794cdf6, type: 2}
@@ -1419,6 +1424,11 @@ Prefab:
       propertyPath: WorkersPrefabs.Array.data[3]
       value: 
       objectReference: {fileID: 554225884}
+    - target: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
+        type: 2}
+      propertyPath: WorkersPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 2065453145}
     - target: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
         type: 2}
       propertyPath: workersInOrientation.Array.data[0]
@@ -1792,6 +1802,11 @@ MonoBehaviour:
   m_PrefabInternal: {fileID: 1936040710}
   m_Script: {fileID: 11500000, guid: ca82168b0c1434444beec51b215866da, type: 3}
 --- !u!1 &1966916226 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1477747632220290, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1119180035}
+--- !u!1 &2065453145 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1777299734336304, guid: aa38d040c29d5eb44b31a101ecb19f2e,
     type: 2}

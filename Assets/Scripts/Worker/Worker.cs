@@ -8,8 +8,6 @@ public enum WorkerState
     Working,
     InMiniGame,
     Winning,
-    Refused,
-    Leading
 }
 
 public class Worker : MonoBehaviour
@@ -39,7 +37,7 @@ public class Worker : MonoBehaviour
 
     //public bool workingState;
 
-    [Range(0,100)]
+    [Range(0, 100)]
     public float happyMeter;
 
     [Header("Cooldown")]
@@ -87,12 +85,12 @@ public class Worker : MonoBehaviour
         workerManager = FindObjectOfType<WorkerManager>();
         workerAnimator = GetComponentInChildren<Animator>();
 
-        
+
     }
     private void Start()
     {
 
-        if(isRandom)
+        if (isRandom)
         {
             GenerateWorker();
             workerState = WorkerState.Idle;
@@ -137,7 +135,7 @@ public class Worker : MonoBehaviour
         //for testing
         AddToColorList();
     }
-    
+
     public void AddComplaint()
     {
         Complaints_SO comp = complaintsManager_SO.GenerateRandomComplaint();
@@ -172,12 +170,14 @@ public class Worker : MonoBehaviour
         machineAssigned.worker = this;
         transform.position = machineAssigned.workerPosition.position;
         machineAssigned.SetMachineState(MachineState.Working);
-        SetWorkerState(WorkerState.Working);
+
+        if (workerState != WorkerState.InMiniGame)
+            SetWorkerState(WorkerState.Working);
     }
 
     public override string ToString()
     {
-        return FullName + ", Gender: " + gender.ToString() 
+        return FullName + ", Gender: " + gender.ToString()
             + "\n level: " + level;
     }
 
@@ -205,7 +205,7 @@ public class Worker : MonoBehaviour
     //saving
     public void SaveWorker(string key)
     {
-        WorkerSaveData saveData = new WorkerSaveData(FullName, gender, level, workerColor, 
+        WorkerSaveData saveData = new WorkerSaveData(FullName, gender, level, workerColor,
             emotion, medicalState, favDayOff, happyMeter, complaints);
 
         string saveJson = JsonUtility.ToJson(saveData);
@@ -279,7 +279,7 @@ public class Worker : MonoBehaviour
     //happiness
     public void AddHappiness(float percentage)
     {
-        happyMeter = Mathf.Clamp(happyMeter+percentage,0,100);
+        happyMeter = Mathf.Clamp(happyMeter + percentage, 0, 100);
     }
 
     public void DecreaseHappiness(float percentage)
@@ -298,11 +298,11 @@ public class Worker : MonoBehaviour
         switch (state)
         {
             case WorkerState.Idle:
-                    workerAnimator.SetBool("Working", false);
+                workerAnimator.SetBool("Working", false);
                 break;
 
             case WorkerState.Working:
-                    workerAnimator.SetBool("Working", true);
+                workerAnimator.SetBool("Working", true);
                 break;
 
             case WorkerState.Winning:
@@ -313,9 +313,9 @@ public class Worker : MonoBehaviour
                 workerState = WorkerState.Working;
                 break;
 
-            //case WorkerState.InMiniGame:
+                //case WorkerState.InMiniGame:
 
-            //    break;
+                //    break;
         }
     }
 

@@ -354,15 +354,18 @@ public class WorkerManager : MonoBehaviour
         print("Returned from Red game.");
         foreach (Worker worker in RedWorkers)
         {
-            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            if (worker.workerState == WorkerState.InMiniGame)
             {
-                print("find Red worker with state in mini game");
-                worker.LevelUp();
-                worker.PlayerWon();
-            }
-            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
-            {
-                ReturnFromOrientationGame(worker);
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    print("find Red worker with state in mini game");
+                    worker.LevelUp();
+                    worker.PlayerWon();
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    ReturnFromOrientationGame(worker);
+                }
             }
         }
     }
@@ -372,15 +375,18 @@ public class WorkerManager : MonoBehaviour
         print("Returned from Yellow game.");
         foreach (Worker worker in YellowWorkers)
         {
-            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            if (worker.workerState == WorkerState.InMiniGame)
             {
-                print("find Yellow worker with state in mini game");
-                worker.LevelUp();
-                worker.PlayerWon();
-            }
-            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
-            {
-                ReturnFromOrientationGame(worker);
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    print("find Yellow worker with state in mini game");
+                    worker.LevelUp();
+                    worker.PlayerWon();
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    ReturnFromOrientationGame(worker);
+                }
             }
         }
     }
@@ -390,16 +396,22 @@ public class WorkerManager : MonoBehaviour
         print("Returned from Green game.");
         foreach (Worker worker in GreenWorkers)
         {
-            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            print(worker.workerState + " " + workersInOrientation.Contains(worker.gameObject));
+
+            if (worker.workerState == WorkerState.InMiniGame)
             {
-                print("find Green worker with state in mini game");
-                worker.LevelUp();
-                worker.PlayerWon();
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    print("find Green worker with state in mini game");
+                    worker.LevelUp();
+                    worker.PlayerWon();
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    ReturnFromOrientationGame(worker);
+                }
             }
-            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
-            {
-                ReturnFromOrientationGame(worker);
-            }
+
         }
     }
 
@@ -408,17 +420,105 @@ public class WorkerManager : MonoBehaviour
         print("Returned from Blue game.");
         foreach (Worker worker in BlueWorkers)
         {
-            if ((worker.workerState == WorkerState.InMiniGame) && !(workersInOrientation.Contains(worker.gameObject)))
+            if (worker.workerState == WorkerState.InMiniGame)
             {
-                print("find Blue worker with state in mini game");
-                worker.LevelUp();
-                worker.PlayerWon();
-            }
-            else if ((worker.workerState == WorkerState.InMiniGame) && (workersInOrientation.Contains(worker.gameObject)))
-            {
-                ReturnFromOrientationGame(worker);
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    print("find Blue worker with state in mini game");
+                    worker.LevelUp();
+                    worker.PlayerWon();
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    ReturnFromOrientationGame(worker);
+                }
             }
         }
+    }
+
+    public void RedBackToNormal()
+    {
+        print("Red Back To Normal");
+
+        foreach (Worker worker in RedWorkers)
+        {
+            if (worker.workerState == WorkerState.InMiniGame)
+            {
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    worker.workerState = WorkerState.Working;
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    worker.workerState = WorkerState.Idle;
+                }
+            }
+        }
+
+    }
+
+    public void YellowBackToNormal()
+    {
+        print("Yellow Back To Normal");
+
+        foreach (Worker worker in YellowWorkers)
+        {
+            if (worker.workerState == WorkerState.InMiniGame)
+            {
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    worker.workerState = WorkerState.Working;
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    worker.workerState = WorkerState.Idle;
+                }
+            }
+        }
+
+    }
+
+    public void GreenBackToNormal()
+    {
+        print("Green Back To Normal");
+
+        foreach (Worker worker in GreenWorkers)
+        {
+            if (worker.workerState == WorkerState.InMiniGame)
+            {
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    worker.workerState = WorkerState.Working;
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    worker.workerState = WorkerState.Idle;
+                }
+            }
+        }
+
+    }
+
+    public void BlueBackToNormal()
+    {
+        print("Blue Back To Normal");
+
+        foreach (Worker worker in BlueWorkers)
+        {
+            if (worker.workerState == WorkerState.InMiniGame)
+            {
+                if (!(workersInOrientation.Contains(worker.gameObject)))
+                {
+                    worker.workerState = WorkerState.Working;
+                }
+                else if (workersInOrientation.Contains(worker.gameObject))
+                {
+                    worker.workerState = WorkerState.Idle;
+                }
+            }
+        }
+
+
     }
 
     //public void ReturnFromOrientationGame()

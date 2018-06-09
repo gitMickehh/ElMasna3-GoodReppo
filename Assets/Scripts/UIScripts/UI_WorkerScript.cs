@@ -194,6 +194,7 @@ public class UI_WorkerScript : MonoBehaviour
 
     public void PlayButton()
     {
+        print("worker: " + worker);
         worker.SetWorkerState(WorkerState.InMiniGame);
         var bIndex = worker.workerColor.sceneBuildIndex;
         //StartCoroutine(LoadSceneCo(bIndex));
