@@ -68,6 +68,7 @@ public class Worker : MonoBehaviour
     public Factory_SO factory_SO;
 
     public Animator workerAnimator;
+    public Machine machineAssigned;
 
     public float PlayingToLevelIndivCost
     {
@@ -158,10 +159,20 @@ public class Worker : MonoBehaviour
         workingSpeed += increaseWorkingSpeedBy;
         movementSpeed += increaseWorkingSpeedBy;
     }
-    
+    /*
     public void AssignWorker(Transform position)
     {
         transform.position = position.position;
+    }
+    */
+
+    public void AssignWorker(Machine machine)
+    {
+        machineAssigned = machine;
+        machineAssigned.worker = this;
+        transform.position = machineAssigned.workerPosition.position;
+        machineAssigned.SetMachineState(MachineState.Working);
+        SetWorkerState(WorkerState.Working);
     }
 
     public override string ToString()

@@ -13770,6 +13770,7 @@ MonoBehaviour:
   LevelUpEvent: {fileID: 0}
   factory_SO: {fileID: 0}
   workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114069226414347434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13818,6 +13819,7 @@ MonoBehaviour:
   LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114076860965888322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13882,6 +13884,7 @@ MonoBehaviour:
   LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114129119780064100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13917,6 +13920,7 @@ MonoBehaviour:
   LevelUpEvent: {fileID: 0}
   factory_SO: {fileID: 0}
   workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114140390199323000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14001,8 +14005,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4598147631473208}
-  isWorking: 0
+  machineState: 0
   fillImg: {fileID: 114925249248475624}
   worker: {fileID: 0}
 --- !u!114 &114251044435901844
@@ -14044,9 +14049,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4010522558530378}
-  isWorking: 0
-  fillImg: {fileID: 114510430438730358}
+  machineState: 0
+  fillImg: {fileID: 114049179103749794}
   worker: {fileID: 0}
 --- !u!114 &114321757750833008
 MonoBehaviour:
@@ -14206,8 +14212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4034830285534080}
-  isWorking: 0
+  machineState: 0
   fillImg: {fileID: 114693527722579346}
   worker: {fileID: 0}
 --- !u!114 &114494816609439194
@@ -14245,6 +14252,7 @@ MonoBehaviour:
   LevelUpEvent: {fileID: 0}
   factory_SO: {fileID: 0}
   workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114496433261528622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14414,8 +14422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4524852293378972}
-  isWorking: 0
+  machineState: 0
   fillImg: {fileID: 114370452021519108}
   worker: {fileID: 0}
 --- !u!114 &114679921003522670
@@ -14721,6 +14730,7 @@ MonoBehaviour:
   LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114886689382074122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14756,6 +14766,7 @@ MonoBehaviour:
   LevelUpEvent: {fileID: 11400000, guid: d7dfe2b2dd6ec7a438dd501f5dbdec74, type: 2}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114888110519905856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14834,8 +14845,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4795896351400410}
-  isWorking: 0
+  machineState: 0
   fillImg: {fileID: 114371041196794272}
   worker: {fileID: 0}
 --- !u!137 &137010892190626580

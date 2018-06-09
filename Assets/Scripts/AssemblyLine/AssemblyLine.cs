@@ -52,18 +52,27 @@ public class AssemblyLine : MonoBehaviour
 
             for (int i = 0; i < workersInLine.Count && j < Machines.Count; i++)
             {
-                workersInLine[i].AssignWorker(Machines[j].workerPosition);
-                //workersInLine[i].SetWorkerState(WorkerState.Working);
-                StartCoroutine(Machines[j].StartCountDown());
+                //workersInLine[i].AssignWorker(Machines[j].workerPosition);
+                if (workersInLine[i].machineAssigned)
+                {
+                    workersInLine[i].machineAssigned.SetMachineState(MachineState.Idle);
+                    workersInLine[i].machineAssigned.worker = null;
+                    workersInLine[i].machineAssigned = null;
+                }
+
+                workersInLine[i].AssignWorker(Machines[j]);
+                //StartCoroutine(Machines[j].StartCountDown());
 
                 j++;
                 moneyMadeInLine += (50 * Mathf.Pow((1.2f), workersInLine[i].level)) + ((Factory_SO.companyLevel - 1) * 100);
             }
-           // workersInLine[0].PlayerWon();
-            SetWorkersInLineWorking();
+            //SetWorkersInLineWorking();
+            StartCountDown();
             yield return new WaitForSeconds(machineBase.DurationInMinutes * 60); // *60
 
-           // SetWorkersInLineIdle();
+            //SetWorkersInLineIdle();
+            //SetMachinesInLineIdle();
+
 
             if (j >= Machines.Count)
             {
@@ -74,18 +83,26 @@ public class AssemblyLine : MonoBehaviour
 
                 j = 0;
             }
-           
+
         }
+    }
+
+    public void StartCountDown()
+    {
+        for (int i = 0; i < Machines.Count; i++)
+            if (Machines[i].worker)
+                StartCoroutine(Machines[i].StartCountDown());
+
     }
 
     public void SetWorkersInLineWorking()
     {
-       for (int i = 0; i < workersInLine.Count; i++)
-       {
+        for (int i = 0; i < workersInLine.Count; i++)
+        {
             workersInLine[i].SetWorkerState(WorkerState.Working);
-       }
+        }
     }
-/*
+
     public void SetWorkersInLineIdle()
     {
         for (int i = 0; i < workersInLine.Count; i++)
@@ -93,7 +110,16 @@ public class AssemblyLine : MonoBehaviour
             workersInLine[i].SetWorkerState(WorkerState.Idle);
         }
     }
-*/
+
+
+    public void SetMachinesInLineIdle()
+    {
+        for (int i = 0; i < j; i++)
+        {
+            Machines[i].SetMachineState(MachineState.Idle);
+        }
+    }
+
     public void DepositMoneyToFactory()
     {
         print("L_IterationFinished has been raised.");
@@ -144,7 +170,7 @@ public class AssemblyLine : MonoBehaviour
     public void AddNewWorkerToAssembly(Worker worker)
     {
         workersInLine.Add(worker);
-        if(workersInLine.Count == 5)
+        if (workersInLine.Count == 5)
         {
             workerFull = true;
         }

@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Machine : MonoBehaviour {
+public enum MachineState
+{
+    Idle, Working
+}
+public class Machine : MonoBehaviour
+{
     [Header("Machine")]
     public Machine_SO machineBase;
-    //[SerializeField]
-    //public static float DurationInMinutes = 2f;
+    public Animator machineAnimator;
+
     public Transform workerPosition;
-    public bool isWorking;
+    public MachineState machineState;
 
     [Header("Machine Time")]
     public Image fillImg;
@@ -17,21 +22,12 @@ public class Machine : MonoBehaviour {
 
     [Header("Worker On Task")]
     public Worker worker;
-    /*
-    public float OverallTimeSeconds
-    {
-        get
-        {
-            return (machineBase.DurationInMinutes * 60) / worker.workingSpeed;
-        }
-    }
 
-    public IEnumerator ActivateMachine()
-    {
-        yield return new WaitForSeconds(OverallTimeSeconds);
 
+    private void Awake()
+    {
+        machineAnimator = GetComponentsInChildren<Animator>()[0];
     }
-    */
     public IEnumerator StartCountDown()
     {
         time = machineBase.DurationInMinutes * 60;
@@ -42,20 +38,41 @@ public class Machine : MonoBehaviour {
             fillImg.fillAmount = time / (machineBase.DurationInMinutes * 60);
         }
 
-        if(time <= 0)
+        if (time <= 0)
         {
+            fillImg.fillAmount = 1;
             StopCountDown();
         }
     }
 
     private void Start()
     {
-        isWorking = true;
+        //isWorking = true;
+        //machineState = MachineState.Idle
+        SetMachineState(MachineState.Idle);
     }
     public void StopCountDown()
     {
-        StopCoroutine(StartCountDown());
         time = machineBase.DurationInMinutes * 60;
+        StopCoroutine(StartCountDown());
+
+    }
+
+    public void SetMachineState(MachineState state)
+    {
+        machineState = state;
+
+        switch (state)
+        {
+            case MachineState.Idle:
+                machineAnimator.SetBool("Working", false);
+                break;
+
+            case MachineState.Working:
+                machineAnimator.SetBool("Working", true);
+
+                break;
+        }
     }
 
 }
