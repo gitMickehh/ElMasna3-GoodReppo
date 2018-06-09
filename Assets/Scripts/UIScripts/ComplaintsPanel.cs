@@ -20,4 +20,10 @@ public class ComplaintsPanel : MonoBehaviour {
             GetComponent<UI_OpenCloseEvent>().UI_OpenEvent.Raise();
         }
     }
+
+    public void PlaySound(string soundName)
+    {
+        FindObjectOfType<AudioManager>().Play(soundName);
+    }
+
 }

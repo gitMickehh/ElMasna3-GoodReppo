@@ -135,6 +135,8 @@ public class TouchManager : MonoBehaviour
 
                         //StartCoroutine(GetComponent<Thief>().DestroyThief());
                         Destroy(toDrag.gameObject, 1);
+
+                        FindObjectOfType<AudioManager>().Play("Swoosh1");
                     }
 
                     break;
