@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef285ab9fb183b42a467481de303d23, type: 3}
   m_Name: CameraNavigationSO
   m_EditorClassIdentifier: 
-  MinimumYPosition: 17
+  MinimumYPosition: 11
   MaximumYPosition: 60

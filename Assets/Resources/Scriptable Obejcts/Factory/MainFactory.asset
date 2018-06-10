@@ -15,7 +15,7 @@ MonoBehaviour:
   FirstLoginTime: {fileID: 11400000, guid: 3ab56e108fe898e4498be3448bad62fb, type: 2}
   LastTimeLogin: {fileID: 11400000, guid: 81a1836bbcc447545a2b88e729c21485, type: 2}
   FactoryMoney: 0
-  companyLevel: 1
+  companyLevel: 2
   factoryMoneyChanged: {fileID: 11400000, guid: 185a5b7138688f740931f70641d09bed,
     type: 2}
   factory_LevelUpEvent: {fileID: 11400000, guid: 85d43ca1aaa46184e9944b3b75394dd4,
