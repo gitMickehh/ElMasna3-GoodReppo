@@ -46,6 +46,7 @@ public class UI_WorkerScript : MonoBehaviour
     {
         UICamera.enabled = false;
         animatorControllers = GetComponentsInChildren<Animator>();
+        PlayButtonInteract();
     }
 
     private void Update()
@@ -90,8 +91,10 @@ public class UI_WorkerScript : MonoBehaviour
 
     public void OpenPanel(Worker w, Transform cameraPos)
     {
+        print("Panel Opened");
         //get worker data
         FillWorkerData(w);
+        PlayButtonInteract();
         MoveCamera(cameraPos);
 
         //turn off other input
@@ -177,24 +180,36 @@ public class UI_WorkerScript : MonoBehaviour
 
     public void PlayButtonInteract()
     {
+        //print("Worker in PlayButtonInteract: " + worker);
+        //print("worker.PlayingToLevelIndivCost: " + worker.PlayingToLevelIndivCost);
+
         if (factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost)
         {
+            //print("workerManager.workersInOrientation.Contains(worker.gameObject): " + workerManager.workersInOrientation.Contains(worker.gameObject));
+            //print("assemblyLineManager.canAssign: " + assemblyLineManager.canAssign);
+            //print("workerManager.WorkersPrefabs.Contains(worker.gameObject): "+ workerManager.WorkersPrefabs.Contains(worker.gameObject));
             if (workerManager.workersInOrientation.Contains(worker.gameObject) && assemblyLineManager.canAssign)
             {
+                print("Can Assign");
                 playButton.interactable = true;
             }
             else if (workerManager.WorkersPrefabs.Contains(worker.gameObject))
             {
                 playButton.interactable = true;
             }
+            else
+                playButton.interactable = false;
         }
         else
+        {
+            print("Can't Assign");
             playButton.interactable = false;
+        }
     }
 
     public void PlayButton()
     {
-        print("worker: " + worker);
+       // print("worker: " + worker);
         worker.SetWorkerState(WorkerState.InMiniGame);
         var bIndex = worker.workerColor.sceneBuildIndex;
         //StartCoroutine(LoadSceneCo(bIndex));

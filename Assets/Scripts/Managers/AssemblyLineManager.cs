@@ -7,12 +7,18 @@ public class AssemblyLineManager : MonoBehaviour
 
     public List<AssemblyLine> assemblyLines;
     public CompanyMoneyUpdates_SO companyMoneyUpdates_SO;
+    public GameEvent_SO NewWorkerAdded;
     public double moneyMadeInLines;
     public bool canAssign;
 
     private void Start()
     {
-        canAssign = true;
+        if (CheckForAssigningWorker() != null)
+            canAssign = true;
+        else
+            canAssign = false;
+
+        print("index of assembly available: " + CheckForAssigningWorker());
     }
 
     public void CalcAssemblyLinesProfit()
@@ -34,8 +40,27 @@ public class AssemblyLineManager : MonoBehaviour
 
     public void AddNewWorkerToAssemb(Worker worker)
     {
+        int? index = CheckForAssigningWorker();
+
+        if (index != null)
+        {
+            assemblyLines[(int)index].AddNewWorkerToAssembly(worker);
+            if ((index == (assemblyLines.Count - 1)) && assemblyLines[(int)index].workerFull)
+            {
+                canAssign = false;
+            }
+            NewWorkerAdded.Raise();
+        }
+
+        else
+            print("something wrong");
+
+    }
+
+    public int? CheckForAssigningWorker() //returns index of assemblyLine which can be assigned
+    {
         int i = 0;
-        while (assemblyLines[i].workerFull && (i != assemblyLines.Count))
+        while ((i != assemblyLines.Count) && (assemblyLines[i].workerFull))
         {
             i++;
         }
@@ -44,17 +69,11 @@ public class AssemblyLineManager : MonoBehaviour
         {
             // canAssign = false;
             print("Something not being handled.");
-
-
+            return null;
         }
         else
-        {
-            assemblyLines[i].AddNewWorkerToAssembly(worker);
-            if ((i == (assemblyLines.Count - 1)) && assemblyLines[i].workerFull)
-            {
-                canAssign = false;
-            }
-        }
-
+            return i;
     }
+
+
 }

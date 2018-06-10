@@ -32,7 +32,7 @@ public class AssemblyLine : MonoBehaviour
         j = 0;
         moneyMadeInLine = 0;
         isWorking = true;
-        workerFull = false;
+        workerFull = CheckForWorkersCount();
         //print("set isworking to true");
 
         assemblyLineManager = FindObjectOfType<AssemblyLineManager>();
@@ -95,30 +95,6 @@ public class AssemblyLine : MonoBehaviour
 
     }
 
-    public void SetWorkersInLineWorking()
-    {
-        for (int i = 0; i < workersInLine.Count; i++)
-        {
-            workersInLine[i].SetWorkerState(WorkerState.Working);
-        }
-    }
-
-    public void SetWorkersInLineIdle()
-    {
-        for (int i = 0; i < workersInLine.Count; i++)
-        {
-            workersInLine[i].SetWorkerState(WorkerState.Idle);
-        }
-    }
-
-
-    public void SetMachinesInLineIdle()
-    {
-        for (int i = 0; i < j; i++)
-        {
-            Machines[i].SetMachineState(MachineState.Idle);
-        }
-    }
 
     public void DepositMoneyToFactory()
     {
@@ -170,10 +146,19 @@ public class AssemblyLine : MonoBehaviour
     public void AddNewWorkerToAssembly(Worker worker)
     {
         workersInLine.Add(worker);
-        if (workersInLine.Count == 5)
+        CheckForWorkersCount();
+    }
+
+    public bool CheckForWorkersCount()
+    {
+        if (workersInLine.Count == Machines.Count)
         {
             workerFull = true;
         }
+        else
+            workerFull = false;
+
+        return workerFull;
     }
 
 
