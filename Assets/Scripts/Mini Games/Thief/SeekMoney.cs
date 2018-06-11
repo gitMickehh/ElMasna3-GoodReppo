@@ -10,6 +10,7 @@ public class SeekMoney : SteeringBase
     int no;
     bool runningAway;
     public GameEvent_SO moneyLostEvent;
+    public GameEvent_SO timeIsUpEvent;
     public GameObject setOfMoney;
 
 
@@ -83,9 +84,17 @@ public class SeekMoney : SteeringBase
             print("Money is lost");
             moneyLostEvent.Raise();
             DestroyImmediate(gameObject);
-            
+
+            //check if there was no money left
+            CheckForMoneyLeft();
         }
     }
     
-
+    public void CheckForMoneyLeft()
+    {
+        if (setOfMoney.transform.childCount == 0)
+        {
+            timeIsUpEvent.Raise();
+        }
+    }
 }

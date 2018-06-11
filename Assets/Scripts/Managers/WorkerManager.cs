@@ -543,6 +543,7 @@ public class WorkerManager : MonoBehaviour
         worker.PlayerWon();
         assemblyLineManager.AddNewWorkerToAssemb(worker);
         print(worker.name + " has been accepted");
+        worker.gameObject.SetActive(false);
     }
 
     //public void ChangeTotalBlueColor()

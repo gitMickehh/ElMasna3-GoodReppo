@@ -49,10 +49,10 @@ public class UI_Manager : MonoBehaviour
     public void UpdateMoney()
     {
         money.text = (setOfMoney.transform.childCount * SetOfMoney.moneyValue).ToString();
-        if (setOfMoney.transform.childCount == 0)
-        {
-            timeIsUpEvent.Raise();
-        }
+        //if (setOfMoney.transform.childCount == 0)
+        //{
+        //    timeIsUpEvent.Raise();
+        //}
     }
 
     public void OnGameOver()

@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 
     void Start ()
     {
-        durationBetween2Spawns = 4f;
+        durationBetween2Spawns = 1f;
         gameStartEvent.Raise();
         StartCoroutine("CreateThieves");
     }

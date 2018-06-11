@@ -28,7 +28,7 @@ public class SetOfMoney : MonoBehaviour
         }
         else if((indexOfTarget < 0) && (transform.childCount == 0))
         {
-            timeIsUpEvent.Raise();
+            //timeIsUpEvent.Raise();
             return null;
         }
             
