@@ -180,30 +180,30 @@ public class UI_WorkerScript : MonoBehaviour
 
     public void PlayButtonInteract()
     {
-        //print("Worker in PlayButtonInteract: " + worker);
-        //print("worker.PlayingToLevelIndivCost: " + worker.PlayingToLevelIndivCost);
-
-        if (factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost)
+        if(worker != null)
         {
-            //print("workerManager.workersInOrientation.Contains(worker.gameObject): " + workerManager.workersInOrientation.Contains(worker.gameObject));
-            //print("assemblyLineManager.canAssign: " + assemblyLineManager.canAssign);
-            //print("workerManager.WorkersPrefabs.Contains(worker.gameObject): "+ workerManager.WorkersPrefabs.Contains(worker.gameObject));
-            if (workerManager.workersInOrientation.Contains(worker.gameObject) && assemblyLineManager.canAssign)
+            if (factory_SO.FactoryMoney >= worker.PlayingToLevelIndivCost)
             {
-                print("Can Assign");
-                playButton.interactable = true;
-            }
-            else if (workerManager.WorkersPrefabs.Contains(worker.gameObject))
-            {
-                playButton.interactable = true;
+                //print("workerManager.workersInOrientation.Contains(worker.gameObject): " + workerManager.workersInOrientation.Contains(worker.gameObject));
+                //print("assemblyLineManager.canAssign: " + assemblyLineManager.canAssign);
+                //print("workerManager.WorkersPrefabs.Contains(worker.gameObject): "+ workerManager.WorkersPrefabs.Contains(worker.gameObject));
+                if (workerManager.workersInOrientation.Contains(worker.gameObject) && assemblyLineManager.canAssign)
+                {
+                    print("Can Assign");
+                    playButton.interactable = true;
+                }
+                else if (workerManager.WorkersPrefabs.Contains(worker.gameObject))
+                {
+                    playButton.interactable = true;
+                }
+                else
+                    playButton.interactable = false;
             }
             else
+            {
+                print("Can't Assign");
                 playButton.interactable = false;
-        }
-        else
-        {
-            print("Can't Assign");
-            playButton.interactable = false;
+            }
         }
     }
 
