@@ -209,10 +209,16 @@ public class WorkerManager : MonoBehaviour
 
     public void AddNewWorker(GameObject w)
     {
-        WorkersPrefabs.Add(w);
+        //WorkersPrefabs.Add(w);
         workersInOrientation.Add(w);
     }
-
+/*
+    public void AddNewWorkerToFactory(GameObject w)
+    {
+        WorkersPrefabs.Add(w);
+       // w.GetComponent<Worker>().AddToColorList();
+    }
+    */
     public void AddRedWorker(Worker w)
     {
         if(!RedWorkers.Contains(w))
@@ -506,6 +512,7 @@ public class WorkerManager : MonoBehaviour
         foreach (Worker worker in BlueWorkers)
         {
             if (worker.workerState == WorkerState.InMiniGame)
+            //if (worker.workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Win"))
             {
                 if (!(workersInOrientation.Contains(worker.gameObject)))
                 {
@@ -540,10 +547,14 @@ public class WorkerManager : MonoBehaviour
     public void ReturnFromOrientationGame(Worker worker)
     {
         worker.LevelUp(); //is the worker level increase when worker accepted?
-        worker.PlayerWon();
+
         assemblyLineManager.AddNewWorkerToAssemb(worker);
         print(worker.name + " has been accepted");
-        worker.gameObject.SetActive(false);
+
+        worker.PlayerWon();
+        //assemblyLineManager.AddNewWorkerToAssemb(worker);
+        //print(worker.name + " has been accepted");
+       // worker.gameObject.SetActive(false);
     }
 
     //public void ChangeTotalBlueColor()

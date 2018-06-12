@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1526474406590000
 GameObject:
   m_ObjectHideFlags: 1
@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1839563787940806
 GameObject:
   m_ObjectHideFlags: 1
@@ -403,12 +403,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 115
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 69
-    m_Alignment: 0
+    m_MaxSize: 150
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -486,7 +486,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114994026248760946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: BackToFactory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114850810625870098
@@ -757,10 +768,10 @@ RectTransform:
   m_Father: {fileID: 224951332623644786}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.038564105, y: 0.73897266}
-  m_AnchorMax: {x: 0.2974359, y: 0.91666394}
-  m_AnchoredPosition: {x: 1.5, y: 0.5}
-  m_SizeDelta: {x: -17, y: -11}
+  m_AnchorMin: {x: 0.023354167, y: 0.72200006}
+  m_AnchorMax: {x: 0.3014375, y: 0.92612803}
+  m_AnchoredPosition: {x: -3.5, y: 5}
+  m_SizeDelta: {x: -81, y: -42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224836543152990300
 RectTransform:
@@ -836,6 +847,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19119136, y: 0.035643145}
   m_AnchorMax: {x: 0.46361732, y: 0.28346467}
-  m_AnchoredPosition: {x: 0.3639984, y: 1.2000122}
+  m_AnchoredPosition: {x: 0.36398315, y: 1.2000122}
   m_SizeDelta: {x: -2.6500015, y: -0.8999996}
   m_Pivot: {x: 0.5, y: 0.5}

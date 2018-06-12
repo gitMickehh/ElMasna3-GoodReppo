@@ -181,7 +181,7 @@ public class Worker : MonoBehaviour
             + "\n level: " + level;
     }
 
-    void AddToColorList()
+    void AddToColorList()  //changed it to public
     {
         switch (workerColor.colorName)
         {
@@ -309,6 +309,7 @@ public class Worker : MonoBehaviour
                 print("winning");
                 workerAnimator.SetBool("Working", false);
                 workerAnimator.SetTrigger("WinTrigger");
+                StartCoroutine(WaitTillWinningFinish());
                 workerAnimator.SetBool("Working", true);
                 workerState = WorkerState.Working;
                 break;
@@ -319,10 +320,38 @@ public class Worker : MonoBehaviour
         }
     }
 
+    IEnumerator WaitTillWinningFinish()
+    {
+       
+
+        // print("normalized time = " + workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        yield return new WaitForSeconds(3.5f//workerAnimator.GetCurrentAnimatorStateInfo(0).length + 
+            /*workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime*/);
+
+       
+
+        if (workerManager.workersInOrientation.Contains(gameObject))
+        {
+            //SetWorkerState(WorkerState.Idle);
+
+            //yield return new WaitForSeconds(1//workerAnimator.GetCurrentAnimatorStateInfo(0).length + 
+            ///*workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime*/);
+
+            gameObject.SetActive(false);
+        }
+    }
+
     public void PlayerWon()
     {
         print("Player Won.");
         SetWorkerState(WorkerState.Winning);
+
+        //while (workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WinTrigger"))
+        //{
+        //    print("in Win animation");
+        //}
+
+        
     }
 
 }

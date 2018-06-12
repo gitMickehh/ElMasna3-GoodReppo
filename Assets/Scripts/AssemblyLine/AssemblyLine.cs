@@ -26,6 +26,9 @@ public class AssemblyLine : MonoBehaviour
     public bool isWorking;
     public bool workerFull;
 
+    [Header("Worker Manager")]
+    public WorkerManager workerManager;
+
     float moneyMadeInLine;
     int j;
 
@@ -175,12 +178,16 @@ public class AssemblyLine : MonoBehaviour
 
     public void AddPendingWorkersToLine()
     {
-        foreach(Worker worker in pendingWorkers)
+        for(int i = 0; i < pendingWorkers.Count; i++)
         {
-            worker.gameObject.SetActive(true);
-            workersInLine.Add(worker);
-            pendingWorkers.RemoveAt(0);
+            pendingWorkers[i].gameObject.SetActive(true);
+            workersInLine.Add(pendingWorkers[i]);
+            //workerManager.AddNewWorkerToFactory(pendingWorkers[i].gameObject);
+            workerManager.WorkersPrefabs.Add(pendingWorkers[i].gameObject);
+            workerManager.workersInOrientation.Remove(pendingWorkers[i].gameObject);
         }
+
+        pendingWorkers.Clear();
     }
 
 }

@@ -642,7 +642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setOfMoney: {fileID: 0}
-  timeIsUpEvent: {fileID: 11400000, guid: e0df0c12ec8e1c6458874448834b8b2b, type: 2}
 --- !u!212 &212080142977009760
 SpriteRenderer:
   m_ObjectHideFlags: 1

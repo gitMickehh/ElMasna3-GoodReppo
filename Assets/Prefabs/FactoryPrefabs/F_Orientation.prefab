@@ -14690,11 +14690,13 @@ MonoBehaviour:
   - {fileID: 114222973007122826}
   - {fileID: 114886689382074122}
   - {fileID: 114114110043650926}
+  pendingWorkers: []
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   L_IterationFinished: {fileID: 11400000, guid: 5aedc896d567a804099fa221d06b6020,
     type: 2}
   isWorking: 0
   workerFull: 0
+  workerManager: {fileID: 0}
 --- !u!114 &114881640505557474
 MonoBehaviour:
   m_ObjectHideFlags: 1
