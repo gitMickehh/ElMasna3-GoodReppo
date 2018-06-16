@@ -18,6 +18,30 @@ public class FactoryUpdate : MonoBehaviour {
         SaveLastTimeNow();
     }
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if(focus)
+        {
+            CheckSavedAndUpdateDates();
+        }
+        else
+        {
+            SaveLastTimeNow();
+        }
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if(pause)
+        {
+            SaveLastTimeNow();
+        }
+        else
+        {
+            CheckSavedAndUpdateDates();
+        }
+    }
+
     void CheckSavedAndUpdateDates()
     {
         if (PlayerPrefs.HasKey("FirstDateEver"))

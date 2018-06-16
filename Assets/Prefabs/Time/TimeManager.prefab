@@ -74,6 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47574538d9fbf744987a62d67dc9cbe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaximumMinutesBetweenEvents: 10
+  MaximumMinutesBetweenEvents: 5
   randomEventsList: {fileID: 11400000, guid: 7c2d38c82fefd36478ac1a1efe96666e, type: 2}
   eventPicked: {fileID: 0}
