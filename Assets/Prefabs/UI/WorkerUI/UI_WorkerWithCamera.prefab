@@ -850,6 +850,8 @@ MonoBehaviour:
   maxOpenTime: 0.5
   miniGameStartedEvent: {fileID: 11400000, guid: 67509b22711573d44bddea0bf81104de,
     type: 2}
+  workerManager: {fileID: 0}
+  assemblyLineManager: {fileID: 0}
 --- !u!114 &114090112082661556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -977,7 +979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ???
+  m_Text: Emotion
 --- !u!114 &114145701545855166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1342,7 +1344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ???
+  m_Text: Medical State
 --- !u!114 &114520249233347594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1641,7 +1643,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ???
+  m_Text: Fav. Day off
 --- !u!114 &114729434347222006
 MonoBehaviour:
   m_ObjectHideFlags: 1

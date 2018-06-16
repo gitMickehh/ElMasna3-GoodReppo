@@ -17,15 +17,15 @@ public class BallControl : MonoBehaviour {
         coroutinePushes = new Queue<Coroutine>();
     }
 
-    void Update()
+    /*void Update()
     {
-        speed = Input.acceleration;
+        //speed = Input.acceleration;
     }
 
     private void FixedUpdate()
     {
         my_body.AddForce(speed * speedControl);
-    }
+    }*/
 
     public void PushBall(Vector3 trapPushStrength, float triggerWaitTime)
     {

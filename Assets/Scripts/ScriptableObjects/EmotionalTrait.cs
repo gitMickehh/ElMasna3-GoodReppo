@@ -14,4 +14,7 @@ public class EmotionalTrait : ScriptableObject {
     {
         return Title;
     }
+
+    public Sprite emotionIcon;
+
 }

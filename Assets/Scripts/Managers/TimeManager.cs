@@ -73,6 +73,40 @@ public class TimeManager : MonoBehaviour {
         SaveDay();
     }
 
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            SaveDay();
+        }
+        else
+        {
+            DateClass timeNow = DateTime_SO.GetTimeNow();
+            GetSetDay();
+            CalculateTimeGap(timeNow);
+
+            timer.maxTimeSeconds = dayDurationMinutes * 60;
+            timer.timeLeftSeconds = timeLeft * 60 + timeLeftSec;
+        }
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if(focus)
+        {
+            SaveDay();
+        }
+        else
+        {
+            DateClass timeNow = DateTime_SO.GetTimeNow();
+            GetSetDay();
+            CalculateTimeGap(timeNow);
+
+            timer.maxTimeSeconds = dayDurationMinutes * 60;
+            timer.timeLeftSeconds = timeLeft * 60 + timeLeftSec;
+        }
+    }
+
     //Calculate Time 
     void CalculateTimeGap(DateClass timeNow)
     {
