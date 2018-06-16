@@ -18,6 +18,7 @@ TagManager:
   - Pinball_Trap
   - Pinball_Obstacle
   - ThiefCamera
+  - Thief_Police
   layers:
   - Default
   - TransparentFX
@@ -57,6 +58,9 @@ TagManager:
     locked: 0
   - name: MidGround
     uniqueID: 3341129989
+    locked: 0
+  - name: MidGround2
+    uniqueID: 1618072861
     locked: 0
   - name: Default
     uniqueID: 0

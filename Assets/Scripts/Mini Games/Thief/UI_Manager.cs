@@ -23,11 +23,13 @@ public class UI_Manager : MonoBehaviour
     public GameObject panel;
     public GameObject goldImage;
     bool won;
+    int count;
 
     private void Start()
     {
-        gameDuration = 60;
-        money.text = (setOfMoney.transform.childCount * SetOfMoney.moneyValue).ToString();
+        gameDuration = 30;
+        count = setOfMoney.transform.childCount;
+        money.text = (count * SetOfMoney.moneyValue).ToString();
         StartCoroutine("CountDown");
 
     }
@@ -48,11 +50,17 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateMoney()
     {
-        money.text = (setOfMoney.transform.childCount * SetOfMoney.moneyValue).ToString();
+        count--;
+        money.text = (count * SetOfMoney.moneyValue).ToString();
+        //(setOfMoney.transform.childCount * SetOfMoney.moneyValue).ToString();
         //if (setOfMoney.transform.childCount == 0)
         //{
         //    timeIsUpEvent.Raise();
         //}
+        if (count == 0)
+        {
+            timeIsUpEvent.Raise();
+        }
     }
 
     public void OnGameOver()

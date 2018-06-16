@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4560701897710984}
   - component: {fileID: 114550947067485378}
   - component: {fileID: 114226211035900668}
+  - component: {fileID: 114243269033038902}
   m_Layer: 13
   m_Name: GameManager
   m_TagString: Untagged
@@ -78,6 +79,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114550947067485378}
+        m_MethodName: FreezePolice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114243269033038902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125942020521434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7ae02833c0a3176439e95988e9917a79, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114550947067485378}
+        m_MethodName: PoliceIsHappyForAwhile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114550947067485378
@@ -107,3 +147,7 @@ MonoBehaviour:
   thieves: {fileID: 0}
   gameStartEvent: {fileID: 11400000, guid: 29b76e1655420cd49bf369236024ad1e, type: 2}
   touchManager: {fileID: 0}
+  police: {fileID: 0}
+  onScreenTime: 2
+  offScreenTime: 2
+  happyTime: 1

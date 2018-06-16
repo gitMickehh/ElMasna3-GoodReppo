@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour {
     public Transform thieves;
     public GameEvent_SO gameStartEvent;
     public TouchManager touchManager;
+    public GameObject police;
+
+    public float onScreenTime = 2f;
+    public float offScreenTime = 2f;
+    public float happyTime = 2f;
 
 
     void Start ()
@@ -17,6 +22,7 @@ public class GameManager : MonoBehaviour {
         durationBetween2Spawns = 1f;
         gameStartEvent.Raise();
         StartCoroutine("CreateThieves");
+        StartCoroutine("EnablePolice");
     }
 
     public IEnumerator CreateThieves()
@@ -38,9 +44,36 @@ public class GameManager : MonoBehaviour {
         StopCoroutine("CreateThieves");
     }
 
+    public IEnumerator EnablePolice()
+    {
+        while (true)
+        {
+            police.SetActive(false);
+            yield return new WaitForSeconds(offScreenTime);
+            police.SetActive(true);
+            yield return new WaitForSeconds(onScreenTime);
+        }
+    }
+    public void PoliceIsHappyForAwhile()
+    {
+        StopCoroutine("EnablePolice");
+        StartCoroutine("EnablingPoliceAfterHappyTime");
+
+    }
+    public IEnumerator EnablingPoliceAfterHappyTime()
+    {
+        yield return new WaitForSeconds(happyTime);
+        StartCoroutine("EnablePolice");
+    }
     public void DisablingTouchManager()
     {
         touchManager.gameObject.SetActive(false);
+    }
+
+    public void FreezePolice()
+    {
+        print("Police Freezed");
+        StopCoroutine("EnablePolice");
     }
 	
 }

@@ -13,7 +13,7 @@ public class LeaveMoney : MonoBehaviour {
     }
     public void LeaveMoneyWhenRunning()
     {
-        GetComponent<BoxCollider2D>().enabled = false;
+        //GetComponent<BoxCollider2D>().enabled = false;
         if (transform.childCount > 0)
         {
             print("LeaveMoney");

@@ -4,34 +4,45 @@ using UnityEngine;
 
 public class Thief : MonoBehaviour {
     public Vector3 startPlace;
+    public bool swiped;
     public GameEvent_SO moneyCatchedEvent;
 
 	void Start ()
     {
         startPlace = transform.position;
+        swiped = false;
 
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Money" && transform.childCount == 0 && !(other.transform.parent.CompareTag("Thief")))
+        if (other.tag == "Money" && transform.childCount == 0 && !(other.transform.parent.CompareTag("Thief")) && 
+            !(swiped))
         {
             print("catched money.");
             other.gameObject.transform.SetParent(transform);
-            other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            //other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             moneyCatchedEvent.Raise();
         }
     }
-/*
-    public IEnumerator DestroyThief()
-    {
-        yield return new WaitForSeconds(1);
-        Destroy(gameObject);
-    }
-    */
+
     public void StopSeeking()
     {
         GetComponent<SeekMoney>().enabled = false;
-        //GetComponent<TouchManager>().enabled = false;
+    }
+
+    public void WhenArrested()
+    {
+        print("When Arrested");
+        /*
+        if(transform.childCount > 0)
+        {
+            gameObject.GetComponent<LeaveMoney>().LeaveMoneyWhenRunning();
+        }
+        */
+        StopSeeking();
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
     }
 }
