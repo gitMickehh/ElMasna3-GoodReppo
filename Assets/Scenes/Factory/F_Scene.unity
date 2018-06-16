@@ -1063,7 +1063,7 @@ Prefab:
     - target: {fileID: 224286932269170944, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 16.532196
+      value: 16.563614
       objectReference: {fileID: 0}
     - target: {fileID: 224773813216320260, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
         type: 2}
@@ -1093,7 +1093,7 @@ Prefab:
     - target: {fileID: 224286932269170944, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1.304596
+      value: 1.3046722
       objectReference: {fileID: 0}
     - target: {fileID: 1741074314965400, guid: 91ffc23769f28ca49a4c6bd98794cdf6, type: 2}
       propertyPath: m_IsActive
@@ -1185,11 +1185,6 @@ Prefab:
       propertyPath: assemblyLineManager
       value: 
       objectReference: {fileID: 100721825}
-    - target: {fileID: 114767846931320986, guid: 075701d5134602947a7515f7028aa5e2,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1021899824}
     - target: {fileID: 224627162747024864, guid: 075701d5134602947a7515f7028aa5e2,
         type: 2}
       propertyPath: m_AnchorMin.y
@@ -1280,6 +1275,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
+        type: 2}
+      propertyPath: WorkersPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4028820462502956, guid: ff0faf9e12dbad144bcf2adda9386114, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1357,6 +1357,11 @@ Prefab:
       propertyPath: assemblyLineManager
       value: 
       objectReference: {fileID: 100721825}
+    - target: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
+        type: 2}
+      propertyPath: WorkersPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1202161891}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff0faf9e12dbad144bcf2adda9386114, type: 2}
   m_IsPrefabParent: 0
@@ -1586,6 +1591,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114811514126394686, guid: aa38d040c29d5eb44b31a101ecb19f2e,
+        type: 2}
+      propertyPath: workerManager
+      value: 
+      objectReference: {fileID: 762131937}
     - target: {fileID: 33475997522770348, guid: aa38d040c29d5eb44b31a101ecb19f2e,
         type: 2}
       propertyPath: m_Mesh

@@ -13,6 +13,8 @@ public class AssemblyLine : MonoBehaviour
 
     [Header("Workers")]
     public List<Worker> workersInLine;
+    public List<Worker> pendingWorkers;
+    //public int workerCountWithPending;
 
     [Header("Factory")]
     public Factory_SO Factory_SO;
@@ -24,6 +26,9 @@ public class AssemblyLine : MonoBehaviour
     public bool isWorking;
     public bool workerFull;
 
+    [Header("Worker Manager")]
+    public WorkerManager workerManager;
+
     float moneyMadeInLine;
     int j;
 
@@ -31,6 +36,7 @@ public class AssemblyLine : MonoBehaviour
     {
         j = 0;
         moneyMadeInLine = 0;
+        //workerCountWithPending = workersInLine.Count;
         isWorking = true;
         workerFull = CheckForWorkersCount();
         //print("set isworking to true");
@@ -77,8 +83,9 @@ public class AssemblyLine : MonoBehaviour
             if (j >= Machines.Count)
             {
                 //Iteration Finished
-
-                L_IterationFinished.Raise();
+                DepositMoneyToFactory();
+                AddPendingWorkersToLine();
+                //L_IterationFinished.Raise();
                 moneyMadeInLine = 0;
 
                 j = 0;
@@ -142,16 +149,18 @@ public class AssemblyLine : MonoBehaviour
 
         return moneyPerMin;
     }
-
+/*
     public void AddNewWorkerToAssembly(Worker worker)
     {
         workersInLine.Add(worker);
         CheckForWorkersCount();
     }
+    */
 
     public bool CheckForWorkersCount()
     {
-        if (workersInLine.Count == Machines.Count)
+        // if (workersInLine.Count == Machines.Count)
+        if ((workersInLine.Count + pendingWorkers.Count) == Machines.Count)
         {
             workerFull = true;
         }
@@ -161,5 +170,24 @@ public class AssemblyLine : MonoBehaviour
         return workerFull;
     }
 
+    public void PendWorker(Worker worker)
+    {
+        pendingWorkers.Add(worker);
+        CheckForWorkersCount();
+    }
+
+    public void AddPendingWorkersToLine()
+    {
+        for(int i = 0; i < pendingWorkers.Count; i++)
+        {
+            pendingWorkers[i].gameObject.SetActive(true);
+            workersInLine.Add(pendingWorkers[i]);
+            //workerManager.AddNewWorkerToFactory(pendingWorkers[i].gameObject);
+            workerManager.WorkersPrefabs.Add(pendingWorkers[i].gameObject);
+            workerManager.workersInOrientation.Remove(pendingWorkers[i].gameObject);
+        }
+
+        pendingWorkers.Clear();
+    }
 
 }

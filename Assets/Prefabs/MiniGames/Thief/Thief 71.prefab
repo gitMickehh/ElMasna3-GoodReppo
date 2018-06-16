@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swipeAway: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
   toDrag: {fileID: 0}
+  setOfMoney: {fileID: 0}
 --- !u!114 &114436675434935126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,13 +202,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b987fb39e2b455643ab9e23181feda32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxVelocity: 5
+  MaxVelocity: 7
   MaxSteering: 300
   Velocity: {x: 0, y: 0, z: 0}
   Steering: {x: 0, y: 0, z: 0}
   Mass: 1
   PositionTargetTolerance: 0.5
   moneyLostEvent: {fileID: 11400000, guid: d76e9de6d18a9b8418a6e5fcd7ab2f48, type: 2}
+  timeIsUpEvent: {fileID: 11400000, guid: e0df0c12ec8e1c6458874448834b8b2b, type: 2}
   setOfMoney: {fileID: 0}
 --- !u!114 &114602524985360168
 MonoBehaviour:

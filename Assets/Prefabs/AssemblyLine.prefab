@@ -1558,6 +1558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd0b21b1531edd4ebf5557fb96bb085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assemblyLineManager: {fileID: 0}
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
   Machines:
   - {fileID: 114942283999181768}
@@ -1571,8 +1572,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  pendingWorkers: []
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   L_IterationFinished: {fileID: 11400000, guid: 5aedc896d567a804099fa221d06b6020,
+    type: 2}
+  isWorking: 0
+  workerFull: 0
+  workerManager: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
     type: 2}
 --- !u!114 &114387641361225728
 MonoBehaviour:
@@ -1586,7 +1592,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4917356897195434}
+  machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114448647509237516
@@ -1601,7 +1609,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4039883582554674}
+  machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114731729582866904
@@ -1616,7 +1626,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4066064857393772}
+  machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114942283999181768
@@ -1631,7 +1643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4443066165063456}
+  machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
 --- !u!114 &114992479295178046
@@ -1646,6 +1660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4960564542605036}
+  machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}

@@ -44,7 +44,8 @@ public class AssemblyLineManager : MonoBehaviour
 
         if (index != null)
         {
-            assemblyLines[(int)index].AddNewWorkerToAssembly(worker);
+            //assemblyLines[(int)index].AddNewWorkerToAssembly(worker);
+            assemblyLines[(int)index].PendWorker(worker);
             if ((index == (assemblyLines.Count - 1)) && assemblyLines[(int)index].workerFull)
             {
                 canAssign = false;
@@ -53,7 +54,7 @@ public class AssemblyLineManager : MonoBehaviour
         }
 
         else
-            print("something wrong");
+            print("something wrong"); //the function shouldn't be called if there was no room available
 
     }
 
