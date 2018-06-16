@@ -9,6 +9,9 @@ public class ClickableWorker : MonoBehaviour {
     [Tooltip("It finds itself, don't add")]
     public UI_WorkerScript workerUI;
 
+    [Header("Tutorial")]
+    public GameEvent_SO ClickTutorialEvent;
+
     private void Start()
     {
         worker = GetComponent<Worker>();
@@ -20,11 +23,12 @@ public class ClickableWorker : MonoBehaviour {
 
     }
 
-
     public void ClickWorker()
     {
         Debug.Log(worker.FullName);
         workerUI.OpenPanel(worker, cameraPos);
+
+        ClickTutorialEvent.Raise();
     }
 
 }
