@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entryPoint: {fileID: 4458373048344192}
-  ballObject: {fileID: 1568186085918202, guid: 5f1d14f3e26bc934cae6bdf72a831d2b, type: 2}
+  ballObject: {fileID: 1209912765723254, guid: 5f1d14f3e26bc934cae6bdf72a831d2b, type: 2}
   ballCount: {fileID: 11400000, guid: 3717432b037e6084fbecacb8fcf92362, type: 2}
   minimumZRotation: -75
   maximumZRotation: 180

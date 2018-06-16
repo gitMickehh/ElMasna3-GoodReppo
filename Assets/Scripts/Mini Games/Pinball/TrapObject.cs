@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TrapObjectDirection { Up, Down, Right, Left}
+public enum ForceDirection { Up, Down, Right, Left}
 
 public class TrapObject : MonoBehaviour {
 
-    public TrapObjectDirection directionOfHit;
+    public ForceDirection directionOfHit;
 
     [SerializeField]
     float trapPushStrength = 100;
@@ -22,16 +22,16 @@ public class TrapObject : MonoBehaviour {
 
             switch (directionOfHit)
             {
-                case TrapObjectDirection.Up:
+                case ForceDirection.Up:
                     ballScript.PushBall(new Vector3(0, trapPushStrength, 0), triggerWaitTime);
                     break;
-                case TrapObjectDirection.Down:
+                case ForceDirection.Down:
                     ballScript.PushBall(new Vector3(0, trapPushStrength, 0) * (-1), triggerWaitTime);
                     break;
-                case TrapObjectDirection.Right:
+                case ForceDirection.Right:
                     ballScript.PushBall(new Vector3(trapPushStrength, 0, 0), triggerWaitTime);
                     break;
-                case TrapObjectDirection.Left:
+                case ForceDirection.Left:
                     ballScript.PushBall(new Vector3(trapPushStrength, 0, 0) * (-1), triggerWaitTime);
                     break;
                 default:
