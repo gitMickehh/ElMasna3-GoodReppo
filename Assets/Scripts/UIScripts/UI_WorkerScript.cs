@@ -32,8 +32,9 @@ public class UI_WorkerScript : MonoBehaviour
     [Header("Swipe Controls")]
     public float swipeCloseSpeed = 5;
     bool opened = false;
-    float openTime = 0;
-    public float maxOpenTime = 0.5f;
+    float touchDeltaMag = 0;
+    //float openTime = 0;
+    //public float maxOpenTime = 0.5f;
 
     [Header("Events")]
     public GameEvent_SO miniGameStartedEvent;
@@ -58,10 +59,6 @@ public class UI_WorkerScript : MonoBehaviour
 
         if (opened)
         {
-            if (openTime >= maxOpenTime)
-            {
-                openTime = 0;
-
                 if (Input.touchCount == 1)
                 {
                     Touch touchZero = Input.GetTouch(0);
@@ -69,22 +66,19 @@ public class UI_WorkerScript : MonoBehaviour
                     if (touchZero.phase == TouchPhase.Moved)
                     {
                         float touchZeroPrevPos = touchZero.position.x - touchZero.deltaPosition.x;
+                        touchDeltaMag = touchZero.position.x;
 
-
-                        float touchDeltaMag = touchZero.position.x;
-
-                        if (touchDeltaMag > swipeCloseSpeed)
-                        {
-                            ClosePanel();
-                        }
+                        
+                    }
+                    if(touchZero.phase == TouchPhase.Ended)
+                    {
+                       if (touchDeltaMag > swipeCloseSpeed)
+                            {
+                                ClosePanel();
+                            }
                     }
                 }
-
-            }
-            else
-            {
-                openTime += Time.deltaTime;
-            }
+            
         }
 
     }
@@ -122,7 +116,7 @@ public class UI_WorkerScript : MonoBehaviour
         ClearCamera();
 
         opened = false;
-        openTime = 0;
+        //openTime = 0;
 
         FindObjectOfType<FloorManager>().SetCurrentFloorActive(true);
 

@@ -116,8 +116,8 @@ MonoBehaviour:
   ballCount: {fileID: 11400000, guid: 3717432b037e6084fbecacb8fcf92362, type: 2}
   minimumZRotation: -75
   maximumZRotation: 180
-  minimumForce: 200
-  maximumForce: 340
+  minimumForce: 150
+  maximumForce: 270
 --- !u!212 &212186858002322030
 SpriteRenderer:
   m_ObjectHideFlags: 1
