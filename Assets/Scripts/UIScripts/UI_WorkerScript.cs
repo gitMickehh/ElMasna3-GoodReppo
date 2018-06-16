@@ -76,6 +76,7 @@ public class UI_WorkerScript : MonoBehaviour
                             {
                                 ClosePanel();
                             }
+                    touchDeltaMag = 0;
                     }
                 }
             
