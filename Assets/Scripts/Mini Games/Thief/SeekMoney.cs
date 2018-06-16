@@ -86,15 +86,15 @@ public class SeekMoney : SteeringBase
             DestroyImmediate(gameObject);
 
             //check if there was no money left
-            CheckForMoneyLeft();
+            //CheckForMoneyLeft();
         }
     }
     
-    public void CheckForMoneyLeft()
-    {
-        if (setOfMoney.transform.childCount == 0)
-        {
-            timeIsUpEvent.Raise();
-        }
-    }
+    //public void CheckForMoneyLeft()
+    //{
+    //    if (setOfMoney.transform.childCount == 0)
+    //    {
+    //        timeIsUpEvent.Raise();
+    //    }
+    //}
 }

@@ -32,4 +32,13 @@ public class SetOfMoney : MonoBehaviour
         return transform.GetChild(indexOfTarget).position;
 
     }
+
+    public void ResetChildMoney()
+    {
+        print("Child Money Count: " + transform.childCount);
+        for(int i = 0; i< transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<Money>().ResetMoney();
+        }
+    }
 }

@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114089153025984316}
   - component: {fileID: 114638907474166974}
   - component: {fileID: 61762815333186406}
+  - component: {fileID: 114485992659649194}
   m_Layer: 13
   m_Name: Thief 61
   m_TagString: Thief
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b987fb39e2b455643ab9e23181feda32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxVelocity: 7
+  MaxVelocity: 6.6
   MaxSteering: 300
   Velocity: {x: 0, y: 0, z: 0}
   Steering: {x: 0, y: 0, z: 0}
@@ -156,6 +157,18 @@ MonoBehaviour:
   moneyLostEvent: {fileID: 11400000, guid: d76e9de6d18a9b8418a6e5fcd7ab2f48, type: 2}
   timeIsUpEvent: {fileID: 11400000, guid: e0df0c12ec8e1c6458874448834b8b2b, type: 2}
   setOfMoney: {fileID: 0}
+--- !u!114 &114485992659649194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123713461871518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcea0010169cc0347812d4ba47f6c694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thiefGotArrested: {fileID: 11400000, guid: 7ae02833c0a3176439e95988e9917a79, type: 2}
 --- !u!114 &114565771552548156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPlace: {x: 0, y: 0, z: 0}
+  swiped: 0
   moneyCatchedEvent: {fileID: 11400000, guid: b50cb37051c04de4d887839b4b7327eb, type: 2}
 --- !u!114 &114813794141481738
 MonoBehaviour:
