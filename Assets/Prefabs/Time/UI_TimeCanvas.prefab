@@ -181,9 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0b3df530717c74d8aeca95d76f4e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerType: 0
   maxTimeSeconds: 60
   timeLeftSeconds: 60
   timerSlider: {fileID: 114384084943344010}
+  daySprite: {fileID: 0}
+  nightSprite: {fileID: 0}
+  timeImage: {fileID: 0}
 --- !u!114 &114384084943344010
 MonoBehaviour:
   m_ObjectHideFlags: 1

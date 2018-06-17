@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum TimerType { Linear, Images, Radial}
+public enum TimerType { Linear, Images, Radial, LinearAndImage}
 
 public class UI_MainTimer : MonoBehaviour {
 
@@ -21,6 +21,11 @@ public class UI_MainTimer : MonoBehaviour {
     public Sprite daySprite;
     public Sprite nightSprite;
     public Image timeImage;
+
+    [Header("Linear and Image")]
+    public Color DaySliderColor;
+    public Color NightSliderColor;
+    public Image SliderFillImage;
 
     void Update () {
 
@@ -45,6 +50,9 @@ public class UI_MainTimer : MonoBehaviour {
                         timeImage.sprite = nightSprite;
                     }
                     break;
+                case TimerType.LinearAndImage:
+                    timerSlider.value = percentage;
+                    break;
                 default:
                     break;
             }
@@ -55,7 +63,28 @@ public class UI_MainTimer : MonoBehaviour {
         }
     }
 
-
-
+    /// <summary>
+    /// d for Day, n for Night, default for day
+    /// </summary>
+    /// <param name="c"></param>
+    public void DayOrNight(char c = 'd')
+    {
+        if(timerType == TimerType.LinearAndImage)
+        {
+            switch (c)
+            {
+                case 'd':
+                    timeImage.sprite = daySprite;
+                    SliderFillImage.color = DaySliderColor;
+                    break;
+                case 'n':
+                    timeImage.sprite = nightSprite;
+                    SliderFillImage.color = NightSliderColor;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
 }
