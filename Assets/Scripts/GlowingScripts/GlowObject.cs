@@ -28,8 +28,6 @@ public class GlowObject : MonoBehaviour
 		Renderers = GetComponentsInChildren<Renderer>();
         _targetColor = GlowColor;
         m_highlightMaterial = new Material(Shader.Find("StandardGlow"));
-        
-
     }
 
     public void GlowMachine()

@@ -13776,6 +13776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4006402662722576}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114076860965888322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13805,6 +13806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4435903992365350}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114111829206451936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14235,6 +14237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4118190956113058}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114410344300444840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14476,6 +14479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4044395612778916}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114677751169517718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14863,6 +14867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4575733784604446}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114890102413559558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14876,6 +14881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4519415831279162}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114920185617491932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14889,6 +14895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4313815153640376}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114925249248475624
 MonoBehaviour:
   m_ObjectHideFlags: 1
