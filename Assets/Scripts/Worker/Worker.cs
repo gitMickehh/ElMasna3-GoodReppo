@@ -164,15 +164,29 @@ public class Worker : MonoBehaviour
     }
     */
 
-    public void AssignWorker(Machine machine)
+    public bool AssignWorker(Machine machine)
     {
         machineAssigned = machine;
         machineAssigned.worker = this;
         transform.position = machineAssigned.workerPosition.position;
-        machineAssigned.SetMachineState(MachineState.Working);
 
-        if (workerState != WorkerState.InMiniGame)
-            SetWorkerState(WorkerState.Working);
+        if (machineAssigned.machineState != MachineState.Broken)
+        {
+            machineAssigned.SetMachineState(MachineState.Working);
+
+            if (workerState != WorkerState.InMiniGame)
+                SetWorkerState(WorkerState.Working);
+
+            return true;
+        }
+
+        else
+        {
+            if (workerState != WorkerState.InMiniGame)
+                SetWorkerState(WorkerState.Idle);
+
+            return false;
+        }
     }
 
     public override string ToString()
@@ -322,13 +336,13 @@ public class Worker : MonoBehaviour
 
     IEnumerator WaitTillWinningFinish()
     {
-       
+
 
         // print("normalized time = " + workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
         yield return new WaitForSeconds(3.5f//workerAnimator.GetCurrentAnimatorStateInfo(0).length + 
-            /*workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime*/);
+                                            /*workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime*/);
 
-       
+
 
         if (workerManager.workersInOrientation.Contains(gameObject))
         {
@@ -351,7 +365,7 @@ public class Worker : MonoBehaviour
         //    print("in Win animation");
         //}
 
-        
+
     }
 
 }

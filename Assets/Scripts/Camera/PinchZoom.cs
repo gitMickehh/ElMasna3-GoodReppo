@@ -10,12 +10,15 @@ public class PinchZoom : MonoBehaviour
 
     public float orthoZoomSpeed = 0.05f;        // The rate of change of the orthographic size in orthographic mode.
     Camera camera;
+    public Camera []cameraChild;
     public float minOrthographicSize = 8.7f;
     public float maxOrthographicSize = 15f;
 
     private void Start()
     {
         camera = transform.GetComponent<Camera>();
+        cameraChild = transform.GetComponentsInChildren<Camera>();
+
     }
 
     void Update()
@@ -40,6 +43,7 @@ public class PinchZoom : MonoBehaviour
                 camera.orthographicSize = Mathf.Max(camera.orthographicSize, minOrthographicSize);
                 camera.orthographicSize = Mathf.Min(camera.orthographicSize, maxOrthographicSize);
 
+                cameraChild[1].orthographicSize = camera.orthographicSize;
                
             }
 
@@ -53,6 +57,8 @@ public class PinchZoom : MonoBehaviour
 
                 camera.fieldOfView = Mathf.Max(camera.fieldOfView, minPerspectiveFOV);
                 camera.fieldOfView = Mathf.Min(camera.fieldOfView, maxPerspectiveFOV);
+
+                cameraChild[1].fieldOfView = camera.fieldOfView;
             }
 
         }

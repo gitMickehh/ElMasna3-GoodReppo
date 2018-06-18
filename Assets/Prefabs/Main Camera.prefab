@@ -25,9 +25,28 @@ GameObject:
   - component: {fileID: 114810855277935524}
   - component: {fileID: 114334852878928506}
   - component: {fileID: 114316597189035320}
+  - component: {fileID: 92559326140671230}
+  - component: {fileID: 114580831584768758}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1606626877535782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4272513525414862}
+  - component: {fileID: 20540088506995630}
+  - component: {fileID: 114685242229007690}
+  m_Layer: 0
+  m_Name: GlowPrePassCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,10 +60,24 @@ Transform:
   m_LocalRotation: {x: -0.046394967, y: 0.71174985, z: -0.043538377, w: -0.6995457}
   m_LocalPosition: {x: 39.41, y: 21.1, z: -0.77751255}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4272513525414862}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.14, y: -10, z: 0}
+--- !u!4 &4272513525414862
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606626877535782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4179910210293850}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20183781583965000
 Camera:
   m_ObjectHideFlags: 1
@@ -81,8 +114,51 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!20 &20540088506995630
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606626877535782}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 66
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!81 &81761910234456462
 AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331869992439824}
+  m_Enabled: 1
+--- !u!92 &92559326140671230
+Behaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -103,6 +179,7 @@ MonoBehaviour:
   minPerspectiveFOV: 33
   maxPerspectiveFOV: 66
   orthoZoomSpeed: 0.05
+  cameraChild: []
   minOrthographicSize: 8.7
   maxOrthographicSize: 15
 --- !u!114 &114334852878928506
@@ -121,6 +198,31 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   moving: {fileID: 11400000, guid: 60b49ddbe8eb7a44bb19ec5f46d25951, type: 2}
+--- !u!114 &114580831584768758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331869992439824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d743eff80d8a941478a6611117040a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Intensity: 2.6
+  _compositeMat: {fileID: 0}
+--- !u!114 &114685242229007690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606626877535782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c08bc790e81e6e4787d61eaf5e9f283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blurMat: {fileID: 0}
 --- !u!114 &114810855277935524
 MonoBehaviour:
   m_ObjectHideFlags: 1

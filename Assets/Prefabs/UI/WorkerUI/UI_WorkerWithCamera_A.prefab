@@ -1820,7 +1820,6 @@ MonoBehaviour:
   UICamera: {fileID: 20017751857637684}
   animatorControllers: []
   swipeCloseSpeed: 2
-  maxOpenTime: 0.5
   miniGameStartedEvent: {fileID: 11400000, guid: 67509b22711573d44bddea0bf81104de,
     type: 2}
   workerManager: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum MachineState
 {
-    Idle, Working
+    Idle, Working, Broken
 }
 public class Machine : MonoBehaviour
 {
@@ -23,11 +23,31 @@ public class Machine : MonoBehaviour
     [Header("Worker On Task")]
     public Worker worker;
 
+    [Header("Assembly Line")]
+    public AssemblyLine assemblyLine;
+
+    GlowObject glowObject;
 
     private void Awake()
     {
+        assemblyLine = GetComponentInParent<AssemblyLine>();
         machineAnimator = GetComponentsInChildren<Animator>()[0];
+        glowObject = GetComponent<GlowObject>();
     }
+
+
+    private void Start()
+    {
+        SetMachineState(MachineState.Idle);
+
+    }
+    public void StopCountDown()
+    {
+        time = machineBase.DurationInMinutes * 60;
+        StopCoroutine(StartCountDown());
+
+    }
+
     public IEnumerator StartCountDown()
     {
         time = machineBase.DurationInMinutes * 60;
@@ -44,20 +64,6 @@ public class Machine : MonoBehaviour
             StopCountDown();
         }
     }
-
-    private void Start()
-    {
-        //isWorking = true;
-        //machineState = MachineState.Idle
-        SetMachineState(MachineState.Idle);
-    }
-    public void StopCountDown()
-    {
-        time = machineBase.DurationInMinutes * 60;
-        StopCoroutine(StartCountDown());
-
-    }
-
     public void SetMachineState(MachineState state)
     {
         machineState = state;
@@ -70,9 +76,24 @@ public class Machine : MonoBehaviour
 
             case MachineState.Working:
                 machineAnimator.SetBool("Working", true);
+                break;
 
+            case MachineState.Broken:
+                machineAnimator.SetBool("Working", false);
+                if (worker)
+                {
+                    worker.SetWorkerState(WorkerState.Idle);
+                }
                 break;
         }
+    }
+
+    public void MachineBrokenDown()
+    {
+        SetMachineState(MachineState.Broken);
+        glowObject.GlowMachine();
+
+        assemblyLine.isWorking = false;
     }
 
 }

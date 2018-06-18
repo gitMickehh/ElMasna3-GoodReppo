@@ -36,10 +36,8 @@ public class AssemblyLine : MonoBehaviour
     {
         j = 0;
         moneyMadeInLine = 0;
-        //workerCountWithPending = workersInLine.Count;
         isWorking = true;
         workerFull = CheckForWorkersCount();
-        //print("set isworking to true");
 
         assemblyLineManager = FindObjectOfType<AssemblyLineManager>();
         assemblyLineManager.assemblyLines.Add(gameObject.GetComponent<AssemblyLine>());
@@ -58,7 +56,6 @@ public class AssemblyLine : MonoBehaviour
 
             for (int i = 0; i < workersInLine.Count && j < Machines.Count; i++)
             {
-                //workersInLine[i].AssignWorker(Machines[j].workerPosition);
                 if (workersInLine[i].machineAssigned)
                 {
                     workersInLine[i].machineAssigned.SetMachineState(MachineState.Idle);
@@ -66,26 +63,24 @@ public class AssemblyLine : MonoBehaviour
                     workersInLine[i].machineAssigned = null;
                 }
 
-                workersInLine[i].AssignWorker(Machines[j]);
-                //StartCoroutine(Machines[j].StartCountDown());
+                bool machineCond = workersInLine[i].AssignWorker(Machines[j]);
+                if (!machineCond)
+                    isWorking = false;
 
-                j++;
                 moneyMadeInLine += (50 * Mathf.Pow((1.2f), workersInLine[i].level)) + ((Factory_SO.companyLevel - 1) * 100);
+                j++;
+
             }
-            //SetWorkersInLineWorking();
             StartCountDown();
-            yield return new WaitForSeconds(machineBase.DurationInMinutes * 60); // *60
-
-            //SetWorkersInLineIdle();
-            //SetMachinesInLineIdle();
-
+            yield return new WaitForSeconds(machineBase.DurationInMinutes * 60);
 
             if (j >= Machines.Count)
             {
                 //Iteration Finished
+
                 DepositMoneyToFactory();
+
                 AddPendingWorkersToLine();
-                //L_IterationFinished.Raise();
                 moneyMadeInLine = 0;
 
                 j = 0;
@@ -105,6 +100,8 @@ public class AssemblyLine : MonoBehaviour
 
     public void DepositMoneyToFactory()
     {
+        if(!isWorking)
+            moneyMadeInLine = 0;
         print("L_IterationFinished has been raised.");
         Factory_SO.DepositMoney(moneyMadeInLine);
         moneyMadeInLine = 0;
@@ -149,13 +146,13 @@ public class AssemblyLine : MonoBehaviour
 
         return moneyPerMin;
     }
-/*
-    public void AddNewWorkerToAssembly(Worker worker)
-    {
-        workersInLine.Add(worker);
-        CheckForWorkersCount();
-    }
-    */
+    /*
+        public void AddNewWorkerToAssembly(Worker worker)
+        {
+            workersInLine.Add(worker);
+            CheckForWorkersCount();
+        }
+        */
 
     public bool CheckForWorkersCount()
     {
@@ -178,7 +175,7 @@ public class AssemblyLine : MonoBehaviour
 
     public void AddPendingWorkersToLine()
     {
-        for(int i = 0; i < pendingWorkers.Count; i++)
+        for (int i = 0; i < pendingWorkers.Count; i++)
         {
             pendingWorkers[i].gameObject.SetActive(true);
             workersInLine.Add(pendingWorkers[i]);
