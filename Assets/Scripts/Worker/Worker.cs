@@ -164,29 +164,17 @@ public class Worker : MonoBehaviour
     }
     */
 
-    public bool AssignWorker(Machine machine)
+    public void AssignWorker(Machine machine)
     {
         machineAssigned = machine;
         machineAssigned.worker = this;
         transform.position = machineAssigned.workerPosition.position;
 
-        if (machineAssigned.machineState != MachineState.Broken)
-        {
-            machineAssigned.SetMachineState(MachineState.Working);
+        machineAssigned.SetMachineState(MachineState.Working);
 
-            if (workerState != WorkerState.InMiniGame)
-                SetWorkerState(WorkerState.Working);
+        if (workerState != WorkerState.InMiniGame)
+            SetWorkerState(WorkerState.Working);
 
-            return true;
-        }
-
-        else
-        {
-            if (workerState != WorkerState.InMiniGame)
-                SetWorkerState(WorkerState.Idle);
-
-            return false;
-        }
     }
 
     public override string ToString()

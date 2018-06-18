@@ -44,10 +44,14 @@ public class Machine : MonoBehaviour
     public void StopCountDown()
     {
         time = machineBase.DurationInMinutes * 60;
-        StopCoroutine(StartCountDown());
+        StopCoroutine("StartCountDown");
 
     }
 
+    public void CountDown()
+    {
+        StartCoroutine("StartCountDown");
+    }
     public IEnumerator StartCountDown()
     {
         time = machineBase.DurationInMinutes * 60;
@@ -64,6 +68,8 @@ public class Machine : MonoBehaviour
             StopCountDown();
         }
     }
+
+
     public void SetMachineState(MachineState state)
     {
         machineState = state;
@@ -80,10 +86,12 @@ public class Machine : MonoBehaviour
 
             case MachineState.Broken:
                 machineAnimator.SetBool("Working", false);
+                /*
                 if (worker)
                 {
                     worker.SetWorkerState(WorkerState.Idle);
                 }
+                */
                 break;
         }
     }
@@ -93,7 +101,15 @@ public class Machine : MonoBehaviour
         SetMachineState(MachineState.Broken);
         glowObject.GlowMachine();
 
-        assemblyLine.isWorking = false;
+        //assemblyLine.isWorking = false;
+    }
+
+    public void StopMachine()
+    {
+        StopCountDown();
+        SetMachineState(MachineState.Idle);
+        if (worker)
+            worker.SetWorkerState(WorkerState.Idle);
     }
 
 }

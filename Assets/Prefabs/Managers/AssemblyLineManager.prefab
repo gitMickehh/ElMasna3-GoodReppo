@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4605872583488862}
   - component: {fileID: 114173918502767964}
+  - component: {fileID: 114986143488902884}
   m_Layer: 0
   m_Name: AssemblyLineManager
   m_TagString: Untagged
@@ -57,3 +58,31 @@ MonoBehaviour:
   NewWorkerAdded: {fileID: 11400000, guid: 72b87d9a0aeb84a4eb3823745e6f784e, type: 2}
   moneyMadeInLines: 0
   canAssign: 0
+--- !u!114 &114986143488902884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117953938010526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d9fd7f1272f3744a0c65b10f3a4254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4a056923d23b67044a8615d4cb350dec, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114173918502767964}
+        m_MethodName: BreakMachineRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
