@@ -6,20 +6,10 @@ public class FloorRotation : MonoBehaviour {
 
     public float SwipeSpeed = .06f;
     public float swipeThreshold = 200;
-    //bool touching = false;
 
-    //Rigidbody rb;
-    //Vector3 torque;
-
-    //private void Start()
-    //{
-    //rb = this.GetComponent<Rigidbody>();
-    //torque = new Vector3();
-    //}
-
-        /*
-         We can enable this script on the floor we are currently only looking at.
-        */
+    [Header("Tutorial")]
+    public GameEvent_SO rotationTutorialDone;
+    bool tutorialCheck = false;
 
     void Update()
     {
@@ -52,10 +42,35 @@ public class FloorRotation : MonoBehaviour {
                 {
                     transform.Rotate(new Vector3(0, newY, 0));
                 }
+
+                if(!tutorialCheck)
+                {
+                    DoTutorial();
+                }
+
             }
         }
     }
 
+    void DoTutorial()
+    {
+        if (PlayerPrefs.HasKey("firstTime"))
+        {
+            if (PlayerPrefs.GetInt("firstTime") != 2)
+            {
+                rotationTutorialDone.Raise();
+                PlayerPrefs.SetInt("firstTime", 2);
+            }
+            else
+                tutorialCheck = true;
+        }
+        else
+        {
+            rotationTutorialDone.Raise();
+            PlayerPrefs.SetInt("firstTime", 2);
+            tutorialCheck = true;
+        }
+    }
 
     /*void FixedUpdate () {
 

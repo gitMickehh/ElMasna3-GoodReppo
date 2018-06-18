@@ -5,11 +5,12 @@ using UnityEngine;
 public class Restart : MonoBehaviour {
 
     public PlayerPrefsRemover_SO playerPrefsRemover_SO;
-    public Play play;
+    public LevelLoader levelLoader;
+
 
     public void OnRestartButtonClicked()
     {
         playerPrefsRemover_SO.DeletePlayerPrefs();
-        play.OnPlayButtonClicked();
+        levelLoader.LoadLevel(1);
     }
 }

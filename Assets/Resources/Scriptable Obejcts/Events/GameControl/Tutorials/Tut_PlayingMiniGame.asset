@@ -9,5 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a631be24f4b884f9f4ca9401760a25, type: 3}
-  m_Name: TutorialPause
+  m_Name: Tut_PlayingMiniGame
   m_EditorClassIdentifier: 
+  listeners: []

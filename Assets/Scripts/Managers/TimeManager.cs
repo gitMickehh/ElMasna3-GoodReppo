@@ -63,9 +63,6 @@ public class TimeManager : MonoBehaviour {
         DateClass timeNow = DateTime_SO.GetTimeNow();
         GetSetDay();
         CalculateTimeGap(timeNow);
-
-        timer.maxTimeSeconds = dayDurationMinutes * 60;
-        timer.timeLeftSeconds = timeLeft * 60 + timeLeftSec;
     }
 
     private void OnApplicationQuit()
@@ -276,10 +273,12 @@ public class TimeManager : MonoBehaviour {
         {
             startDayEvent.Raise();
             Debug.Log("Morning, " + dayInGame.ToString() + ", day: " + MorningDuration * 60 + " seconds");
+            SetTimerUI(MorningDuration * 60, MorningDuration * 60);
             yield return new WaitForSeconds(MorningDuration * 60);
 
             endDayEvent.Raise();
             Debug.Log("Night" + ", day: " + (NightDuration) * 60 + " seconds");
+            SetTimerUI(NightDuration * 60, NightDuration * 60, 'n');
             yield return new WaitForSeconds(NightDuration * 60);
 
             AddDay();
@@ -291,9 +290,11 @@ public class TimeManager : MonoBehaviour {
         //called if t (minutes) < MorningDuration
         //t is in seconds
         Debug.Log("Morning");
+        SetTimerUI(MorningDuration * 60, t);
         yield return new WaitForSeconds(t);
 
         Debug.Log("Night");
+        SetTimerUI(NightDuration * 60, NightDuration * 60,'n');
         yield return new WaitForSeconds(NightDuration * 60);
 
         AddDay();
@@ -305,11 +306,21 @@ public class TimeManager : MonoBehaviour {
         //called if t (minutes) > MorningDuration
         //t is in seconds
         TimeLog.MyLog("Night duration: " + t);
+        SetTimerUI(NightDuration * 60,t, 'n');
 
         yield return new WaitForSeconds(t);
 
         Debug.Log("Day Ended");
         AddDay();
         StartCoroutine(ActivateTimer());
+    }
+
+    void SetTimerUI(float timerMaxTime, float timerCurrentValue, char c = 'd')
+    {
+        //timer.maxTimeSeconds = dayDurationMinutes * 60;
+        //timer.timeLeftSeconds = timeLeft * 60 + timeLeftSec;
+        timer.maxTimeSeconds = timerMaxTime;
+        timer.timeLeftSeconds = timerCurrentValue;
+        timer.DayOrNight(c);
     }
 }

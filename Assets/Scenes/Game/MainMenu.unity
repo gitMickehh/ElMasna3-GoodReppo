@@ -501,7 +501,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114069078286348466, guid: cf1a9f65dc1b3b044b0a21a246460c4a,
+    - target: {fileID: 114042786892338524, guid: cf1a9f65dc1b3b044b0a21a246460c4a,
+        type: 2}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 2095300572}
+    - target: {fileID: 114394467530142746, guid: cf1a9f65dc1b3b044b0a21a246460c4a,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -516,10 +521,15 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 396523768}
-    - target: {fileID: 114439055121998374, guid: cf1a9f65dc1b3b044b0a21a246460c4a,
+    - target: {fileID: 114069078286348466, guid: cf1a9f65dc1b3b044b0a21a246460c4a,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevel
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 396523768}
+    - target: {fileID: 114503778450917672, guid: cf1a9f65dc1b3b044b0a21a246460c4a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf1a9f65dc1b3b044b0a21a246460c4a, type: 2}
