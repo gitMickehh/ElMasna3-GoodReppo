@@ -268,8 +268,8 @@ GameObject:
   - component: {fileID: 224971756964181852}
   - component: {fileID: 222487772719472398}
   - component: {fileID: 114297155831326304}
-  - component: {fileID: 114689215096886566}
   - component: {fileID: 95322257589120978}
+  - component: {fileID: 114454377976806422}
   m_Layer: 5
   m_Name: Text_AddReduceMoney
   m_TagString: Untagged
@@ -638,6 +638,7 @@ MonoBehaviour:
   pay_Btn: {fileID: 114270317448884764}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   reduceAnim: {fileID: 0}
+  fixingCost: 0
 --- !u!114 &114154974251335172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1127,6 +1128,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114454377976806422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1508846532128548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7341c728f414ba479381c2f92ac059d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114458182001258014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1627,19 +1639,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI_OpenEvent: {fileID: 11400000, guid: 7f266aab3049e3042836f89d4fc5d189, type: 2}
   UI_CloseEvent: {fileID: 11400000, guid: 07e44d871528a564d8ab89eebb82420e, type: 2}
---- !u!114 &114689215096886566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1508846532128548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951472c05b301bd42803f6f0be1a9365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  companyMoney: {fileID: 114297155831326304}
-  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
 --- !u!114 &114707084357448314
 MonoBehaviour:
   m_ObjectHideFlags: 1

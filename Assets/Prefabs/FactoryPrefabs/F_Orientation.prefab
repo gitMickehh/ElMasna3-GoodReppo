@@ -13740,6 +13740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114049179103749794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14095,6 +14096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114237431747559064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14227,6 +14229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114370452021519108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14699,6 +14702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114731163759674024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14925,6 +14929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114881640505557474
 MonoBehaviour:
   m_ObjectHideFlags: 1
