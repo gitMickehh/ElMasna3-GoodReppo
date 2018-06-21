@@ -188,6 +188,9 @@ MonoBehaviour:
   daySprite: {fileID: 0}
   nightSprite: {fileID: 0}
   timeImage: {fileID: 0}
+  DaySliderColor: {r: 0, g: 0, b: 0, a: 0}
+  NightSliderColor: {r: 0, g: 0, b: 0, a: 0}
+  SliderFillImage: {fileID: 0}
 --- !u!114 &114384084943344010
 MonoBehaviour:
   m_ObjectHideFlags: 1

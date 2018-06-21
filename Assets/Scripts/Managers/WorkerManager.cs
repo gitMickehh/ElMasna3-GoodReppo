@@ -450,7 +450,7 @@ public class WorkerManager : MonoBehaviour
         {
             if (worker.workerState == WorkerState.InMiniGame)
             {
-                if (!(workersInOrientation.Contains(worker.gameObject)))
+                if (!(workersInOrientation.Contains(worker.gameObject)) && (worker.machineAssigned.machineState != MachineState.Broken))
                 {
                     worker.workerState = WorkerState.Working;
                 }
@@ -471,7 +471,7 @@ public class WorkerManager : MonoBehaviour
         {
             if (worker.workerState == WorkerState.InMiniGame)
             {
-                if (!(workersInOrientation.Contains(worker.gameObject)))
+                if (!(workersInOrientation.Contains(worker.gameObject)) && (worker.machineAssigned.machineState != MachineState.Broken))
                 {
                     worker.workerState = WorkerState.Working;
                 }
@@ -492,7 +492,7 @@ public class WorkerManager : MonoBehaviour
         {
             if (worker.workerState == WorkerState.InMiniGame)
             {
-                if (!(workersInOrientation.Contains(worker.gameObject)))
+                if (!(workersInOrientation.Contains(worker.gameObject)) && (worker.machineAssigned.machineState != MachineState.Broken))
                 {
                     worker.workerState = WorkerState.Working;
                 }
@@ -514,7 +514,7 @@ public class WorkerManager : MonoBehaviour
             if (worker.workerState == WorkerState.InMiniGame)
             //if (worker.workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Win"))
             {
-                if (!(workersInOrientation.Contains(worker.gameObject)))
+                if (!(workersInOrientation.Contains(worker.gameObject)) && (worker.machineAssigned.machineState != MachineState.Broken))
                 {
                     worker.workerState = WorkerState.Working;
                 }

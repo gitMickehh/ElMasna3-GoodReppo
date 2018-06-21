@@ -7,19 +7,18 @@ public class TouchManager : MonoBehaviour
 
     Camera thiefCam;
 
-    public GameEvent_SO swipeAway;
+    //public GameEvent_SO swipeAway;
     Vector2 startPos;
     Vector2 endPos;
-    //Rigidbody2D rb;
 
     public Transform toDrag;
-    //public float speed;
     float dist;
     bool dragging;
     bool oneTap;
     Vector3 offset;
     public SetOfMoney setOfMoney;
-
+    public Explosion explosion;
+    bool firstPlay;
     private void Awake()
     {
         setOfMoney = FindObjectOfType<SetOfMoney>();
@@ -28,11 +27,12 @@ public class TouchManager : MonoBehaviour
     {
         dragging = false;
         oneTap = false;
-        
+        firstPlay = true;
+
         thiefCam = GameObject.FindGameObjectWithTag("ThiefCamera").GetComponent<Camera>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         float speed = 10;
         float moveHorizontal;
@@ -52,8 +52,9 @@ public class TouchManager : MonoBehaviour
 
                     if (hit.collider != null && hit.collider.CompareTag("Thief"))
                     {
-                        print("Touch Theif");
+                        
                         toDrag = hit.transform;
+                        print("begin Touch "+ toDrag.name);
 
                         dist = toDrag.position.z - thiefCam.transform.position.z;
                         v3 = new Vector3(touch.position.x, touch.position.y, dist);
@@ -66,6 +67,7 @@ public class TouchManager : MonoBehaviour
                         moveVertical = 0.0f;
                         oneTap = true;
                         dragging = true;
+                        firstPlay = true;
                     }
 
                     break;
@@ -73,7 +75,14 @@ public class TouchManager : MonoBehaviour
                 case TouchPhase.Moved:
                     if (dragging)
                     {
-                        oneTap = false;
+                        PlayExplosion();
+                        print("moving " + toDrag.name);
+                        
+                        if(touch.deltaPosition.y > Mathf.Abs(2) || touch.deltaPosition.x > Mathf.Abs(2))
+                        {
+                            oneTap = false;
+                        }
+
                         v3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, dist);
                         v3 = thiefCam.ScreenToWorldPoint(v3);
                         toDrag.position = v3 + offset;
@@ -83,14 +92,18 @@ public class TouchManager : MonoBehaviour
                     }
                     else
                     {
-                        oneTap = false;
+                        if (touch.deltaPosition.y > Mathf.Abs(2) || touch.deltaPosition.x > Mathf.Abs(2))
+                        {
+                            oneTap = false;
+                        }
                         RaycastHit2D hit1 = Physics2D.Raycast(thiefCam.ScreenToWorldPoint(
                         (touch.position)), Vector2.zero);
                        
                         if (hit1.collider != null && hit1.collider.CompareTag("Thief"))
                         {
-                            print("Touch Theif");
+                            
                             toDrag = hit1.transform;
+                            print("begin Touch while moving " + toDrag.name);
 
                             dist = toDrag.position.z - thiefCam.transform.position.z;
                             v3 = new Vector3(touch.position.x, touch.position.y, dist);
@@ -102,6 +115,7 @@ public class TouchManager : MonoBehaviour
                             moveHorizontal = 0.0f;
                             moveVertical = 0.0f;
                             dragging = true;
+                            firstPlay = true;
                         }
                     }
                     break;
@@ -116,6 +130,8 @@ public class TouchManager : MonoBehaviour
                 case TouchPhase.Ended:
                     if (dragging && !oneTap)
                     {
+                        //explosion.ExplosionEffect(toDrag);
+                        print("leave " + toDrag.name);
                         dragging = false;
 
                         endPos = touch.position;
@@ -128,9 +144,11 @@ public class TouchManager : MonoBehaviour
                         movement.Normalize();
 
                         toDrag.GetComponent<Rigidbody2D>().velocity = (movement * speed);
+                        //toDrag.tag = "Untagged";
+                        //explosion.ExplosionEffect(toDrag);
                         Destroy(toDrag.gameObject, 2);
 
-                        FindObjectOfType<AudioManager>().Play("Swoosh1");
+                        //FindObjectOfType<AudioManager>().Play("Swoosh1");
                     }
 
                     break;
@@ -138,12 +156,20 @@ public class TouchManager : MonoBehaviour
         }
     }
 
+
+    public void PlayExplosion()
+    {
+        if (firstPlay)
+            explosion.ExplosionEffect(toDrag);
+
+        firstPlay = false;
+    }
    
     public void SetDraggingFalse()
     {
         dragging = false;
         toDrag.tag = "Untagged";
-        toDrag = null;
+        //toDrag = null;
     }
 
 }

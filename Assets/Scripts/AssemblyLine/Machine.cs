@@ -26,7 +26,19 @@ public class Machine : MonoBehaviour
     [Header("Assembly Line")]
     public AssemblyLine assemblyLine;
 
+    public Factory_SO factory_SO;
+    public GameEvent_SO machineFixed;
+    public GameEvent_SO machineIssue;
+
     GlowObject glowObject;
+
+    public float FixingCost
+    {
+        get
+        {
+            return 500 * Mathf.Pow(1.3f, factory_SO.companyLevel);
+        }
+    }
 
     private void Awake()
     {
@@ -98,8 +110,11 @@ public class Machine : MonoBehaviour
 
     public void MachineBrokenDown()
     {
+        //FindObjectOfType<ComplaintsManager>().AddFixMachineComp();
+        machineIssue.Raise();
         SetMachineState(MachineState.Broken);
         glowObject.GlowMachine();
+        GetComponent<ClickableMachine>().enabled = true;
 
         //assemblyLine.isWorking = false;
     }
@@ -111,5 +126,32 @@ public class Machine : MonoBehaviour
         if (worker)
             worker.SetWorkerState(WorkerState.Idle);
     }
+
+    public void MachineFixed()
+    {
+            //SetNormal();
+            //FindObjectOfType<ComplaintsManager>().FixMachine();
+            glowObject.StopGlowing();
+            GetComponent<ClickableMachine>().enabled = false;
+            print(transform.name + " got fixed");
+            assemblyLine.ReturnToWork();
+            machineFixed.Raise();
+
+    }
+
+    //public void SetNormal()
+    //{
+    //    if (worker)
+    //    {
+    //        SetMachineState(MachineState.Working);
+    //        //worker.SetWorkerState(WorkerState.Working);
+    //    }
+    //    else
+    //    {
+    //        SetMachineState(MachineState.Idle);
+    //    }
+    //}
+
+     
 
 }

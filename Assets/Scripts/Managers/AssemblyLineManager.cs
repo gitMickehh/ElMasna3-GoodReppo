@@ -82,7 +82,7 @@ public class AssemblyLineManager : MonoBehaviour
         return assemblyLines[no];
     }
 
-    public void BreakMachineRandom()
+    public void BreakMachineRandom() //Respond of BreakMachineRandomEvent
     {
         AssemblyLine assemblyLine = RandomLine();
         Machine machine = assemblyLine.RandomMachine();

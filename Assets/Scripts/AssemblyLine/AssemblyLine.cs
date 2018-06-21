@@ -8,7 +8,7 @@ public class AssemblyLine : MonoBehaviour
     AssemblyLineManager assemblyLineManager;
 
     [Header("Machines")]
-    public Machine_SO machineBase;
+    public Machine_SO machineBase; 
     public List<Machine> Machines;
 
     [Header("Workers")]
@@ -192,6 +192,14 @@ public class AssemblyLine : MonoBehaviour
         }
 
         moneyMadeInLine = 0; //not sure!!
+        j = 0;
+    }
+
+    public void ReturnToWork()
+    {
+        isWorking = true;
+        StartCoroutine("AssignWorkersToMachinesAvailable");
+        
     }
 
 }
