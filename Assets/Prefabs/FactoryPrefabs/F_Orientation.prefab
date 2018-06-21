@@ -2363,9 +2363,11 @@ GameObject:
   - component: {fileID: 4834144347779818}
   - component: {fileID: 114237431747559064}
   - component: {fileID: 114250149616494190}
+  - component: {fileID: 65067581657649102}
+  - component: {fileID: 114223647095058192}
   m_Layer: 0
   m_Name: Machine3
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2746,9 +2748,11 @@ GameObject:
   - component: {fileID: 4009909948578294}
   - component: {fileID: 114410344300444840}
   - component: {fileID: 114828142418818706}
+  - component: {fileID: 65155463424382262}
+  - component: {fileID: 114040677335242756}
   m_Layer: 0
   m_Name: Machine6
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5227,9 +5231,11 @@ GameObject:
   - component: {fileID: 4918180401735538}
   - component: {fileID: 114677751169517718}
   - component: {fileID: 114511687503203562}
+  - component: {fileID: 65099564486185904}
+  - component: {fileID: 114702302443439810}
   m_Layer: 0
   m_Name: Machine1
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5381,9 +5387,11 @@ GameObject:
   - component: {fileID: 4635655288737732}
   - component: {fileID: 114300126252463938}
   - component: {fileID: 114111829206451936}
+  - component: {fileID: 65588609565950572}
+  - component: {fileID: 114857439253284144}
   m_Layer: 0
   m_Name: Machine5
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6355,9 +6363,11 @@ GameObject:
   - component: {fileID: 4761475527968272}
   - component: {fileID: 114940217520710692}
   - component: {fileID: 114427018087986910}
+  - component: {fileID: 65505362571811798}
+  - component: {fileID: 114358723477125960}
   m_Layer: 0
   m_Name: Machine2
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13273,6 +13283,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!65 &65067581657649102
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401941343402802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.1811786, y: 2.2615929, z: 0.9370794}
+  m_Center: {x: 0.003372662, y: 1.16642, z: -0.83848166}
+--- !u!65 &65099564486185904
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821362670058134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9345603, y: 5.218746, z: 1.8324089}
+  m_Center: {x: 0.522748, y: 2.8156319, z: -0.019312138}
+--- !u!65 &65155463424382262
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453235998117378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.24959, y: 5.708789, z: 1.0780377}
+  m_Center: {x: 0.7893019, y: 5.548843, z: 1.8520849}
 --- !u!65 &65311257459243056
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13309,6 +13355,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 24.014645, y: 0.2405962, z: 39.81551}
   m_Center: {x: 8.378294, y: 0, z: -1.0907574}
+--- !u!65 &65505362571811798
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986602211466236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3914552, y: 6.2154846, z: 1}
+  m_Center: {x: -1.0248487, y: 3.7233028, z: 0.000000043194145}
+--- !u!65 &65588609565950572
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854665904065322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.2189083, y: 1.3591928, z: 1.5074273}
+  m_Center: {x: 0.1621766, y: 0.99170065, z: -0.05174035}
 --- !u!65 &65644084222746152
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13658,6 +13728,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114040677335242756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453235998117378}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
 --- !u!114 &114049179103749794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13776,7 +13858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4006402662722576}
   workerUI: {fileID: 0}
-  ClickTutorialEvent: {fileID: 0}
+  ClickTutorialEvent: {fileID: 11400000, guid: ba71e1b042e0b444387a5978323b3eb6, type: 2}
 --- !u!114 &114076860965888322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13806,7 +13888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4435903992365350}
   workerUI: {fileID: 0}
-  ClickTutorialEvent: {fileID: 0}
+  ClickTutorialEvent: {fileID: 11400000, guid: ba71e1b042e0b444387a5978323b3eb6, type: 2}
 --- !u!114 &114111829206451936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14001,6 +14083,18 @@ MonoBehaviour:
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   workerAnimator: {fileID: 0}
   machineAssigned: {fileID: 0}
+--- !u!114 &114223647095058192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401941343402802}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
 --- !u!114 &114237431747559064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14019,6 +14113,9 @@ MonoBehaviour:
   fillImg: {fileID: 114925249248475624}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114250149616494190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14078,6 +14175,9 @@ MonoBehaviour:
   fillImg: {fileID: 114049179103749794}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114321757750833008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14115,6 +14215,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114358723477125960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986602211466236}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
 --- !u!114 &114370452021519108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14237,7 +14349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4118190956113058}
   workerUI: {fileID: 0}
-  ClickTutorialEvent: {fileID: 0}
+  ClickTutorialEvent: {fileID: 11400000, guid: ba71e1b042e0b444387a5978323b3eb6, type: 2}
 --- !u!114 &114410344300444840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14256,6 +14368,9 @@ MonoBehaviour:
   fillImg: {fileID: 114693527722579346}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114427018087986910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14479,7 +14594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4044395612778916}
   workerUI: {fileID: 0}
-  ClickTutorialEvent: {fileID: 0}
+  ClickTutorialEvent: {fileID: 11400000, guid: ba71e1b042e0b444387a5978323b3eb6, type: 2}
 --- !u!114 &114677751169517718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14498,6 +14613,9 @@ MonoBehaviour:
   fillImg: {fileID: 114370452021519108}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114679921003522670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14569,6 +14687,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 1
+--- !u!114 &114702302443439810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821362670058134}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
 --- !u!114 &114731163759674024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14783,6 +14913,18 @@ MonoBehaviour:
   GlowColor: {r: 1, g: 0, b: 0, a: 0}
   LerpFactor: 10
   m_highlightMaterial: {fileID: 0}
+--- !u!114 &114857439253284144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854665904065322}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
 --- !u!114 &114881640505557474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14868,7 +15010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4575733784604446}
   workerUI: {fileID: 0}
-  ClickTutorialEvent: {fileID: 0}
+  ClickTutorialEvent: {fileID: 11400000, guid: ba71e1b042e0b444387a5978323b3eb6, type: 2}
 --- !u!114 &114890102413559558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14882,7 +15024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4519415831279162}
   workerUI: {fileID: 0}
-  ClickTutorialEvent: {fileID: 0}
+  ClickTutorialEvent: {fileID: 11400000, guid: ba71e1b042e0b444387a5978323b3eb6, type: 2}
 --- !u!114 &114920185617491932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14896,7 +15038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4313815153640376}
   workerUI: {fileID: 0}
-  ClickTutorialEvent: {fileID: 0}
+  ClickTutorialEvent: {fileID: 11400000, guid: ba71e1b042e0b444387a5978323b3eb6, type: 2}
 --- !u!114 &114925249248475624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14942,6 +15084,9 @@ MonoBehaviour:
   fillImg: {fileID: 114371041196794272}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!137 &137010892190626580
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

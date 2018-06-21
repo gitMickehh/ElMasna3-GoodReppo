@@ -55,7 +55,7 @@ public class Factory_SO : ScriptableObject
 
     public void WithdrawMoney(float money)
     {
-        if (money <= FactoryMoney)
+        if (CheckMoneyAvailability(money))
         {
             FactoryMoney -= money;
             factoryMoneyChanged.Raise();

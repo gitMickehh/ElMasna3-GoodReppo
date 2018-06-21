@@ -312,8 +312,16 @@ public class Worker : MonoBehaviour
                 workerAnimator.SetBool("Working", false);
                 workerAnimator.SetTrigger("WinTrigger");
                 StartCoroutine(WaitTillWinningFinish());
-                workerAnimator.SetBool("Working", true);
-                workerState = WorkerState.Working;
+                if (machineAssigned.machineState == MachineState.Broken)
+                {
+                    workerAnimator.SetBool("Working", false);
+                    workerState = WorkerState.Idle;
+                }
+                else
+                {
+                    workerAnimator.SetBool("Working", true);
+                    workerState = WorkerState.Working;
+                }
                 break;
 
                 //case WorkerState.InMiniGame:

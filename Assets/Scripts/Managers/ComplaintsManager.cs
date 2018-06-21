@@ -27,4 +27,25 @@ public class ComplaintsManager : MonoBehaviour {
     {
         complaintsRuntimeList.RemoveElement(allComplaints.ListElements[3]);
     }
+
+
+    public void AddDayOffComp()
+    {
+        complaintsRuntimeList.AddElement(allComplaints.ListElements[0]);
+    }
+
+    public void AddFixMachineComp()
+    {
+        complaintsRuntimeList.AddElement(allComplaints.ListElements[1]);
+    }
+
+    public void AddGivenPromotionComp()
+    {
+        complaintsRuntimeList.AddElement(allComplaints.ListElements[2]);
+    }
+
+    public void AddLevelUpSlowWorkerComp()
+    {
+        complaintsRuntimeList.AddElement(allComplaints.ListElements[3]);
+    }
 }
