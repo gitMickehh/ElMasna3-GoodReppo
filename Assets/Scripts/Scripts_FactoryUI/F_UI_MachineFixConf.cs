@@ -10,7 +10,7 @@ public class F_UI_MachineFixConf : MonoBehaviour {
     public Button pay_Btn;
     public Factory_SO factory_SO;
     public Animator reduceAnim;
-    float fixingCost;
+    public float fixingCost;
     Machine brokenMachine;
 
     public void Start()

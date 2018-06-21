@@ -8,7 +8,7 @@ public class ClickableMachine : MonoBehaviour
     //public Text fixMachineCost;
     public GameObject fixMachineConf_Panel;
     F_UI_MachineFixConf machineFixConf;
-    Machine machine;
+    public Machine machine;
 
     private void Start()
     {

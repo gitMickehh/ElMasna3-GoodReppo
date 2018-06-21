@@ -19,6 +19,7 @@ public class GlowObject : MonoBehaviour
 
     //private List<Material> _materials = new List<Material>();
     public Material m_highlightMaterial;
+    //try making the material and referencing it here
 
     private Color _currentColor;
     private Color _targetColor;
