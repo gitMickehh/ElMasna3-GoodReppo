@@ -165,12 +165,6 @@ public class WorkerManager : MonoBehaviour
     }
 
     //functions
-    public Worker GetRandomWorker()
-    {
-        int no = Random.Range(0, WorkersPrefabs.Count);
-        Worker worker = (WorkersPrefabs[no]).GetComponent(typeof(Worker)) as Worker;
-        return worker;
-    }
 
     public void DestroyWorkersInOrientation()
     {
@@ -355,6 +349,12 @@ public class WorkerManager : MonoBehaviour
             companyMoneyUpdates_SO.playForGreenTeam = 500 * (TotalGreenColor) / (GreenColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
     }
 
+    //public void ChangeTotalBlueColor()
+    //{
+    //    if (BlueColorOverSix > 0)
+    //        companyMoneyUpdates_SO.playForBlueTeam = 500 * (TotalBlueColor) / (BlueColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
+    //}
+
     public void ReturnFromRedGame()
     {
         print("Returned from Red game.");
@@ -528,21 +528,6 @@ public class WorkerManager : MonoBehaviour
 
     }
 
-    //public void ReturnFromOrientationGame()
-    //{
-    //    print("count in orientation: "+ workersInOrientation.Count);
-    //    foreach (GameObject workerGO in workersInOrientation)
-    //    {
-    //        Worker worker;
-    //        worker = workerGO.GetComponent<Worker>();
-    //        if (worker.workerState == WorkerState.InMiniGame)
-    //        {
-    //            //worker.LevelUp();
-    //            //worker.PlayerWon();
-    //            print("Worker in Orientation has been accepted.");
-    //        }
-    //    }
-    //}
 
     public void ReturnFromOrientationGame(Worker worker)
     {
@@ -552,14 +537,21 @@ public class WorkerManager : MonoBehaviour
         print(worker.name + " has been accepted");
 
         worker.PlayerWon();
-        //assemblyLineManager.AddNewWorkerToAssemb(worker);
-        //print(worker.name + " has been accepted");
-       // worker.gameObject.SetActive(false);
+
     }
 
-    //public void ChangeTotalBlueColor()
-    //{
-    //    if (BlueColorOverSix > 0)
-    //        companyMoneyUpdates_SO.playForBlueTeam = 500 * (TotalBlueColor) / (BlueColorOverSix) + ((factory_SO.companyLevel - 1) * 100);
-    //}
+
+
+    public Worker GetRandomWorker()
+    {
+        int no = Random.Range(0, WorkersPrefabs.Count);
+        Worker worker = (WorkersPrefabs[no]).GetComponent(typeof(Worker)) as Worker;
+        return worker;
+    }
+
+    public void RandomWorkerComplaint()
+    {
+        Worker worker = GetRandomWorker();
+        worker.AddComplaint();
+    }
 }
