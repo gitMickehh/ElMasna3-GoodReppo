@@ -51,7 +51,7 @@ public class TouchManager : MonoBehaviour
                     RaycastHit2D hit = Physics2D.Raycast(thiefCam.ScreenToWorldPoint(
                         (touch.position)), Vector2.zero);
 
-                    if (hit.collider != null && hit.collider.CompareTag("Thief"))
+                    if (hit.collider != null && hit.collider.CompareTag("Thief") && !hit.transform.gameObject.GetComponent<Thief>().swiped)
                     {
                         
                         toDrag = hit.transform;
@@ -84,8 +84,10 @@ public class TouchManager : MonoBehaviour
                         {
                             oneTap = false;
                         }
+                        
+                        v3 = new Vector3(touch.position.x, touch.position.y, toDrag.position.z);
+                        //v3 = new Vector3(touch.position.x, touch.position.y, dist);
 
-                        v3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, dist);
                         v3 = thiefCam.ScreenToWorldPoint(v3);
                         toDrag.position = v3 + offset;
                         toDrag.GetComponent<Thief>().swiped = true;
@@ -101,14 +103,15 @@ public class TouchManager : MonoBehaviour
                         RaycastHit2D hit1 = Physics2D.Raycast(thiefCam.ScreenToWorldPoint(
                         (touch.position)), Vector2.zero);
                        
-                        if (hit1.collider != null && hit1.collider.CompareTag("Thief"))
+                        if (hit1.collider != null && hit1.collider.CompareTag("Thief") && !hit1.transform.gameObject.GetComponent<Thief>().swiped)
                         {
                             
                             toDrag = hit1.transform;
                             print("begin Touch while moving " + toDrag.name);
 
                             dist = toDrag.position.z - thiefCam.transform.position.z;
-                            v3 = new Vector3(touch.position.x, touch.position.y, dist);
+                            //v3 = new Vector3(touch.position.x, touch.position.y, dist);
+                            v3 = new Vector3(touch.position.x, touch.position.y, toDrag.position.z);
                             v3 = thiefCam.ScreenToWorldPoint(v3);
                             offset = toDrag.position - v3;
 
@@ -130,11 +133,11 @@ public class TouchManager : MonoBehaviour
 
 
                 case TouchPhase.Ended:
-                    if (dragging && !oneTap)
+                    if (dragging && toDrag.GetComponent<Thief>().swiped) // !oneTap)
                     {
                         //explosion.ExplosionEffect(toDrag);
                         print("leave " + toDrag.name);
-                        dragging = false;
+                        //dragging = false;
 
                         endPos = touch.position;
                         toDrag.GetComponent<SeekMoney>().enabled = false;
@@ -152,6 +155,7 @@ public class TouchManager : MonoBehaviour
 
                         //FindObjectOfType<AudioManager>().Play("Swoosh1");
                     }
+                    dragging = false;
 
                     break;
             }

@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114848613492529952}
   - component: {fileID: 114041345883779606}
   - component: {fileID: 114862426178937550}
-  - component: {fileID: 114402462848732048}
   - component: {fileID: 114150145409063586}
   - component: {fileID: 114817663369723832}
   - component: {fileID: 114884090530758518}
@@ -129,20 +128,6 @@ MonoBehaviour:
   setOfMoney: {fileID: 0}
   gameManager: {fileID: 114550947067485378, guid: d528ba98fb51b194b857ba5d28535781,
     type: 2}
---- !u!114 &114402462848732048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1278866372761502}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd1b0bb49feddc4ea6f115923bb2a95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeAway: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
-  toDrag: {fileID: 0}
-  setOfMoney: {fileID: 0}
 --- !u!114 &114597947423833012
 MonoBehaviour:
   m_ObjectHideFlags: 1

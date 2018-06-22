@@ -81,7 +81,7 @@ public class SeekMoney : SteeringBase
     {
         if (transform.childCount > 0)
         {
-            print("Money is lost");
+            //print("Money is lost");
             moneyLostEvent.Raise();
             DestroyImmediate(gameObject);
 

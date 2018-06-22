@@ -19,7 +19,7 @@ public class Thief : MonoBehaviour {
         if (other.tag == "Money" && transform.childCount == 0 && !(other.transform.parent.CompareTag("Thief")) && 
             !(swiped))
         {
-            print("catched money.");
+            //print("catched money.");
             other.gameObject.transform.SetParent(transform);
             //other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             moneyCatchedEvent.Raise();
@@ -33,13 +33,7 @@ public class Thief : MonoBehaviour {
 
     public void WhenArrested()
     {
-        print("When Arrested");
-        /*
-        if(transform.childCount > 0)
-        {
-            gameObject.GetComponent<LeaveMoney>().LeaveMoneyWhenRunning();
-        }
-        */
+        //print("When Arrested");
         StopSeeking();
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;

@@ -16,7 +16,7 @@ public class LeaveMoney : MonoBehaviour {
         //GetComponent<BoxCollider2D>().enabled = false;
         if (transform.childCount > 0)
         {
-            print("LeaveMoney");
+            //print("LeaveMoney");
             
             transform.GetChild(0).gameObject.GetComponent<BoxCollider2D>().enabled = true;
             transform.GetChild(0).gameObject.transform.SetParent(setOfMoney.transform);
