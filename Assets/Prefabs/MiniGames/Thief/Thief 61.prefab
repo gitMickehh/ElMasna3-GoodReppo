@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114701988534047796}
   - component: {fileID: 114250563026069004}
   - component: {fileID: 114813794141481738}
-  - component: {fileID: 114084274510036054}
   - component: {fileID: 114565771552548156}
   - component: {fileID: 114089153025984316}
   - component: {fileID: 114638907474166974}
@@ -95,20 +94,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 2.85}
   m_EdgeRadius: 0
---- !u!114 &114084274510036054
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123713461871518}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd1b0bb49feddc4ea6f115923bb2a95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeAway: {fileID: 11400000, guid: b73f3ee4362b4e4428b6b34cc5152671, type: 2}
-  toDrag: {fileID: 0}
-  setOfMoney: {fileID: 0}
 --- !u!114 &114089153025984316
 MonoBehaviour:
   m_ObjectHideFlags: 1

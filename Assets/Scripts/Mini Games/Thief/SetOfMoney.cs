@@ -35,7 +35,7 @@ public class SetOfMoney : MonoBehaviour
 
     public void ResetChildMoney()
     {
-        print("Child Money Count: " + transform.childCount);
+        //print("Child Money Count: " + transform.childCount);
         for(int i = 0; i< transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<Money>().ResetMoney();
