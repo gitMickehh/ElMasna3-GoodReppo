@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour {
     }
     public void DisablingTouchManager()
     {
+        Debug.Log("Disable touch manager: Game Manager thief");
         touchManager.gameObject.SetActive(false);
     }
 

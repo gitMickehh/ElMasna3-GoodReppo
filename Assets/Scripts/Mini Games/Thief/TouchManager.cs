@@ -19,25 +19,26 @@ public class TouchManager : MonoBehaviour
     public SetOfMoney setOfMoney;
     public Explosion explosion;
     bool firstPlay;
+
+    //were in update - put here to avoid garbage collector
+    float speed = 10;
+    float moveHorizontal;
+    float moveVertical;
+
     private void Awake()
     {
         setOfMoney = FindObjectOfType<SetOfMoney>();
+        thiefCam = GameObject.FindGameObjectWithTag("ThiefCamera").GetComponent<Camera>();
     }
     private void Start()
     {
         dragging = false;
         oneTap = false;
         firstPlay = true;
-
-        thiefCam = GameObject.FindGameObjectWithTag("ThiefCamera").GetComponent<Camera>();
     }
 
     void Update()
     {
-        float speed = 10;
-        float moveHorizontal;
-        float moveVertical;
-
         if (Input.touches.Length > 0)
         {
             Touch touch = Input.touches[0];
@@ -57,7 +58,8 @@ public class TouchManager : MonoBehaviour
                         print("begin Touch "+ toDrag.name);
 
                         dist = toDrag.position.z - thiefCam.transform.position.z;
-                        v3 = new Vector3(touch.position.x, touch.position.y, dist);
+                        //v3 = new Vector3(touch.position.x, touch.position.y, dist);
+                        v3 = new Vector3(touch.position.x, touch.position.y, toDrag.position.z);
                         v3 = thiefCam.ScreenToWorldPoint(v3);
                         offset = toDrag.position - v3;
 
