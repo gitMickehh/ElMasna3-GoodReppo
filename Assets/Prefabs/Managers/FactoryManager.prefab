@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
-  FloorPrefab: {fileID: 1477506694731670, guid: 9bca9a0ffb1e35b4281f4dfca286a8d8,
+  FloorPrefab: {fileID: 1492177113453164, guid: ee49c9d0ba2ada249a8aade2ff3a6215,
     type: 2}
   floorsList: []
   TopFloor: {fileID: 0}

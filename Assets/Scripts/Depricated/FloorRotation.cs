@@ -40,7 +40,7 @@ public class FloorRotation : MonoBehaviour {
                 //to make sure the delta isn't too small
                 if (Mathf.Abs(deltaMagnitudeDiff) >= 1)
                 {
-                    transform.Rotate(new Vector3(0, newY, 0));
+                    transform.Rotate(new Vector3(0, 0, newY));
                 }
 
                 if(!tutorialCheck)
