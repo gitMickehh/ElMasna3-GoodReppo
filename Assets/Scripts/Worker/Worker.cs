@@ -144,6 +144,14 @@ public class Worker : MonoBehaviour
         complaints.Add(comp);
     }
 
+    public void RemoveComplaint(Complaints_SO comp)
+    {
+        if (complaints.Contains(comp))
+        {
+            complaints.Remove(comp);
+        }
+    }
+
     public void LevelUp()
     {
         print("LevelUp Event has been invoked");
@@ -314,7 +322,7 @@ public class Worker : MonoBehaviour
                 workerAnimator.SetBool("Working", false);
                 workerAnimator.SetTrigger("WinTrigger");
                 StartCoroutine(WaitTillWinningFinish());
-                if (machineAssigned.machineState == MachineState.Broken)
+                if ((machineAssigned) && (machineAssigned.machineState == MachineState.Broken))
                 {
                     workerAnimator.SetBool("Working", false);
                     workerState = WorkerState.Idle;
