@@ -14,4 +14,4 @@ MonoBehaviour:
   Title: Annoying
   Description: Higher chance of complaining about other employees, or others complaining
     about him.
-  emotionIcon: {fileID: 21300002, guid: 16e040d3ac3dd8148905099e2b327edd, type: 3}
+  emotionIcon: {fileID: 21300004, guid: 179a30c554ba7194b89061b2660143c2, type: 3}
