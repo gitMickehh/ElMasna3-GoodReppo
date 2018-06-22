@@ -17,6 +17,10 @@ public class UI_WorkerScript : MonoBehaviour
     public Text workerDayOff;
     public Text workerMedicalState;
 
+    [Header("UI Icons")]
+    public Image emotionIcon;
+    public Image medicalIcon;
+
     public Button[] daysOfTheWeek;
     public Button playButton;
 
@@ -133,18 +137,27 @@ public class UI_WorkerScript : MonoBehaviour
         if (w.level >= 6)
         {
             workerEmotion.text = w.emotion.ToString();
+            emotionIcon.sprite = w.emotion.emotionIcon;
+
             workerDayOff.text = w.favDayOff.ToString();
+
             workerMedicalState.text = w.medicalState.ToString();
+            
         }
         else if (w.level >= 3)
         {
             workerEmotion.text = w.emotion.ToString();
+            emotionIcon.sprite = w.emotion.emotionIcon;
+
             workerDayOff.text = "???";
             workerMedicalState.text = w.medicalState.ToString();
+            medicalIcon.sprite = w.medicalState.medicalIcon;
         }
         else if (w.level >= 1)
         {
             workerEmotion.text = w.emotion.ToString();
+            emotionIcon.sprite = w.emotion.emotionIcon;
+
             workerDayOff.text = "???";
             workerMedicalState.text = "???";
         }

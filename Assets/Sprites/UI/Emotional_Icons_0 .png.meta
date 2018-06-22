@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 16e040d3ac3dd8148905099e2b327edd
-timeCreated: 1528801579
+guid: 179a30c554ba7194b89061b2660143c2
+timeCreated: 1529661337
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: E_Unknown
-    21300002: E_Annoying
-    21300004: E_Sad
-    21300006: E_Cheerful
-    21300008: E_Angry
+    21300000: E_Annoying
+    21300002: E_Sad
+    21300004: E_Cheerful
+    21300006: E_Angry
+    21300008: E_Unknown
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -96,27 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: E_Unknown
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 34
-        width: 158
-        height: 189
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: E_Annoying
       rect:
         serializedVersion: 2
-        x: 236
-        y: 36
-        width: 158
-        height: 188
+        x: 171
+        y: 92
+        width: 643
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,10 +113,10 @@ TextureImporter:
       name: E_Sad
       rect:
         serializedVersion: 2
-        x: 444
-        y: 36
-        width: 161
-        height: 188
+        x: 890
+        y: 86
+        width: 661
+        height: 802
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +127,10 @@ TextureImporter:
       name: E_Cheerful
       rect:
         serializedVersion: 2
-        x: 644
-        y: 34
-        width: 158
-        height: 189
+        x: 1675
+        y: 72
+        width: 716
+        height: 824
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +141,24 @@ TextureImporter:
       name: E_Angry
       rect:
         serializedVersion: 2
-        x: 861
-        y: 48
-        width: 160
-        height: 184
+        x: 2456
+        y: 123
+        width: 718
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: E_Unknown
+      rect:
+        serializedVersion: 2
+        x: 3269
+        y: 117
+        width: 674
+        height: 801
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

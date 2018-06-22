@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Normal
   Description: 50/50 Immunity
+  medicalIcon: {fileID: 21300004, guid: 8115396abbbfba5498e90cbd1e8d9720, type: 3}

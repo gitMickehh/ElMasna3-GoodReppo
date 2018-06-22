@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Healthiest
   Description: This worker can't get sick
+  medicalIcon: {fileID: 21300000, guid: 8115396abbbfba5498e90cbd1e8d9720, type: 3}

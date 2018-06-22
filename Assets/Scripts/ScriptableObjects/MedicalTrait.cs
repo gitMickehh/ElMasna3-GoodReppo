@@ -15,5 +15,5 @@ public class MedicalTrait : ScriptableObject {
         return Title;
     }
 
-
+    public Sprite medicalIcon;
 }

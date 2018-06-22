@@ -179,7 +179,7 @@ MonoBehaviour:
   nightSprite: {fileID: 21300020, guid: 73030e36508db854f8b65c4b294c0035, type: 3}
   timeImage: {fileID: 114130802730406736}
   DaySliderColor: {r: 0.90196085, g: 0.42352945, b: 0.058823533, a: 1}
-  NightSliderColor: {r: 0.21875, g: 0.6034483, b: 0.875, a: 1}
+  NightSliderColor: {r: 0.19506921, g: 0.43416655, b: 0.60294116, a: 1}
   SliderFillImage: {fileID: 114245299879203218}
 --- !u!114 &114130802730406736
 MonoBehaviour:
