@@ -6,13 +6,14 @@ using UnityEngine;
 public class ComplaintsManager_SO : ScriptableObject
 {
 
-    public List_SO complaints;
+    //public List_SO complaints;
+    public List_SO workerComplaints;
 
-    public Complaints_SO GenerateRandomComplaint()
+    public Complaints_SO GenerateRandomWorkerComplaint()
     {
-        int no = Random.Range(0, complaints.ListElements.Count);
+        int no = Random.Range(0, workerComplaints.ListElements.Count);
 
-        return (Complaints_SO)(complaints.ListElements)[no];
+        return (Complaints_SO)(workerComplaints.ListElements)[no];
     }
 
 

@@ -8,6 +8,7 @@ public enum WorkerState
     Working,
     InMiniGame,
     Winning,
+    Complaining
 }
 
 public class Worker : MonoBehaviour
@@ -59,8 +60,8 @@ public class Worker : MonoBehaviour
     public MeshRenderer[] meshRenderers;
     public SkinnedMeshRenderer[] skinnedMeshRenderers;
 
-    [Header("Events")]
-    public GameEvent_SO LevelUpEvent;
+    //[Header("Events")]
+    //public GameEvent_SO LevelUpEvent;
 
     [Header("Scriptable Objects")]
     public Factory_SO factory_SO;
@@ -138,7 +139,8 @@ public class Worker : MonoBehaviour
 
     public void AddComplaint()
     {
-        Complaints_SO comp = complaintsManager_SO.GenerateRandomComplaint();
+        SetWorkerState(WorkerState.Complaining);
+        Complaints_SO comp = complaintsManager_SO.GenerateRandomWorkerComplaint();
         complaints.Add(comp);
     }
 
@@ -308,7 +310,7 @@ public class Worker : MonoBehaviour
                 break;
 
             case WorkerState.Winning:
-                print("winning");
+                //print("winning");
                 workerAnimator.SetBool("Working", false);
                 workerAnimator.SetTrigger("WinTrigger");
                 StartCoroutine(WaitTillWinningFinish());
@@ -324,29 +326,19 @@ public class Worker : MonoBehaviour
                 }
                 break;
 
-                //case WorkerState.InMiniGame:
+            case WorkerState.Complaining:
+                GetComponentInChildren<SkinnedMeshRenderer>().material.color = Color.black;
+                break;
 
-                //    break;
         }
     }
 
     IEnumerator WaitTillWinningFinish()
     {
-
-
-        // print("normalized time = " + workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-        yield return new WaitForSeconds(3.5f//workerAnimator.GetCurrentAnimatorStateInfo(0).length + 
-                                            /*workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime*/);
-
-
+        yield return new WaitForSeconds(3.5f);
 
         if (workerManager.workersInOrientation.Contains(gameObject))
         {
-            //SetWorkerState(WorkerState.Idle);
-
-            //yield return new WaitForSeconds(1//workerAnimator.GetCurrentAnimatorStateInfo(0).length + 
-            ///*workerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime*/);
-
             gameObject.SetActive(false);
         }
     }
@@ -355,13 +347,6 @@ public class Worker : MonoBehaviour
     {
         print("Player Won.");
         SetWorkerState(WorkerState.Winning);
-
-        //while (workerAnimator.GetCurrentAnimatorStateInfo(0).IsName("WinTrigger"))
-        //{
-        //    print("in Win animation");
-        //}
-
-
     }
 
 }
