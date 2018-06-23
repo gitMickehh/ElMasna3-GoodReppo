@@ -66,7 +66,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   workerStats: {fileID: 11400000, guid: 1a72cd3c5ef757048958203cece174ff, type: 2}
-  OrientationOrigin: {fileID: 0}
+  OrientationOrigin: {fileID: 4473658741693648, guid: d7972a43fc4e15248af145f5c92452b8,
+    type: 2}
   radius: 16
   theta: 15
   workerManager: {fileID: 114547311667761038}
@@ -290,7 +291,8 @@ MonoBehaviour:
     type: 2}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   workerInGame: {fileID: 0}
-  assemblyLineManager: {fileID: 0}
+  assemblyLineManager: {fileID: 114173918502767964, guid: 7ac62ae61149b314f91ec088d8a5b2f6,
+    type: 2}
 --- !u!114 &114573473704364914
 MonoBehaviour:
   m_ObjectHideFlags: 1

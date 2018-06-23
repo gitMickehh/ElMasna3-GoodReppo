@@ -69,6 +69,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4043994908778900}
   - component: {fileID: 114198067767357812}
+  - component: {fileID: 114772894758174950}
+  - component: {fileID: 114431267308065440}
+  - component: {fileID: 65744072664746010}
   m_Layer: 0
   m_Name: Machine3
   m_TagString: Untagged
@@ -268,6 +271,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523635962726480}
   m_Mesh: {fileID: 4300000, guid: 8367da7831b711d46ace56658e852846, type: 3}
+--- !u!65 &65744072664746010
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367791818546702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3082304, y: 1.6610179, z: 1.108818}
+  m_Center: {x: -0.05951214, y: 1.047869, z: -0.852417}
 --- !u!95 &95778938643677458
 Animator:
   serializedVersion: 3
@@ -297,10 +312,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machineBase: {fileID: 11400000, guid: 6b8a392594b81ce46811dc1492ad1bc3, type: 2}
+  machineAnimator: {fileID: 0}
   workerPosition: {fileID: 4392717778299228}
-  isWorking: 0
+  machineState: 0
   fillImg: {fileID: 114371789512141994}
   worker: {fileID: 0}
+  assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114371789512141994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,6 +348,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 1
+--- !u!114 &114431267308065440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367791818546702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlowColor: {r: 1, g: 0, b: 0, a: 0}
+  LerpFactor: 10
+  m_highlightMaterial: {fileID: 0}
 --- !u!114 &114439562104489160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,6 +426,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114772894758174950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367791818546702}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 1616004839745434, guid: 28b0f943842118a468a021503174ee13,
+    type: 2}
+  machine: {fileID: 0}
 --- !u!222 &222355463443533774
 CanvasRenderer:
   m_ObjectHideFlags: 1

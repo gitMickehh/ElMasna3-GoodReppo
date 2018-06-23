@@ -995,7 +995,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114014410661583204, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
+          type: 2}
         m_MethodName: PlaySound
         m_Mode: 5
         m_Arguments:
@@ -1202,7 +1203,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114014410661583204, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
+          type: 2}
         m_MethodName: PlaySound
         m_Mode: 5
         m_Arguments:
@@ -1407,7 +1409,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114956559573891748, guid: a69842c6dee671d40bf67b57f69b5231,
+          type: 2}
         m_MethodName: OnClickAddFloor
         m_Mode: 1
         m_Arguments:
@@ -1429,7 +1432,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114014410661583204, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
+          type: 2}
         m_MethodName: PlaySound
         m_Mode: 5
         m_Arguments:
@@ -1492,7 +1496,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114014410661583204, guid: 91ffc23769f28ca49a4c6bd98794cdf6,
+          type: 2}
         m_MethodName: PlaySound
         m_Mode: 5
         m_Arguments:
@@ -1653,7 +1658,8 @@ MonoBehaviour:
   CompanyMoneyUpdates_SO: {fileID: 11400000, guid: 0acab7ec68a7e344e982d5a90c14585d,
     type: 2}
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
-  WorkerManager: {fileID: 0}
+  WorkerManager: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
+    type: 2}
   levelUpButton: {fileID: 114591000218222384}
   levelUpRedButton: {fileID: 114468238176767108}
   levelUpYellowButton: {fileID: 114625841806389466}
