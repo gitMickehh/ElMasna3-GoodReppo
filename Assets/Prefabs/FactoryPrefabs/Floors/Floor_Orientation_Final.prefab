@@ -14655,9 +14655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114242715373461604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14690,9 +14690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114275969827544704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14782,9 +14782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114363812814136838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14796,9 +14796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114363879121728532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15145,8 +15145,7 @@ MonoBehaviour:
     type: 2}
   isWorking: 0
   workerFull: 0
-  workerManager: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
-    type: 2}
+  workerManager: {fileID: 0}
   moneyMadeInLine: 0
 --- !u!114 &114618703374842978
 MonoBehaviour:
@@ -15707,9 +15706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114975757702056432
 MonoBehaviour:
   m_ObjectHideFlags: 1

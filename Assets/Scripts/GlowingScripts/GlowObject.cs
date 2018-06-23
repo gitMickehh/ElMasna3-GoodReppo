@@ -24,11 +24,15 @@ public class GlowObject : MonoBehaviour
     private Color _currentColor;
     private Color _targetColor;
 
+    //private void OnEnable()
+    //{
+    //    m_highlightMaterial = new Material(Shader.Find("StandardGlow"));
+    //}
     void Start()
     {
         Renderers = GetComponentsInChildren<Renderer>();
         _targetColor = GlowColor;
-        m_highlightMaterial = new Material(Shader.Find("StandardGlow"));
+        
     }
 
     public void GlowMachine()
