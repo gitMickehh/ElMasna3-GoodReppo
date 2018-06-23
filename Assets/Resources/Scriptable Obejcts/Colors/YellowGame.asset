@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: yellow
   ShirtColor: {r: 1, g: 0.9724138, b: 0, a: 1}
+  WorkerMaterial: {fileID: 2100000, guid: acfc123d4a406014a8256328f690d7af, type: 2}
   MiniGameName: Yellow Game
   Description: Thief
   sceneRef: AddRefereceToMiniGameSceneHere

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: blue
   ShirtColor: {r: 0.19852942, g: 0.5025355, b: 1, a: 0}
+  WorkerMaterial: {fileID: 2100000, guid: 71a941651dd3d6044b290b02c4d1dceb, type: 2}
   MiniGameName: Blue Game
   Description: Ice Breaking
   sceneRef: AddRefereceToMiniGameSceneHere
