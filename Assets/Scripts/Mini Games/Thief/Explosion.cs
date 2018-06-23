@@ -10,9 +10,14 @@ public class Explosion : MonoBehaviour {
     {
         explosionAnim = GetComponent<Animator>();
     }
-    public void ExplosionEffect(Transform newPos)
+
+    public void SetExplosionPos(Transform newPos)
     {
         transform.position = newPos.position;
+    }
+
+    public void ExplosionEffect()
+    {
         explosionAnim.SetTrigger("Swiped");
     }
 }
