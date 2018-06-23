@@ -28,6 +28,7 @@ public class TouchManager : MonoBehaviour
     private void Awake()
     {
         setOfMoney = FindObjectOfType<SetOfMoney>();
+        explosion = FindObjectOfType<Explosion>();
         thiefCam = GameObject.FindGameObjectWithTag("ThiefCamera").GetComponent<Camera>();
     }
     private void Start()
