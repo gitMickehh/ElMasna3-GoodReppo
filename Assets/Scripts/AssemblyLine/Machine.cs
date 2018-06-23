@@ -43,7 +43,10 @@ public class Machine : MonoBehaviour
     private void Awake()
     {
         assemblyLine = GetComponentInParent<AssemblyLine>();
-        machineAnimator = GetComponentsInChildren<Animator>()[0];
+        if (GetComponentsInChildren<Animator>().Length > 0)
+            machineAnimator = GetComponentsInChildren<Animator>()[0];
+        else
+            machineAnimator = null;
         glowObject = GetComponent<GlowObject>();
     }
 
@@ -89,15 +92,18 @@ public class Machine : MonoBehaviour
         switch (state)
         {
             case MachineState.Idle:
-                machineAnimator.SetBool("Working", false);
+                if (machineAnimator)
+                    machineAnimator.SetBool("Working", false);
                 break;
 
             case MachineState.Working:
-                machineAnimator.SetBool("Working", true);
+                if (machineAnimator)
+                    machineAnimator.SetBool("Working", true);
                 break;
 
             case MachineState.Broken:
-                machineAnimator.SetBool("Working", false);
+                if (machineAnimator)
+                    machineAnimator.SetBool("Working", false);
                 /*
                 if (worker)
                 {
@@ -129,13 +135,13 @@ public class Machine : MonoBehaviour
 
     public void MachineFixed()
     {
-            //SetNormal();
-            //FindObjectOfType<ComplaintsManager>().FixMachine();
-            glowObject.StopGlowing();
-            GetComponent<ClickableMachine>().enabled = false;
-            print(transform.name + " got fixed");
-            assemblyLine.ReturnToWork();
-            machineFixed.Raise();
+        //SetNormal();
+        //FindObjectOfType<ComplaintsManager>().FixMachine();
+        glowObject.StopGlowing();
+        GetComponent<ClickableMachine>().enabled = false;
+        print(transform.name + " got fixed");
+        assemblyLine.ReturnToWork();
+        machineFixed.Raise();
 
     }
 
@@ -152,6 +158,6 @@ public class Machine : MonoBehaviour
     //    }
     //}
 
-     
+
 
 }

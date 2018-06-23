@@ -4361,6 +4361,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4182826916088698}
   - component: {fileID: 114955442175929580}
+  - component: {fileID: 114226624002693788}
+  - component: {fileID: 114618791851730368}
   m_Layer: 0
   m_Name: Machine6
   m_TagString: Untagged
@@ -4978,6 +4980,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4790868693214202}
   - component: {fileID: 114732295184238178}
+  - component: {fileID: 114957499943769724}
+  - component: {fileID: 114957334610567216}
   m_Layer: 0
   m_Name: Machine1
   m_TagString: Untagged
@@ -5573,6 +5577,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4079279408707368}
   - component: {fileID: 114807058670216052}
+  - component: {fileID: 114363812814136838}
+  - component: {fileID: 114085861936720600}
   m_Layer: 0
   m_Name: Machine2
   m_TagString: Untagged
@@ -6049,6 +6055,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4067910829854854}
   - component: {fileID: 114242715373461604}
+  - component: {fileID: 114244018405372822}
+  - component: {fileID: 114888200882552790}
   m_Layer: 0
   m_Name: Machine3
   m_TagString: Untagged
@@ -6393,6 +6401,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4236887192827640}
   - component: {fileID: 114400575969637888}
+  - component: {fileID: 114359769665096526}
+  - component: {fileID: 114275969827544704}
   m_Layer: 0
   m_Name: Machine4
   m_TagString: Untagged
@@ -13975,6 +13985,19 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114085861936720600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844426173196182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114104539435195424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14081,6 +14104,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114226624002693788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663568965541852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  LerpFactor: 10
+  m_highlightMaterial: {fileID: 0}
 --- !u!114 &114242715373461604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14099,9 +14136,36 @@ MonoBehaviour:
   fillImg: {fileID: 114741604904845328}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
-  factory_SO: {fileID: 0}
-  machineFixed: {fileID: 0}
-  machineIssue: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
+--- !u!114 &114244018405372822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944514803214032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  LerpFactor: 10
+  m_highlightMaterial: {fileID: 0}
+--- !u!114 &114275969827544704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1990307584446014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114328128671892906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14167,6 +14231,34 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114359769665096526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1990307584446014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  LerpFactor: 10
+  m_highlightMaterial: {fileID: 0}
+--- !u!114 &114363812814136838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844426173196182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  LerpFactor: 10
+  m_highlightMaterial: {fileID: 0}
 --- !u!114 &114363879121728532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14241,9 +14333,9 @@ MonoBehaviour:
   fillImg: {fileID: 114621942392318498}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
-  factory_SO: {fileID: 0}
-  machineFixed: {fileID: 0}
-  machineIssue: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114406824987499934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14536,6 +14628,19 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114618791851730368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663568965541852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114620488383705138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14766,9 +14871,9 @@ MonoBehaviour:
   fillImg: {fileID: 114975757702056432}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
-  factory_SO: {fileID: 0}
-  machineFixed: {fileID: 0}
-  machineIssue: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114741604904845328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14905,9 +15010,9 @@ MonoBehaviour:
   fillImg: {fileID: 114843050027150900}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
-  factory_SO: {fileID: 0}
-  machineFixed: {fileID: 0}
-  machineIssue: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
 --- !u!114 &114811860250749908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14962,6 +15067,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 1
+--- !u!114 &114888200882552790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944514803214032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
 --- !u!114 &114920664613103712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15021,9 +15139,36 @@ MonoBehaviour:
   fillImg: {fileID: 114811860250749908}
   worker: {fileID: 0}
   assemblyLine: {fileID: 0}
-  factory_SO: {fileID: 0}
-  machineFixed: {fileID: 0}
-  machineIssue: {fileID: 0}
+  factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
+  machineFixed: {fileID: 11400000, guid: 1e27d744f37ae444586e28db23b1129f, type: 2}
+  machineIssue: {fileID: 11400000, guid: 89f0ea0ef0b474345a84a55be1ff5ccc, type: 2}
+--- !u!114 &114957334610567216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762004439104616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixMachineConf_Panel: {fileID: 0}
+  machine: {fileID: 0}
+--- !u!114 &114957499943769724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762004439104616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e9edc695ab1aa42819903af228d13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlowColor: {r: 1, g: 0.0148140285, b: 0.0148140285, a: 0}
+  LerpFactor: 10
+  m_highlightMaterial: {fileID: 0}
 --- !u!114 &114975757702056432
 MonoBehaviour:
   m_ObjectHideFlags: 1
