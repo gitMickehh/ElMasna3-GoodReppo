@@ -20,6 +20,9 @@ public class UI_WorkerScript : MonoBehaviour
     [Header("UI Icons")]
     public Image emotionIcon;
     public Image medicalIcon;
+    public Sprite unkownEmotionIcon;
+    public Sprite unkownMedicalIcon;
+
 
     public Button[] daysOfTheWeek;
     public Button playButton;
@@ -159,13 +162,19 @@ public class UI_WorkerScript : MonoBehaviour
             emotionIcon.sprite = w.emotion.emotionIcon;
 
             workerDayOff.text = "???";
+
             workerMedicalState.text = "???";
+            medicalIcon.sprite = unkownMedicalIcon;
         }
         else
         {
             workerEmotion.text = "???";
+            emotionIcon.sprite = unkownEmotionIcon;
+
             workerDayOff.text = "???";
+
             workerMedicalState.text = "???";
+            medicalIcon.sprite = unkownMedicalIcon;
         }
 
     }

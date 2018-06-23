@@ -48,11 +48,21 @@ public class Worker_SO : ScriptableObject
         {
             case Gender.MALE:
                 no1 = Random.Range(0, MaleFirstNames.strings.Count);
-                fullName = MaleFirstNames.strings[no1] + " " + LastNames.strings[no2];
+                
+                //english
+                //fullName = MaleFirstNames.strings[no1] + " " + LastNames.strings[no2];
+                
+                //arabic:
+                fullName = LastNames.strings[no2] + " " + MaleFirstNames.strings[no1];
                 break;
             case Gender.FEMALE:
                 no1 = Random.Range(0, FemaleFirstNames.strings.Count);
-                fullName = FemaleFirstNames.strings[no1] + " " + LastNames.strings[no2];
+
+                //english
+                //fullName = FemaleFirstNames.strings[no1] + " " + LastNames.strings[no2];
+
+                //arabic:
+                fullName = LastNames.strings[no2] + " " + FemaleFirstNames.strings[no1];
                 break;
             default:
                 fullName = "Hamada Hamda";
