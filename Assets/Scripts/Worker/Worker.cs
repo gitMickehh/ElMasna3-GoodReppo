@@ -57,7 +57,7 @@ public class Worker : MonoBehaviour
 
     [Header("Model")]
     //public GameObject ModelOfWorker;
-    public MeshRenderer[] meshRenderers;
+    //public MeshRenderer[] meshRenderers;
     public SkinnedMeshRenderer[] skinnedMeshRenderers;
 
     //[Header("Events")]
@@ -80,7 +80,7 @@ public class Worker : MonoBehaviour
     void Awake()
     {
         //Debug.Log("I started");
-        meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        //meshRenderers = GetComponentsInChildren<MeshRenderer>();
         skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
         //workerManager = GameObject.FindGameObjectWithTag("WorkerManager").GetComponent<WorkerManager>();
         workerManager = FindObjectOfType<WorkerManager>();
@@ -119,16 +119,15 @@ public class Worker : MonoBehaviour
 
         //shirt color
         workerColor = WorkerStats.RandomizeColorLinker();
-        Color c = workerColor.ShirtColor;
 
-        for (int i = 0; i < meshRenderers.Length; i++)
+        /*for (int i = 0; i < meshRenderers.Length; i++)
         {
             meshRenderers[i].material.color = c;
-        }
+        }*/
 
         for (int i = 0; i < skinnedMeshRenderers.Length; i++)
         {
-            skinnedMeshRenderers[i].material.color = c;
+            skinnedMeshRenderers[i].material = workerColor.WorkerMaterial;
         }
 
         transform.name = FullName;
@@ -246,11 +245,16 @@ public class Worker : MonoBehaviour
         workingSpeed = 1f;
 
         workerColor = saveData.WorkerColor;
-        Color c = workerColor.ShirtColor;
+        /*Color c = workerColor.ShirtColor;
         for (int i = 0; i < meshRenderers.Length; i++)
         {
             meshRenderers[i].material.color = c;
+        }*/
+        for (int i = 0; i < skinnedMeshRenderers.Length; i++)
+        {
+            skinnedMeshRenderers[i].material = workerColor.WorkerMaterial;
         }
+
 
         transform.name = FullName;
 
@@ -275,11 +279,16 @@ public class Worker : MonoBehaviour
         workingSpeed = 1f;
 
         workerColor = saveData.WorkerColor;
-        Color c = workerColor.ShirtColor;
+        /*Color c = workerColor.ShirtColor;
         for (int i = 0; i < meshRenderers.Length; i++)
         {
             meshRenderers[i].material.color = c;
+        }*/
+        for (int i = 0; i < skinnedMeshRenderers.Length; i++)
+        {
+            skinnedMeshRenderers[i].material = workerColor.WorkerMaterial;
         }
+
 
         transform.name = FullName;
 

@@ -20,9 +20,9 @@ MonoBehaviour:
   CooldownTime: 2
   MovementSpeed: 5
   MalePrefabs:
-  - {fileID: 1281063472529440, guid: bc6a5958dc42a19428bef56d4337a64f, type: 2}
+  - {fileID: 1461835309953972, guid: 869baa6794db5a44cbd45f86b35ab016, type: 2}
   FemalePrefabs:
-  - {fileID: 1611894779570934, guid: c478cf1684372d04bbfee559d629ef6c, type: 2}
+  - {fileID: 1214414289556626, guid: 1d0e8f277f3494043a7d223bd2308692, type: 2}
   HairPrefabs: []
   FacialHairPrefabs: []
   GlassesPrefabs: []
