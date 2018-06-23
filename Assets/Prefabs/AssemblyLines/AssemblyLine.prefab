@@ -1580,6 +1580,7 @@ MonoBehaviour:
   workerFull: 0
   workerManager: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
     type: 2}
+  moneyMadeInLine: 0
 --- !u!114 &114387641361225728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1597,6 +1598,10 @@ MonoBehaviour:
   machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
+  assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 0}
+  machineFixed: {fileID: 0}
+  machineIssue: {fileID: 0}
 --- !u!114 &114448647509237516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1614,6 +1619,10 @@ MonoBehaviour:
   machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
+  assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 0}
+  machineFixed: {fileID: 0}
+  machineIssue: {fileID: 0}
 --- !u!114 &114731729582866904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1631,6 +1640,10 @@ MonoBehaviour:
   machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
+  assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 0}
+  machineFixed: {fileID: 0}
+  machineIssue: {fileID: 0}
 --- !u!114 &114942283999181768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1648,6 +1661,10 @@ MonoBehaviour:
   machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
+  assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 0}
+  machineFixed: {fileID: 0}
+  machineIssue: {fileID: 0}
 --- !u!114 &114992479295178046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1665,3 +1682,7 @@ MonoBehaviour:
   machineState: 0
   fillImg: {fileID: 0}
   worker: {fileID: 0}
+  assemblyLine: {fileID: 0}
+  factory_SO: {fileID: 0}
+  machineFixed: {fileID: 0}
+  machineIssue: {fileID: 0}

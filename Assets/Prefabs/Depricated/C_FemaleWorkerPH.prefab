@@ -644,6 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afab2421d42f97343beb46bbc6df7ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRandom: 1
   WorkerStats: {fileID: 11400000, guid: 1a72cd3c5ef757048958203cece174ff, type: 2}
   workerManager: {fileID: 0}
   workerState: 0
@@ -664,7 +665,9 @@ MonoBehaviour:
   complaints: []
   meshRenderers: []
   skinnedMeshRenderers: []
-  LevelUpEvent: {fileID: 0}
+  factory_SO: {fileID: 0}
+  workerAnimator: {fileID: 0}
+  machineAssigned: {fileID: 0}
 --- !u!114 &114290769167431942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,6 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 4378374200161222}
   workerUI: {fileID: 0}
+  ClickTutorialEvent: {fileID: 0}
 --- !u!114 &114486747643257640
 MonoBehaviour:
   m_ObjectHideFlags: 1
