@@ -9,6 +9,7 @@ public class MiniGameLinker_SO : ScriptableObject {
     [Header("Color")]
     public string colorName;
     public Color ShirtColor;
+    public Material WorkerMaterial;
 
     public string MiniGameName;
 

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: red
   ShirtColor: {r: 0.9117647, g: 0, b: 0, a: 0}
+  WorkerMaterial: {fileID: 2100000, guid: 9503c6baca05c0144bed81c4e810dfdc, type: 2}
   MiniGameName: Red game
   Description: Pinball
   sceneRef: AddRefereceToMiniGameSceneHere

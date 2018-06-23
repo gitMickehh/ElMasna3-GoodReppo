@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorName: green
   ShirtColor: {r: 0.23788926, g: 0.8088235, b: 0.45445055, a: 0}
+  WorkerMaterial: {fileID: 2100000, guid: f779ea27cf0cf1f4b9ad4906fb6b075a, type: 2}
   MiniGameName: Green Teal Game
   Description: Papers
   sceneRef: AddRefereceToMiniGameSceneHere
