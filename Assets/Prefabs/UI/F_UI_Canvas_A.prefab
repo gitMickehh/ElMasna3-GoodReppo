@@ -638,7 +638,7 @@ MonoBehaviour:
   pay_Btn: {fileID: 114270317448884764}
   factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   reduceAnim: {fileID: 0}
-  fixingCost: 0
+  fixingCost: 844.99994
 --- !u!114 &114154974251335172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1625,9 +1625,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uFEDE\uFEE4\uFECC\uFEF3 \uFE9D\uFE8E\uFE98\uFEE7\uFEF9\uFE8D \uFEC2\uFEA7
-    \uFEDE\uFECC\uFE9F\uFE8D \uFEED \uFE94\uFEE8\uFEDC\uFEE4\uFEDF\uFE8D \uFEDE\uFEC4\uFECB
-    \uFEA2\uFEE0\uFEBB\uFE8D\n.\uFEAA\uFEF3\uFEAA\uFE9F \uFEE6\uFEE3"
+  m_Text: Fix machine to return Line to working state __ Pay 844.9999
 --- !u!114 &114679070346701456
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 65962109939468550}
   m_Layer: 0
   m_Name: Machine2
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 3962d18da779244418d86afc6489a450, type: 2}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114925864806199858
 MonoBehaviour:
   m_ObjectHideFlags: 1

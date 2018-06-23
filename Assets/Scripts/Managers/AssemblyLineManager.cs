@@ -86,9 +86,12 @@ public class AssemblyLineManager : MonoBehaviour
     {
         AssemblyLine assemblyLine = RandomLine();
         Machine machine = assemblyLine.RandomMachine();
-        assemblyLine.StopLine();
+
+        if (assemblyLine.isWorking)
+            assemblyLine.StopLine();
+
         machine.MachineBrokenDown();
-        
+
     }
 
 }

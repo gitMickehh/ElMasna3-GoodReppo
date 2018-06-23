@@ -117,10 +117,13 @@ public class Machine : MonoBehaviour
     public void MachineBrokenDown()
     {
         //FindObjectOfType<ComplaintsManager>().AddFixMachineComp();
-        machineIssue.Raise();
-        SetMachineState(MachineState.Broken);
-        glowObject.GlowMachine();
-        GetComponent<ClickableMachine>().enabled = true;
+        if (machineState != MachineState.Broken)
+        {
+            machineIssue.Raise();
+            SetMachineState(MachineState.Broken);
+            glowObject.GlowMachine();
+            GetComponent<ClickableMachine>().enabled = true;
+        }
 
         //assemblyLine.isWorking = false;
     }
@@ -128,9 +131,13 @@ public class Machine : MonoBehaviour
     public void StopMachine()
     {
         StopCountDown();
-        SetMachineState(MachineState.Idle);
-        if (worker)
-            worker.SetWorkerState(WorkerState.Idle);
+
+        if (machineState == MachineState.Working)
+        {
+            SetMachineState(MachineState.Idle);
+            if (worker)
+                worker.SetWorkerState(WorkerState.Idle);
+        }
     }
 
     public void MachineFixed()

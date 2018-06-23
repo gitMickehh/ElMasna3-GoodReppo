@@ -33,7 +33,7 @@ public class ClickableMachine : MonoBehaviour
                         && hit.collider.CompareTag("Machine") 
                         && hit.transform.name == transform.name)
                     {
-                        //print("Clicked on "+ hit.transform.name);
+                        print("Clicked on "+ hit.transform.name);
                         machineFixConf.SetFixCost(machine);
                         fixMachineConf_Panel.SetActive(true);
                     }

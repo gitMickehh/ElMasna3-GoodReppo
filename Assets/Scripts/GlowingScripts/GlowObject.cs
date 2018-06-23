@@ -5,6 +5,7 @@ public class GlowObject : MonoBehaviour
 {
     public Color GlowColor;
     public float LerpFactor = 10;
+    public Material machineMaterial;
 
     public Renderer[] Renderers
     {
@@ -40,7 +41,9 @@ public class GlowObject : MonoBehaviour
         for (int i = 0; i < Renderers.Length; i++)
         {
             Renderers[i].material = m_highlightMaterial;
+            Renderers[i].material.mainTexture = machineMaterial.mainTexture;
             Renderers[i].material.SetColor("_GlowColor", GlowColor);
+
         }
     }
 
@@ -49,6 +52,7 @@ public class GlowObject : MonoBehaviour
         for (int i = 0; i < Renderers.Length; i++)
         {
             Renderers[i].material.SetColor("_GlowColor", Color.black);
+            Renderers[i].material = machineMaterial;
         }
     }
 

@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 65572968469387976}
   m_Layer: 0
   m_Name: Machine2
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 65500171580502382}
   m_Layer: 0
   m_Name: Machine3
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 65678552044140638}
   m_Layer: 0
   m_Name: Machine4 (1)
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4411,7 +4411,7 @@ GameObject:
   - component: {fileID: 65462228724535136}
   m_Layer: 0
   m_Name: Machine1 (1)
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5605,7 +5605,7 @@ GameObject:
   - component: {fileID: 65934225973436520}
   m_Layer: 0
   m_Name: Machine6 (1)
-  m_TagString: Untagged
+  m_TagString: Machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16290,8 +16290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixMachineConf_Panel: {fileID: 1616004839745434, guid: 28b0f943842118a468a021503174ee13,
-    type: 2}
+  fixMachineConf_Panel: {fileID: 0}
   machine: {fileID: 0}
 --- !u!114 &114056713548701606
 MonoBehaviour:
@@ -16412,8 +16411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixMachineConf_Panel: {fileID: 1616004839745434, guid: 28b0f943842118a468a021503174ee13,
-    type: 2}
+  fixMachineConf_Panel: {fileID: 0}
   machine: {fileID: 0}
 --- !u!114 &114132272274175612
 MonoBehaviour:
@@ -16470,7 +16468,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 3962d18da779244418d86afc6489a450, type: 2}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114196608586755354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16756,7 +16755,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 3962d18da779244418d86afc6489a450, type: 2}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114400985952481776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16957,7 +16957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 3962d18da779244418d86afc6489a450, type: 2}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114585107434972758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17430,8 +17431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixMachineConf_Panel: {fileID: 1616004839745434, guid: 28b0f943842118a468a021503174ee13,
-    type: 2}
+  fixMachineConf_Panel: {fileID: 0}
   machine: {fileID: 0}
 --- !u!114 &114828589354571406
 MonoBehaviour:
@@ -17444,8 +17444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixMachineConf_Panel: {fileID: 1616004839745434, guid: 28b0f943842118a468a021503174ee13,
-    type: 2}
+  fixMachineConf_Panel: {fileID: 0}
   machine: {fileID: 0}
 --- !u!114 &114840648952271666
 MonoBehaviour:
@@ -17458,8 +17457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a66ef823b2790c4c905ce65cd7a27a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixMachineConf_Panel: {fileID: 1616004839745434, guid: 28b0f943842118a468a021503174ee13,
-    type: 2}
+  fixMachineConf_Panel: {fileID: 0}
   machine: {fileID: 0}
 --- !u!114 &114844562424844328
 MonoBehaviour:
@@ -17474,7 +17472,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 3962d18da779244418d86afc6489a450, type: 2}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114904614420084402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17544,7 +17543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GlowColor: {r: 0.9485294, g: 0.16738753, b: 0.16738753, a: 0}
   LerpFactor: 10
-  m_highlightMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 3962d18da779244418d86afc6489a450, type: 2}
+  m_highlightMaterial: {fileID: 2100000, guid: 594207515bba7534f93f38c1a7c872ad, type: 2}
 --- !u!114 &114966702149662978
 MonoBehaviour:
   m_ObjectHideFlags: 1
