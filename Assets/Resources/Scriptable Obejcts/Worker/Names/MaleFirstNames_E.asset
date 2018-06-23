@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Name: MaleFirstNames_E
   m_EditorClassIdentifier: 
   strings:
-  - Nader
-  - Karim
-  - Esam
-  - Hamdy
-  - Mohamed
-  - Michael
-  - Ahmad
-  - Bishoy
-  - Amr
-  - Ayman
-  - Mina
-  - Omar
-  - Osama
-  - Abdel-Rahman
-  - Alaa
-  - Mostafa
+  - "\uFEAD\uFEA9\uFE8E\uFEE7"
+  - "\uFEE2\uFEF3\uFEAE\uFEDB"
+  - "\uFEE1\uFE8E\uFEBC\uFECB"
+  - "\uFEEF\uFEAA\uFEE4\uFEA3"
+  - "\uFEAA\uFEE4\uFEA4\uFEE3"
+  - "\uFEDE\uFEDC\uFEF3\uFE8E\uFEE3"
+  - "\uFEA9\uFE8E\uFEE4\uFECB"
+  - "\uFEEF\uFEEE\uFEB8\uFEF4\uFE91"
+  - "\uFEAA\uFEE4\uFEA3\uFE83"
+  - "\uFEE6\uFEE4\uFEF3\uFE83"
+  - "\uFE8E\uFEE8\uFEF4\uFEE3"
+  - "\uFEED\uFEAE\uFEE4\uFECB"
+  - "\uFE94\uFEE3\uFE8E\uFEB3\uFE83"
+  - "\uFEE6\uFEE4\uFEA3\uFEAE\uFEDF\uFE8D \uFEAA\uFE92\uFECB"
+  - "\u0621\uFEFC\uFECB"
+  - "\uFEF0\uFED4\uFEC4\uFEBC\uFEE3"
   - "\uFEAD\uFEA9\uFE8E\uFEE7"
   - "\uFEAE\uFEE4\uFECB"

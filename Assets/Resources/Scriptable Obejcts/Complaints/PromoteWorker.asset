@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03ae80027fbfe840a776ca9e3f41edf, type: 3}
   m_Name: PromoteWorker
   m_EditorClassIdentifier: 
-  Complaint: I need a promotion!
+  Complaint: ".\uFE94\uFEF4\uFED7\uFEAE\uFE97 \uFEAA\uFEF3\uFEAD\uFE83"

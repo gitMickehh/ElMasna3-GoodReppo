@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03ae80027fbfe840a776ca9e3f41edf, type: 3}
   m_Name: DayOff
   m_EditorClassIdentifier: 
-  Complaint: I have to go home right now, can I leave?
+  Complaint: "\u061F\uFEEF\uFEAD\uFEAA\uFE91 \uFE93\uFEA9\uFEAD\uFE8E\uFEEC\uFEE8\uFEDF\uFE8D
+    \uFEA1\uFEED\uFEAD\uFE83 \uFEE6\uFEDC\uFEE4\uFEE3"

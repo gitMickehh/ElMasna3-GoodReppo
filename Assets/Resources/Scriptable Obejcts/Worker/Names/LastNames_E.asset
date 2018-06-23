@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Name: LastNames_E
   m_EditorClassIdentifier: 
   strings:
-  - Abdel-Zaher
-  - Abdel-Tawab
-  - Youssef
-  - Haddad
-  - Salama
-  - Kai
-  - Naguib
-  - Abo-Bakr
-  - Ezzat
-  - Atwa
-  - Nagy
-  - Eldeeb
-  - Shaaban
-  - Soliman
-  - Shaheen
+  - "\uFEAE\uFEEB\uFE8E\uFEC8\uFEDF\uFE8D \uFEAA\uFE92\uFECB"
+  - "\uFE8F\uFE8D\uFEEE\uFE98\uFEDF\uFE8D \uFEAA\uFE92\uFECB"
+  - "\uFED2\uFEB3\uFEEE\uFEF3"
+  - "\uFEA9\uFE8D\uFEAA\uFEA3"
+  - "\uFE94\uFEE3\uFEFC\uFEB3"
+  - "\uFEEF\uFE8E\uFEDB"
+  - "\uFE90\uFEF4\uFEA0\uFEE7"
+  - "\uFEAE\uFEDC\uFE91 \uFEEE\uFE91\uFE83"
+  - "\uFE95\uFEB0\uFECB"
+  - "\uFE93\uFEEE\uFEC4\uFECB"
+  - "\uFEF0\uFE9F\uFE8E\uFEE7"
+  - "\uFE90\uFEF3\uFEAA\uFEDF\uFE8D"
+  - "\uFEE5\uFE8E\uFE92\uFECC\uFEB7"
+  - "\uFEE5\uFE8E\uFEE4\uFEF4\uFEE0\uFEB3"
+  - "\uFEE6\uFEF4\uFEEB\uFE8E\uFEB7"

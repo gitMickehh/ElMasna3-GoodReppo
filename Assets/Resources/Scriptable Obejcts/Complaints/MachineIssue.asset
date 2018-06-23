@@ -11,4 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03ae80027fbfe840a776ca9e3f41edf, type: 3}
   m_Name: MachineIssue
   m_EditorClassIdentifier: 
-  Complaint: We need to fix this machine.
+  Complaint: ".\uFEA2\uFEF4\uFEE0\uFEBC\uFE98\uFEE0\uFEDF \uFE94\uFE9F\uFE8E\uFEA4\uFE91
+    \uFE94\uFEE8\uFEDC\uFEE3 \uFED9\uFE8E\uFEE8\uFEEB"

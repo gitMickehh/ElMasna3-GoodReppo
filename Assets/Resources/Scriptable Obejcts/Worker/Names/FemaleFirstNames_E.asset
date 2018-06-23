@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Name: FemaleFirstNames_E
   m_EditorClassIdentifier: 
   strings:
-  - Safwa
-  - Tasnim
-  - Neveen
-  - Noreen
-  - Asmaa
-  - Ghada
-  - Shorouk
-  - Aya
-  - Marwa
-  - Mona
-  - Mariam
-  - Nabila
-  - Rana
-  - Nahed
-  - Rania
-  - Mai
-  - "\uFEEF\uFEEE\uFED4\uFEBB"
+  - "\uFE94\uFEE8\uFEF4\uFEE3\uFE83"
+  - "\uFEE2\uFEF4\uFEE8\uFEB4\uFE97"
+  - "\uFEE6\uFEF4\uFED4\uFEF4\uFEE7"
+  - "\uFEE6\uFEF3\uFEAD\uFEEE\uFEE7"
+  - "\u0621\uFE8E\uFEE4\uFEB3\uFE83"
+  - "\uFE93\uFEA9\uFE8E\uFECF"
+  - "\uFED5\uFEED\uFEAE\uFEB7"
+  - "\uFE94\uFEF3\uFE83"
+  - "\uFE93\uFEED\uFEAE\uFEE3"
+  - "\uFEF0\uFEE8\uFEE3"
+  - "\uFEE2\uFEF3\uFEAE\uFEE3"
+  - "\uFE94\uFEE0\uFEF4\uFE92\uFEE7"
+  - "\uFE8E\uFEE7\uFEAD"
+  - "\uFEAA\uFEEB\uFE8E\uFEE7"
+  - "\uFE8E\uFEF4\uFEE7\uFE8D\uFEAD"
+  - "\uFEF0\uFEE3"
+  - "\uFE93\uFEEE\uFED4\uFEBB"
   - "\u0621\uFE8E\uFEE4\uFEB3\uFE83"
