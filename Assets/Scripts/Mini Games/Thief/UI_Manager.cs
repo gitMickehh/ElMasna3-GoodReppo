@@ -25,13 +25,20 @@ public class UI_Manager : MonoBehaviour
     bool won;
     int count;
 
+    bool gameStarted = false;
+
     private void Start()
     {
         gameDuration = 30;
         count = setOfMoney.transform.childCount;
+       
+    }
+
+    public void StartGame()
+    {
+        gameStarted = true;
         money.text = (count * SetOfMoney.moneyValue).ToString();
         StartCoroutine("CountDown");
-
     }
 
     public IEnumerator CountDown()
@@ -50,17 +57,21 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateMoney()
     {
-        count--;
-        money.text = (count * SetOfMoney.moneyValue).ToString();
-        //(setOfMoney.transform.childCount * SetOfMoney.moneyValue).ToString();
-        //if (setOfMoney.transform.childCount == 0)
-        //{
-        //    timeIsUpEvent.Raise();
-        //}
-        if (count == 0)
+        if(gameStarted)
         {
-            timeIsUpEvent.Raise();
+            count--;
+            money.text = (count * SetOfMoney.moneyValue).ToString();
+            //(setOfMoney.transform.childCount * SetOfMoney.moneyValue).ToString();
+            //if (setOfMoney.transform.childCount == 0)
+            //{
+            //    timeIsUpEvent.Raise();
+            //}
+            if (count == 0)
+            {
+                timeIsUpEvent.Raise();
+            }
         }
+       
     }
 
     public void OnGameOver()

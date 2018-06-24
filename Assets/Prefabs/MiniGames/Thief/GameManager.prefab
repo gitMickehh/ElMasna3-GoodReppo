@@ -151,3 +151,4 @@ MonoBehaviour:
   onScreenTime: 2
   offScreenTime: 2
   happyTime: 1
+  gameStartPanel: {fileID: 0}
