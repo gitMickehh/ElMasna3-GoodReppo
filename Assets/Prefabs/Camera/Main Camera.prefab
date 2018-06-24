@@ -133,7 +133,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 66
-  orthographic: 0
+  orthographic: 1
   orthographic size: 16.9
   m_Depth: -1
   m_CullingMask:
@@ -181,7 +181,7 @@ MonoBehaviour:
   orthoZoomSpeed: 0.05
   cameraChild: []
   minOrthographicSize: 8.7
-  maxOrthographicSize: 15
+  maxOrthographicSize: 30
 --- !u!114 &114574625235158834
 MonoBehaviour:
   m_ObjectHideFlags: 1

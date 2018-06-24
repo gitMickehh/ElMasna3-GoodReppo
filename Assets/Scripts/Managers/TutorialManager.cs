@@ -69,6 +69,7 @@ public class TutorialManager : MonoBehaviour {
     public void SetRotationDone()
     {
         rotatedBuilding = true;
+        RotationArrowsPanel.SetActive(false);
         Tut_TouchWorker.Raise();
     }
 
