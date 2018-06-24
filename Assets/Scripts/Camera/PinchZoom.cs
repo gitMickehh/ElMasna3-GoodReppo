@@ -14,6 +14,8 @@ public class PinchZoom : MonoBehaviour
     public float minOrthographicSize = 8.7f;
     public float maxOrthographicSize = 15f;
 
+    Vector3 cameraPrespectivePosition;
+
     private void Start()
     {
         camera = transform.GetComponent<Camera>();
@@ -49,6 +51,7 @@ public class PinchZoom : MonoBehaviour
 
             else
             {
+                /*
                 // Otherwise change the field of view based on the change in distance between the touches.
                 camera.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
 
@@ -59,6 +62,16 @@ public class PinchZoom : MonoBehaviour
                 camera.fieldOfView = Mathf.Min(camera.fieldOfView, maxPerspectiveFOV);
 
                 cameraChild[1].fieldOfView = camera.fieldOfView;
+                */
+
+                cameraPrespectivePosition = camera.transform.position;
+                cameraPrespectivePosition.z += (deltaMagnitudeDiff * perspectiveZoomSpeed);
+
+                cameraPrespectivePosition.z = Mathf.Max(cameraPrespectivePosition.z, minPerspectiveFOV);
+                cameraPrespectivePosition.z = Mathf.Min(cameraPrespectivePosition.z, maxPerspectiveFOV);
+
+                camera.transform.position = cameraPrespectivePosition;
+
             }
 
         }
