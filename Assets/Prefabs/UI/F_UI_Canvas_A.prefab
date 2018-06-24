@@ -1654,6 +1654,7 @@ MonoBehaviour:
     type: 2}
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   WorkerManager: {fileID: 0}
+  assemblyLineManager: {fileID: 0}
   levelUpButton: {fileID: 114591000218222384}
   levelUpRedButton: {fileID: 114468238176767108}
   levelUpYellowButton: {fileID: 114625841806389466}
