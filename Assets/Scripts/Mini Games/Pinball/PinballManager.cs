@@ -17,6 +17,7 @@ public class PinballManager : MonoBehaviour {
     public ScriptableInt_SO ballsDestroyed;
 
     [Header("UI")]
+    public Image gameStartPanel;
     public Image gameResultPanel;
     public TextMeshProUGUI gameResultText;
     bool winFlag = false;
@@ -24,25 +25,42 @@ public class PinballManager : MonoBehaviour {
     [Header("Goal")]
     public Transform goalPosition;
 
+    bool gameStarted = false;
 
-	void Start () {
+    private void Awake()
+    {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         pbEntrance = FindObjectOfType<PinballEntrance>();
+    }
+
+    void Start () {
 
         FindObjectOfType<GoalControl>().transform.position = goalPosition.position;
-
         gameResultPanel.gameObject.SetActive(false);
+        //to start game
+        //ShootBalls();
+    }
 
+    public void StartGame()
+    {
+        //count down
+
+        gameStarted = true;
+        gameStartPanel.gameObject.SetActive(false);
         ShootBalls();
     }
 
     private void Update()
     {
-        if(ballsCount.intValue <= 0 && !winFlag)
+        if(gameStarted)
         {
-            WinState(CheckWin());
-            winFlag = true;
+            if (ballsCount.intValue <= 0 && !winFlag)
+            {
+                WinState(CheckWin());
+                winFlag = true;
+            }
         }
+        
     }
 
     public void ShootBalls()

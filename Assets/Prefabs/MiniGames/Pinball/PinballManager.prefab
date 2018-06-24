@@ -84,6 +84,7 @@ MonoBehaviour:
   ballsCount: {fileID: 11400000, guid: 3717432b037e6084fbecacb8fcf92362, type: 2}
   ballsScored: {fileID: 11400000, guid: 1d5846bd59fecc94280cfdc6b4f97ce4, type: 2}
   ballsDestroyed: {fileID: 11400000, guid: 0fc70c635538af1428f9085d156219e6, type: 2}
+  gameStartPanel: {fileID: 0}
   gameResultPanel: {fileID: 0}
   gameResultText: {fileID: 0}
   goalPosition: {fileID: 4332109498154178}
