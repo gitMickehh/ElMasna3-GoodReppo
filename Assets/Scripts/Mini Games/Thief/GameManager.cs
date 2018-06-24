@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -16,10 +17,17 @@ public class GameManager : MonoBehaviour {
     public float offScreenTime = 2f;
     public float happyTime = 2f;
 
+    [Header("UI")]
+    public Image gameStartPanel;
 
     void Start ()
     {
         durationBetween2Spawns = 1f;
+    }
+
+    public void StartGame()
+    {
+        gameStartPanel.gameObject.SetActive(false);
         gameStartEvent.Raise();
         StartCoroutine("CreateThieves");
         StartCoroutine("EnablePolice");

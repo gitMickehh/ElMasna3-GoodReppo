@@ -1753,8 +1753,14 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1962759365}
-    - target: {fileID: 1926362943241490, guid: a61af48e299724b48bf9a534be1ef942, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 114009357019671020, guid: a61af48e299724b48bf9a534be1ef942,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114009357019671020, guid: a61af48e299724b48bf9a534be1ef942,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
