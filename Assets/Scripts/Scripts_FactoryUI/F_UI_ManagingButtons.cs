@@ -9,6 +9,7 @@ public class F_UI_ManagingButtons : MonoBehaviour {
     public Factory_SO Factory_SO;
 
     public WorkerManager WorkerManager;
+    public AssemblyLineManager assemblyLineManager;
 
     public Button levelUpButton;
 
@@ -38,8 +39,8 @@ public class F_UI_ManagingButtons : MonoBehaviour {
     {
         //print("WorkerManager.WorkersPrefabs.Count: " + WorkerManager.WorkersPrefabs.Count);
         //print("Factory_SO.FactoryMoney: " + Factory_SO.FactoryMoney + "CompanyMoneyUpdates_SO.levelUpCost: " + CompanyMoneyUpdates_SO.LevelUpCost);
-        if((Factory_SO.FactoryMoney >= CompanyMoneyUpdates_SO.LevelUpCost) && 
-            (WorkerManager.WorkersPrefabs.Count >= (Factory_SO.companyLevel * 10)))//no of workers is missing as condition
+        if ((Factory_SO.FactoryMoney >= CompanyMoneyUpdates_SO.LevelUpCost) && !assemblyLineManager.canAssign
+            /*(WorkerManager.WorkersPrefabs.Count >= (Factory_SO.companyLevel * 10))*/)//no of workers is missing as condition
         {
             //openbutton
             //print("Open levelup button.");
