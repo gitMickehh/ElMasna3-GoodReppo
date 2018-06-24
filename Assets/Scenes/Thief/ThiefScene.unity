@@ -710,11 +710,6 @@ Prefab:
       propertyPath: panel
       value: 
       objectReference: {fileID: 2097893709}
-    - target: {fileID: 114653710954076400, guid: 1b2946f2f4c890d4e99eca0e871bc502,
-        type: 2}
-      propertyPath: goldImage
-      value: 
-      objectReference: {fileID: 2097893708}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b2946f2f4c890d4e99eca0e871bc502, type: 2}
   m_IsPrefabParent: 0
@@ -992,11 +987,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1869561699}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &2097893708 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1779249948077558, guid: 95f94881051d3ef46a995c6f5f35c634,
-    type: 2}
-  m_PrefabInternal: {fileID: 1869561699}
 --- !u!1 &2097893709 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1525129741359356, guid: 95f94881051d3ef46a995c6f5f35c634,

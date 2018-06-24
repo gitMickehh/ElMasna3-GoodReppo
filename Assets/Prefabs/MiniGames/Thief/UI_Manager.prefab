@@ -121,4 +121,3 @@ MonoBehaviour:
   whenGreenLose: {fileID: 11400000, guid: bd571eca34576e64ca633ffdb2e5881a, type: 2}
   miniGameEndedEvent: {fileID: 11400000, guid: 9986c0548630f754aae85df677009b94, type: 2}
   panel: {fileID: 0}
-  goldImage: {fileID: 0}

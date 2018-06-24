@@ -14,7 +14,7 @@ public class GlowPrePass : MonoBehaviour
     void OnEnable()        //OnEnable
     {
         PrePass = new RenderTexture(Screen.width, Screen.height, 24);
-        print("QualitySettings.antiAliasing " + QualitySettings.antiAliasing);
+       // print("QualitySettings.antiAliasing " + QualitySettings.antiAliasing);
 		PrePass.antiAliasing = QualitySettings.antiAliasing; 
 		Blurred = new RenderTexture(Screen.width >> 1, Screen.height >> 1, 0);
 

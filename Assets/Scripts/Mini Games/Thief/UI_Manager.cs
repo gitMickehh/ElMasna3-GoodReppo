@@ -21,7 +21,7 @@ public class UI_Manager : MonoBehaviour
     public GameEvent_SO miniGameEndedEvent;
 
     public GameObject panel;
-    public GameObject goldImage;
+    //public GameObject goldImage;
     bool won;
     int count;
 
@@ -80,16 +80,16 @@ public class UI_Manager : MonoBehaviour
         panel.SetActive(true);
         if (setOfMoney.transform.childCount == 0)
         {
-            panel.GetComponentInChildren<Text>().text = "Game Over";
+            panel.GetComponentInChildren<Text>().text = "ﺕﺮﺴﺧ"+"\n"+"...ﻖﺣﻻ ﺖﻗﻭ ﻰﻓ ﺔﻟﻭﺎﺤﻤﻟﺍ ﺪﻋﺍ";
             won = false;
            // SceneManager.UnloadSceneAsync(3);
             //gameOverEvent.Raise();
         }
         else
         {
-            panel.GetComponentInChildren<Text>().text = "You Win";
-            goldImage.SetActive(true);
-            goldImage.GetComponentInChildren<Text>().text = money.text;
+            panel.GetComponentInChildren<Text>().text = "!! ﺖﺤﺠﻧ" +"\n"+ "ﺓءﺎﻔﻛ ﺮﺜﻛﺍ ﻞﻣﺎﻌﻟﺍ ﻥﻻﺍ";
+            //goldImage.SetActive(true);
+            //goldImage.GetComponentInChildren<Text>().text = money.text;
             won = true;
            // SceneManager.UnloadSceneAsync(3);
             //winnigEvent.Raise();
