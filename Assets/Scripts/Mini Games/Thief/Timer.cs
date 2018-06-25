@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour {
 
     public void StopCountDown()
     {
-        print("here");
+        //print("here");
         timeIsUp = true;
         StopCoroutine("CountDown");
     }

@@ -21,7 +21,7 @@ public class CameraTargetTexture : MonoBehaviour {
         {
             GetComponent<Camera>().targetTexture = dist;
         }
-        else
-            print("something not right");
+       // else
+            //print("something not right");
     }
 }

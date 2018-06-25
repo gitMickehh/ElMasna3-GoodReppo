@@ -36,7 +36,7 @@ public class Police : MonoBehaviour
 
     public void ArrestThief()
     {
-        print("Arrest Thief");
+       // print("Arrest Thief");
         //StopAnimation();
         gameObject.GetComponent<SpriteRenderer>().sprite = happyPolice;
 

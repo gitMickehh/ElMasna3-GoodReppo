@@ -22,7 +22,7 @@ public class SeekMoney : SteeringBase
             Target = setOfMoney.GetComponent<SetOfMoney>().GetNextTarget();
         if (Target == null)
         {
-            print("Something Wrong");
+            //print("Something Wrong");
             DestroyImmediate(gameObject);
         }
         else
@@ -52,7 +52,7 @@ public class SeekMoney : SteeringBase
             }
             else
             {
-                print("Didn't have a target");
+                //print("Didn't have a target");
                 DestroyImmediate(gameObject);
             }
         }

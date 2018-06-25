@@ -101,9 +101,9 @@ public class UI_Manager : MonoBehaviour
     {
         if (won)
         {
-            print("Won true.");
-            print("Yellow listeners count = " + whenYellowWin.listeners.Count);
-            print("Green listeners count = " + whenGreenWin.listeners.Count);
+            //print("Won true.");
+            //print("Yellow listeners count = " + whenYellowWin.listeners.Count);
+            //print("Green listeners count = " + whenGreenWin.listeners.Count);
             whenYellowWin.Raise();          
             whenGreenWin.Raise();          
         }

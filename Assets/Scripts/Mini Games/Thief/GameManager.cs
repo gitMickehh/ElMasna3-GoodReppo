@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 
     void Start ()
     {
-        durationBetween2Spawns = 1f;
+        durationBetween2Spawns = 3f;
     }
 
     public void StartGame()
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
 
     public void FreezePolice()
     {
-        print("Police Freezed");
+        //print("Police Freezed");
         StopCoroutine("EnablePolice");
     }
 	

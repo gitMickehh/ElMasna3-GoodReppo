@@ -63,7 +63,7 @@ public class TouchManager : MonoBehaviour
                             firstPlay = false;
                         }
 
-                        print("moving " + toDrag.name);
+                        //print("moving " + toDrag.name);
 
                         DragThief(touch);
 
@@ -87,7 +87,7 @@ public class TouchManager : MonoBehaviour
                 case TouchPhase.Ended:
                     if (dragging && toDrag.GetComponent<Thief>().swiped) // !oneTap)
                     {
-                        print("leave " + toDrag.name);
+                        //print("leave " + toDrag.name);
                         
                         
                         dragging = false;
@@ -138,7 +138,7 @@ public class TouchManager : MonoBehaviour
         {
 
             toDrag = hit.transform;
-            print("begin Touch " + toDrag.name);
+            //print("begin Touch " + toDrag.name);
 
             dist = toDrag.position.z - thiefCam.transform.position.z;
             //v3 = new Vector3(touch.position.x, touch.position.y, dist);

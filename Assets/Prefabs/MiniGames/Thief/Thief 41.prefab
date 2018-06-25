@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b987fb39e2b455643ab9e23181feda32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxVelocity: 6.6
+  MaxVelocity: 5.2
   MaxSteering: 300
   Velocity: {x: 0, y: 0, z: 0}
   Steering: {x: 0, y: 0, z: 0}
