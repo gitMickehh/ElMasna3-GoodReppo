@@ -359,14 +359,12 @@ public class Worker : MonoBehaviour
 
         if (workerManager.workersInOrientation.Contains(gameObject))
         {
-            print("Play Particles");
             gameObject.SetActive(false);
         }
     }
 
     public void PlayerWon()
     {
-        print("Player Won.");
         SetWorkerState(WorkerState.Winning);
     }
 
