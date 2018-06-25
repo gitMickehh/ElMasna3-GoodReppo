@@ -98,7 +98,7 @@ public class TouchManager : MonoBehaviour
                         toDrag.GetComponent<Rigidbody2D>().velocity = GetDraggingVelocity();
                         Destroy(toDrag.gameObject, 2);
 
-                        //FindObjectOfType<AudioManager>().Play("Swoosh1");
+                        FindObjectOfType<AudioManager>().Play("Swoosh1");
                     }
                     else
                     {
