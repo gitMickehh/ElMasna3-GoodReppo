@@ -26,3 +26,5 @@ MonoBehaviour:
   HairPrefabs: []
   FacialHairPrefabs: []
   GlassesPrefabs: []
+  disappearingParticles: {fileID: 1090131767757684, guid: 05f65d627ed4b1841bd0de34f0a88542,
+    type: 2}
