@@ -178,6 +178,7 @@ public class Worker : MonoBehaviour
         machineAssigned = machine;
         machineAssigned.worker = this;
         transform.position = machineAssigned.workerPosition.position;
+        transform.rotation = machineAssigned.workerPosition.rotation;
 
         machineAssigned.SetMachineState(MachineState.Working);
 
@@ -354,8 +355,11 @@ public class Worker : MonoBehaviour
     {
         yield return new WaitForSeconds(3.5f);
 
+       //WorkerStats.disappearingParticles.Play();
+
         if (workerManager.workersInOrientation.Contains(gameObject))
         {
+            print("Play Particles");
             gameObject.SetActive(false);
         }
     }

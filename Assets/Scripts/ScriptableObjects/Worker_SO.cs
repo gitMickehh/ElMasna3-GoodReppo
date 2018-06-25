@@ -37,6 +37,9 @@ public class Worker_SO : ScriptableObject
     public List<GameObject> FacialHairPrefabs;
     public List<GameObject> GlassesPrefabs;
 
+    [Header("Particles")]
+    public GameObject disappearingParticles;
+
     public string RandomizeName(Gender g)
     {
         int no1 = 0;
