@@ -17,12 +17,12 @@ public class DirectorCode : MonoBehaviour {
         director = GetComponent<PlayableDirector>();
         director.playableAsset = null;
 
-        slideNumber = 0;
+        slideNumber = -1;
     }
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("next");
             NextSlide();
@@ -39,8 +39,17 @@ public class DirectorCode : MonoBehaviour {
     {
         if(!prevPresed)
         {
+            if (slideNumber < timeLinesInOrder.Length-1)
+            {
+                slideNumber++;
+            }
+            else
+            {
+                slideNumber = timeLinesInOrder.Length - 1;
+            }
+
             director.playableAsset = timeLinesInOrder[slideNumber];
-            slideNumber++;
+
         }
 
         director.Play();
@@ -48,9 +57,17 @@ public class DirectorCode : MonoBehaviour {
 
     void PrevSlide()
     {
-        slideNumber--;
-        director.playableAsset = timeLinesInOrder[slideNumber];
 
+        if (slideNumber < 0)
+        {
+            slideNumber = 0;
+        }
+        else
+        {
+            slideNumber--;
+        }
+
+        director.playableAsset = timeLinesInOrder[slideNumber];
         prevPresed = true;
     }
 
