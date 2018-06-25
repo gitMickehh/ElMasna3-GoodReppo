@@ -22,13 +22,13 @@ public class DirectorCode : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             Debug.Log("next");
             NextSlide();
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             PrevSlide();
             Debug.Log("Prev");
