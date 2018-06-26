@@ -11,11 +11,13 @@ public class HowToPlay : MonoBehaviour {
 
     int index;
 
-    private void OnEnable()
+    //private void OnEnable()
+    public void HowToPlayBtnClicked()
     {
-        Images[0].gameObject.SetActive(true);
         index = 0;
+        Images[index].gameObject.SetActive(true);
         prevBtn.interactable = false;
+        nextBtn.interactable = true;
     }
     public void PlayPrevious()
     {
@@ -45,6 +47,10 @@ public class HowToPlay : MonoBehaviour {
 
         if (prevBtn.interactable == false)
             prevBtn.interactable = true;
+    }
+    public void ExitBtnClicked()
+    {
+        Images[index].gameObject.SetActive(false);
     }
 
 }

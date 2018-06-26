@@ -64,7 +64,7 @@ public class TouchManager : MonoBehaviour
                         }
 
                         //print("moving " + toDrag.name);
-
+                        1
                         DragThief(touch);
 
                         toDrag.GetComponent<Thief>().swiped = true;
