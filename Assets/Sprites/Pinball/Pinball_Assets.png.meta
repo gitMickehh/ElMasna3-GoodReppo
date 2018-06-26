@@ -17,6 +17,7 @@ TextureImporter:
     21300020: Ball
     21300022: Goal2
     21300024: TrapHandle
+    21300026: Pinball_Assets_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -252,7 +253,7 @@ TextureImporter:
         width: 661
         height: 663
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -266,7 +267,7 @@ TextureImporter:
         width: 786
         height: 1067
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,6 +280,20 @@ TextureImporter:
         y: 4326
         width: 1012
         height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pinball_Assets_0
+      rect:
+        serializedVersion: 2
+        x: 2837
+        y: 1574
+        width: 1134
+        height: 844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
