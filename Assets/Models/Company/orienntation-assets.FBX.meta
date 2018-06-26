@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: d117b18c95929b24ead9143c417438ef
+timeCreated: 1529916097
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box005
+    100002: Chair002
+    100004: Desk002
+    100006: Group014
+    100008: Group015
+    100010: Newww002
+    100012: Object081
+    100014: Object082
+    100016: Object083
+    100018: Object084
+    100020: Object085
+    100022: Object086
+    100024: Object087
+    100026: Object088
+    100028: Object089
+    100030: Object090
+    100032: Object091
+    100034: Object092
+    100036: Object093
+    100038: Object094
+    100040: //RootNode
+    400000: Box005
+    400002: Chair002
+    400004: Desk002
+    400006: Group014
+    400008: Group015
+    400010: Newww002
+    400012: Object081
+    400014: Object082
+    400016: Object083
+    400018: Object084
+    400020: Object085
+    400022: Object086
+    400024: Object087
+    400026: Object088
+    400028: Object089
+    400030: Object090
+    400032: Object091
+    400034: Object092
+    400036: Object093
+    400038: Object094
+    400040: //RootNode
+    2100000: _orientationstex_mach__assets
+    2300000: Box005
+    2300002: Chair002
+    2300004: Desk002
+    2300006: Newww002
+    2300008: Object081
+    2300010: Object082
+    2300012: Object083
+    2300014: Object084
+    2300016: Object085
+    2300018: Object086
+    2300020: Object087
+    2300022: Object088
+    2300024: Object089
+    2300026: Object090
+    2300028: Object091
+    2300030: Object092
+    2300032: Object093
+    2300034: Object094
+    3300000: Box005
+    3300002: Chair002
+    3300004: Desk002
+    3300006: Newww002
+    3300008: Object081
+    3300010: Object082
+    3300012: Object083
+    3300014: Object084
+    3300016: Object085
+    3300018: Object086
+    3300020: Object087
+    3300022: Object088
+    3300024: Object089
+    3300026: Object090
+    3300028: Object091
+    3300030: Object092
+    3300032: Object093
+    3300034: Object094
+    4300000: Object081
+    4300002: Box005
+    4300004: Object082
+    4300006: Object083
+    4300008: Object084
+    4300010: Object085
+    4300012: Object086
+    4300014: Newww002
+    4300016: Object087
+    4300018: Object088
+    4300020: Object089
+    4300022: Object090
+    4300024: Object091
+    4300026: Object092
+    4300028: Object093
+    4300030: Chair002
+    4300032: Desk002
+    4300034: Object094
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
