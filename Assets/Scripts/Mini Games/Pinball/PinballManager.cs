@@ -19,7 +19,7 @@ public class PinballManager : MonoBehaviour {
     [Header("UI")]
     public Image gameStartPanel;
     public Image gameResultPanel;
-    public TextMeshProUGUI gameResultText;
+    public Text gameResultText;
     bool winFlag = false;
 
     [Header("Goal")]
@@ -83,12 +83,12 @@ public class PinballManager : MonoBehaviour {
         if (winBool)
         {
             //gameResultText.text = "أنت كسبت";
-            gameResultText.text = "You win";
+            gameResultText.text = "ﺕﺮﺴﺧ" + "\n" + "...ﻖﺣﻻ ﺖﻗﻭ ﻰﻓ ﺔﻟﻭﺎﺤﻤﻟﺍ ﺪﻋﺍ";
         }
         else
         {
             //gameResultText.text = "أنت خسرت";
-            gameResultText.text = "You lose";
+            gameResultText.text = "!! ﺖﺤﺠﻧ" + "\n" + "ﺓءﺎﻔﻛ ﺮﺜﻛﺍ ﻞﻣﺎﻌﻟﺍ ﻥﻻﺍ";
         }
     }
 }
