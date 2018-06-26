@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
     float time;
     bool timeIsUp;
 
-    private void Start()
+    public void StartTimer()
     {
        fillImg = GetComponentInChildren<Image>();
         time = timeAmt;
