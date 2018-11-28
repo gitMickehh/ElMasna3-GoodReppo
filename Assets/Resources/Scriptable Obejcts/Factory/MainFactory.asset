@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -14,7 +14,7 @@ MonoBehaviour:
   PlayerName: Nader
   FirstLoginTime: {fileID: 11400000, guid: 3ab56e108fe898e4498be3448bad62fb, type: 2}
   LastTimeLogin: {fileID: 11400000, guid: 81a1836bbcc447545a2b88e729c21485, type: 2}
-  FactoryMoney: 0
+  FactoryMoney: 60000
   companyLevel: 2
   factoryMoneyChanged: {fileID: 11400000, guid: 185a5b7138688f740931f70641d09bed,
     type: 2}

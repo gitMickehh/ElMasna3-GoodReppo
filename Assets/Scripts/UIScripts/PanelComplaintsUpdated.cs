@@ -49,7 +49,6 @@ public class PanelComplaintsUpdated : MonoBehaviour
 
         for (; j < buttons.Length; j += 2)
         {
-            print("Destroy");
             Destroy(buttons[j].gameObject);
         }
 

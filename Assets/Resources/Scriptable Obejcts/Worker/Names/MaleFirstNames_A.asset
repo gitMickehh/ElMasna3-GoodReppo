@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c797effdc9114d438405cbeeacb3a18, type: 3}
+  m_Name: MaleFirstNames_A
+  m_EditorClassIdentifier: 
+  strings:
+  - "\uFEAD\uFEA9\uFE8E\uFEE7"
+  - "\uFEE2\uFEF3\uFEAE\uFEDB"
+  - "\uFEE1\uFE8E\uFEBC\uFECB"
+  - "\uFEEF\uFEAA\uFEE4\uFEA3"
+  - "\uFEAA\uFEE4\uFEA4\uFEE3"
+  - "\uFEDE\uFEDC\uFEF3\uFE8E\uFEE3"
+  - "\uFEA9\uFE8E\uFEE4\uFECB"
+  - "\uFEEF\uFEEE\uFEB8\uFEF4\uFE91"
+  - "\uFEAA\uFEE4\uFEA3\uFE83"
+  - "\uFEE6\uFEE4\uFEF3\uFE83"
+  - "\uFE8E\uFEE8\uFEF4\uFEE3"
+  - "\uFEED\uFEAE\uFEE4\uFECB"
+  - "\uFE94\uFEE3\uFE8E\uFEB3\uFE83"
+  - "\uFEE6\uFEE4\uFEA3\uFEAE\uFEDF\uFE8D \uFEAA\uFE92\uFECB"
+  - "\u0621\uFEFC\uFECB"
+  - "\uFEF0\uFED4\uFEC4\uFEBC\uFEE3"
+  - "\uFEAD\uFEA9\uFE8E\uFEE7"
+  - "\uFEAE\uFEE4\uFECB"

@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: MachineIssue
   m_EditorClassIdentifier: 
   Complaint: ".\uFEA2\uFEF4\uFEE0\uFEBC\uFE98\uFEE0\uFEDF \uFE94\uFE9F\uFE8E\uFEA4\uFE91
-    \uFE94\uFEE8\uFEDC\uFEE3 \uFED9\uFE8E\uFEE8\uFEEB"
+    \uFE94\uFEE8\uFEDC\uFEE3 \uFED9\uFE8E\uFEE8\uFEEB\nSomething needs fixing!"

@@ -83,13 +83,15 @@ public class PinballManager : MonoBehaviour {
         if (winBool)
         {
             //gameResultText.text = "أنت كسبت";
-            gameResultText.text = "!! ﺖﺤﺠﻧ" + "\n" + "ﺓءﺎﻔﻛ ﺮﺜﻛﺍ ﻞﻣﺎﻌﻟﺍ ﻥﻻﺍ";
+            //gameResultText.text = "!! ﺖﺤﺠﻧ" + "\n" + "ﺓءﺎﻔﻛ ﺮﺜﻛﺍ ﻞﻣﺎﻌﻟﺍ ﻥﻻﺍ";
+            gameResultText.text = "you won!\n your worker is now more skilled!";
             
         }
         else
         {
             //gameResultText.text = "أنت خسرت";
-            gameResultText.text = "ﺕﺮﺴﺧ" + "\n" + "...ﻖﺣﻻ ﺖﻗﻭ ﻰﻓ ﺔﻟﻭﺎﺤﻤﻟﺍ ﺪﻋﺍ";
+            //gameResultText.text = "ﺕﺮﺴﺧ" + "\n" + "...ﻖﺣﻻ ﺖﻗﻭ ﻰﻓ ﺔﻟﻭﺎﺤﻤﻟﺍ ﺪﻋﺍ";
+            gameResultText.text = "you lost :(";
 
         }
     }

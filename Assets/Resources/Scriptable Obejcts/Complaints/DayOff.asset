@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: DayOff
   m_EditorClassIdentifier: 
   Complaint: "\u061F\uFEEF\uFEAD\uFEAA\uFE91 \uFE93\uFEA9\uFEAD\uFE8E\uFEEC\uFEE8\uFEDF\uFE8D
-    \uFEA1\uFEED\uFEAD\uFE83 \uFEE6\uFEDC\uFEE4\uFEE3"
+    \uFEA1\uFEED\uFEAD\uFE83 \uFEE6\uFEDC\uFEE4\uFEE3\nCan I take the day off?"

@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -11,12 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d04db8805716864ab4cd10a7e558c6d, type: 3}
   m_Name: CompanyMoneyUpdates
   m_EditorClassIdentifier: 
-  levelUpCost: 20000
+  levelUpCost: 40000
   playForRedTeam: 50
   playForYellowTeam: 50
   playForGreenTeam: 50
   Factory_SO: {fileID: 11400000, guid: c93ba5421f7ea9543836cb8c0dadc3d8, type: 2}
   WorkerManager: {fileID: 114547311667761038, guid: ff0faf9e12dbad144bcf2adda9386114,
     type: 2}
-  PlayToRaiseTeamLevel: {fileID: 114289673670503314, guid: d2ae631225943d843aa0feca13d598bc,
-    type: 2}
+  assemblyLinesProfit: 20

@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03ae80027fbfe840a776ca9e3f41edf, type: 3}
   m_Name: PromoteWorker
   m_EditorClassIdentifier: 
-  Complaint: ".\uFE94\uFEF4\uFED7\uFEAE\uFE97 \uFEAA\uFEF3\uFEAD\uFE83"
+  Complaint: ".\uFE94\uFEF4\uFED7\uFEAE\uFE97 \uFEAA\uFEF3\uFEAD\uFE83\nI want a raise."

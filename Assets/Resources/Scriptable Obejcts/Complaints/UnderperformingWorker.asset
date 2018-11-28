@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: UnderperformingWorker
   m_EditorClassIdentifier: 
   Complaint: ".\uFEDE\uFEC0\uFED3\uFE83 \uFEDE\uFEDC\uFEB8\uFE91 \uFEDE\uFEE4\uFECB\uFEF7
-    \uFE8F\uFEAD\uFEAA\uFE97\uFE83 \uFEE5\uFE83 \uFEAA\uFEF3\uFEAD\uFE83"
+    \uFE8F\uFEAD\uFEAA\uFE97\uFE83 \uFEE5\uFE83 \uFEAA\uFEF3\uFEAD\uFE83\nI need to
+    train more!"

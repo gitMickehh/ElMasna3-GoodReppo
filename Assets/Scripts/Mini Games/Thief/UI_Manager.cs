@@ -80,14 +80,16 @@ public class UI_Manager : MonoBehaviour
         panel.SetActive(true);
         if (setOfMoney.transform.childCount == 0)
         {
-            panel.GetComponentInChildren<Text>().text = "ﺕﺮﺴﺧ"+"\n"+"...ﻖﺣﻻ ﺖﻗﻭ ﻰﻓ ﺔﻟﻭﺎﺤﻤﻟﺍ ﺪﻋﺍ";
+            //panel.GetComponentInChildren<Text>().text = "ﺕﺮﺴﺧ"+"\n"+"...ﻖﺣﻻ ﺖﻗﻭ ﻰﻓ ﺔﻟﻭﺎﺤﻤﻟﺍ ﺪﻋﺍ";
+            panel.GetComponentInChildren<Text>().text = "You lost :(";
             won = false;
            // SceneManager.UnloadSceneAsync(3);
             //gameOverEvent.Raise();
         }
         else
         {
-            panel.GetComponentInChildren<Text>().text = "!! ﺖﺤﺠﻧ" +"\n"+ "ﺓءﺎﻔﻛ ﺮﺜﻛﺍ ﻞﻣﺎﻌﻟﺍ ﻥﻻﺍ";
+            //panel.GetComponentInChildren<Text>().text = "!! ﺖﺤﺠﻧ" +"\n"+ "ﺓءﺎﻔﻛ ﺮﺜﻛﺍ ﻞﻣﺎﻌﻟﺍ ﻥﻻﺍ";
+            panel.GetComponentInChildren<Text>().text = "you won!\n now your worker is more skilled!";
             //goldImage.SetActive(true);
             //goldImage.GetComponentInChildren<Text>().text = money.text;
             won = true;
